@@ -1,0 +1,1602 @@
+Delivered-To: nikitkovalevskiy@gmail.com
+Received: by d31c.emsend3.com id h7lema2p4dor
+	for <nikitkovalevskiy@gmail.com>;
+	Mon, 1 Mar 2021 21:32:13 +0000 (envelope-from <bounce-917000-1909-785277-nikitkovalevskiy=gmail.com@d31c.emsend3.com>)
+X-Google-Smtp-Source: ABdhPJwczycrLIMLkT/l+jN+NTxl+2HjSVW6hQbvJIWGS8Z9GvDxtoNRmERk2jlppfunkpXrd2fF
+X-Received: by 2002:ac8:7649:: with SMTP id i9mr14214357qtr.379.1614634342121;       
+ Mon, 01 Mar 2021 13:32:22 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1614634342; cv=none; d=google.com;
+	s=arc-20160816;
+	b=pO0l364FMgRxRF5xL1DR7zVg4pPBxlOd+dh99TYSetGu/Esgd7+lScgB9dkdI9vASRg5sMmPbp9
+	wG76W2WvB2Epz9QRG4EkUJgswGZw3pNUkXlOw3gTo1v8L/byQVTPTuySye1lbglp2xwLpi2J+LZpp
+	5HG9vDjm+5iTcBcQupNAHeNbqhISqhPAF3T3xwFBx4f8qYSEd+N28zQQCM5WDzc22Tvt2sw6Rad38
+	hfgmMUss7SiQh4bR88SIJ0aTu+9wdQaLPRMMZvcw1VuE1aFjIrImRvoc+Exk+gRKpGs8Z3vI8eiPJ
+	yLAlWgXovYt01cUJGn6D5033zkYHplLEZCUA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com;
+	s=arc-20160816;
+	h=message-id:list-unsubscribe-post:list-unsubscribe:feedback-id:
+	content-transfer-encoding:mime-version:date:subject:from:to:dkim-signature:
+	dkim-signature;
+	bh=FiJz46h21rwcTyXSSGpo+bI6/LaRhzVnw0/T0Umv6ew=;
+	b=ytYgO5FCz3EM7YfZMgaYXVYElgZ1k1k7CzMBRi0+21Alg916/j+7SFiQIY/1rLq4SXzfU5Nped4
+	cKp//7Wybc6qrXfVG9MNIb7b9tuNMhPjypJHop/I5cbcyciSCfLnX69gGk3s+2Y7V7aUYuXkgFG8O
+	yuO2jt2g9nDJGxzWV1/3QVTqMdor/yXnPMPyTPbj8FHUWMzAV/SPnF4u/2Sc8g28R3JLSKeWH/nhc
+	lJGvjMxLUlve3l3x4d+ivZPPmTBNGT8z/WPXUIgNXqCnAsXLAvb3LoUWCDvTGvFNvs6Qmj6ap665T
+	+ZWIGNNw+cmphL3cHXVUDlLMfMspiYDXna3A==
+ARC-Authentication-Results: i=1; mx.google.com;
+	dkim=pass header.i=@digitalmarketer.com header.s=dk header.b=gub6RO7O;
+	dkim=pass header.i=@acems1.com header.s=dk header.b=zGkE1K1o; spf=pass
+	(google.com: domain of bounce-917000-1909-785277-nikitkovalevskiy=gmail.com@d31c.emsend3.com designates 52.128.42.99 as permitted sender)
+	smtp.mailfrom=
+	"bounce-917000-1909-785277-nikitkovalevskiy=gmail.com@d31c.emsend3.com";
+	dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=digitalmarketer.com
+Return-Path: <bounce-917000-1909-785277-nikitkovalevskiy=gmail.com@d31c.emsend3.com>
+Received-SPF: pass (google.com: domain of
+ bounce-917000-1909-785277-nikitkovalevskiy=gmail.com@d31c.emsend3.com
+ designates 52.128.42.99 as permitted sender) client-ip=52.128.42.99;
+Authentication-Results: mx.google.com;
+	dkim=pass header.i=@digitalmarketer.com header.s=dk header.b=gub6RO7O;
+	dkim=pass header.i=@acems1.com header.s=dk header.b=zGkE1K1o; spf=pass
+	(google.com: domain of bounce-917000-1909-785277-nikitkovalevskiy=gmail.com@d31c.emsend3.com designates 52.128.42.99 as permitted sender)
+	smtp.mailfrom=
+	"bounce-917000-1909-785277-nikitkovalevskiy=gmail.com@d31c.emsend3.com";
+	dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=digitalmarketer.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=dk; d=acems1.com;
+	h=To:From:Subject:Date:MIME-Version:Content-Type:Content-Transfer-Encoding:
+	List-Unsubscribe:Message-ID;
+	bh=FiJz46h21rwcTyXSSGpo+bI6/LaRhzVnw0/T0Umv6ew=;
+	b=zGkE1K1oDgwG+r9eCyQWkgeEuYqpJc756nwEBbCpCmG6hMHXoz33T/faHst92QSXhSrs/u076lp
+	+1CibGwU/JLXFkeM/QzQdB3+EjPI7ZHBJa80gNpkntb5byQ1swEAe2hhgNnasfzeyWRySQvD4bIyh
+	r2OpqLTk2EO8w4L0I6c=
+To: Ivan Ivanov <nikitkovalevskiy@gmail.com>
+From: Ryan Deiss <members@digitalmarketer.com>
+Subject: On sale now: SEO Mastery
+Date: Mon, 01 Mar 2021 15:28:43 -0600
+MIME-Version: 1.0
+X-mid: bmlraXRrb3ZhbGV2c2tpeUBnbWFpbC5jb20gLCBjMTkwOSAsIG0zOTQzICwgczgxODYwOQ
+Feedback-ID: 917000:activecampaign
+X-250ok-CID: 917000-1909
+List-Unsubscribe: =?utf-8?q?=3Cmailto=3Aunsubscribe-2622d1b7348500ad51c9bb1dd14ff1c1-1909-454?=
+ =?utf-8?q?b211ef078a7ed2eadf56aefc7e759=40d31c=2Eemsend3=2Ecom=3E=2C?=
+ =?utf-8?q?_=3Chttp=3A=2F=2Fdigitalmarketer47196=2Eactivehosted=2Ecom=2Fbox=2Ephp=3Fnl=3D1&c=3D?=
+ =?utf-8?q?1909&m=3D3943&s=3D454b211ef078a7ed2eadf56aefc7e759&funcml=3Dunsub2&?=
+ =?utf-8?q?luha=3D1=3E?=
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Message-ID: <20210301213213.1377.671641609.swift@digitalmarketer47196.activehosted.com>
+Uid: 10
+Folder: SearchEngines
+Sender: Ryan Deiss <members@digitalmarketer.com>
+PlainText: =?utf-8?q?https=3A=2F=2Fdigitalmarketer47196=2Elt=2Eacemlnb=2Ecom=2FProd=2Flink-tracker?=
+ =?utf-8?q?=3FredirectUrl=3DaHR0cHMlM0ElMkYlMkZ3d3cuZGlnaXRhbG1hcmtldGVyLmNv?=
+ =?utf-8?q?bSUyRmxwJTJGc2VhcmNoLW1hcmtldGluZy1tYXN0ZXJ5JTJGJTNGdXRtX3Nvd?=
+ =?utf-8?q?XJjZSUzRGFjdGl2ZWNhbXBhaWduJTI2dXRtX21lZGl1bSUzRGVtYWlsJTI2dX?=
+ =?utf-8?q?RtX2NhbXBhaWduJTNEMjEwMiUyNTIwc2VvJTI1MjBjZXJ0aWZpY2F0aW9uJTI?=
+ =?utf-8?q?2dXRtX3Rlcm0lM0RtNg=3D=3D&a=3D25815130&account=3Ddigitalmarketer47196?=
+ =?utf-8?q?%2Eactivehosted%2Ecom&email=3Di%2Bb14kkDvlB5v3Q7WQpYd2QOP8ZXmRz?=
+ =?utf-8?q?Mvz3Yw%2BcA7gI%3D&s=3D454b211ef078a7ed2eadf56aefc7e759&i=3D1909A3?=
+ =?utf-8?q?943A1A80084Have?= you ever received a DigitalMarketer
+ certification, Ivan?If so, then you already know you're getting up-to-date
+ education, proventactics, and strategies you can put to work right away.That
+ means, better leads and more sales for your business!And you can be sure
+ you're getting expert intel, because we do thisstuff at DM, and we work with
+ the world's best marketers doing thisstuff for their businesses.And once we
+ know what works we document the ever-loving crap out of itso that you can do
+ it too!Right now, you can get our Brand NEW Search Engine Optimization
+ Courseand Certification,updated with tested and proven SEO tactics that get
+ you found by yourprospects, including:1. 42 NEW video instruction lessons led
+ by 2 of the industry's leadingSearch Engine Optimizers:* DigitalMarketer's
+ senior SEO Strategist and Director of Content &Product, Amanda Powell* Global
+ SEO Strategist at IBM, Technical SEO specialist, and SearchEngine Journal
+ contributor and industry event speaker, Jesse McDonald2. Course Workbook with
+ 4 downloadable planning guides3. Credential Badge & Certificate from
+ DigitalMarketerAnd if all THAT'S not enough...To celebrate the launch of this
+ brand new course, you can save $400(that's 81% OFF!) on our new SEO
+ Certification right now:Secure Your New Winning SEO StrategyBut do it soon!
+ Because this sale ends at midnight tomorrow night, andI'd rather you didn't
+ have to pay full price.Talk soon,RyanP.S. If you're serious about getting
+ your pages ranking in the #1 spot(and pulling in more sales!), then my new
+ SEO course is the fastest,most informed way that I know of to help you get it
+ done.You still have time to get it at the lowest price offered, but
+ onlyfor...Here's the link for
+ =?utf-8?q?you=3Ahttps=3A=2F=2Fdigitalmarketer47196=2Elt=2Eacemlnb=2Ecom=2FProd=2Flink-tra?=
+ =?utf-8?q?cker=3FredirectUrl=3DaHR0cHMlM0ElMkYlMkZ3d3cuZGlnaXRhbG1hcmtldGVy?=
+ =?utf-8?q?LmNvbSUyRmxwJTJGc2VhcmNoLW1hcmtldGluZy1tYXN0ZXJ5JTJG&a=3D258151?=
+ =?utf-8?q?30&account=3Ddigitalmarketer47196%2Eactivehosted%2Ecom&email=3Di%?=
+ =?utf-8?q?2Bb14kkDvlB5v3Q7WQpYd2QOP8ZXmRzMvz3Yw%2BcA7gI%3D&s=3D454b211ef0?=
+ =?utf-8?q?78a7ed2eadf56aefc7e759&i=3D1909A3943A1A80088Ryan?= DeissCo-Founder
+ &
+ =?utf-8?q?CEODigitalMarketerhttps=3A=2F=2Fdigitalmarketer47196=2Elt=2Eacemlnb=2Ecom?=
+ =?utf-8?q?=2FProd=2Flink-tracker=3FredirectUrl=3DaHR0cHMlM0ElMkYlMkZ0d2l0dGVyLm?=
+ =?utf-8?q?NvbSUyRnJ5YW5kZWlzcw=3D=3D&a=3D25815130&account=3Ddigitalmarketer4719?=
+ =?utf-8?q?6%2Eactivehosted%2Ecom&email=3Di%2Bb14kkDvlB5v3Q7WQpYd2QOP8ZXmR?=
+ =?utf-8?q?zMvz3Yw%2BcA7gI%3D&s=3D454b211ef078a7ed2eadf56aefc7e759&i=3D1909A?=
+ =?utf-8?q?3943A1A80085?=
+ =?utf-8?q?_=C2=A0https=3A=2F=2Fdigitalmarketer47196=2Elt=2Eacemlnb=2Ecom=2FProd=2Flink-tr?=
+ =?utf-8?q?acker=3FredirectUrl=3DaHR0cHMlM0ElMkYlMkZ3d3cubGlua2VkaW4uY29tJTJ?=
+ =?utf-8?q?GaW4lMkZyeWFuZGVpc3MlMkY=3D&a=3D25815130&account=3Ddigitalmarketer4?=
+ =?utf-8?q?7196%2Eactivehosted%2Ecom&email=3Di%2Bb14kkDvlB5v3Q7WQpYd2QOP8Z?=
+ =?utf-8?q?XmRzMvz3Yw%2BcA7gI%3D&s=3D454b211ef078a7ed2eadf56aefc7e759&i=3D19?=
+ =?utf-8?q?09A3943A1A80086_=C2=A0=C2=A0Sent?= to:
+ nikitkovalevskiy@gmail.comDigitalMarketer, 4330 Gaines Ranch Loop, 120,
+ Austin, TX 78735, United StatesKnow someone who'd like this email? Forward it
+ to a friend!Did someone forward this email to you? Become a subscriber!Don't
+ want future emails? Unsubscribe _________________Sent to
+ =?utf-8?q?nikitkovalevskiy=40gmail=2EcomUnsubscribe=3Ahttp=3A=2F=2Fdigitalmarketer4?=
+ =?utf-8?q?7196=2Eactivehosted=2Ecom=2Fproc=2Ephp=3Fnl=3D1&amp=3Bc=3D1909&amp=3Bm=3D3943&amp?=
+ =?utf-8?q?=3Bs=3D454b211ef078a7ed2eadf56aefc7e759&amp=3Bact=3DunsubDigitalMarke?=
+ =?utf-8?q?ter=2C?= 4330 Gaines Ranch Loop, 120, Austin, TX 78735, United
+ States
+HtmlBody: <!DOCTYPE html><html><head><!--[if !mso]><meta
+ http-equiv="X-UA-Compatible" content="IE=edge"><!--<![endif]--><meta
+ http-equiv="Content-Type" content="text/html; charset=utf-8"><meta
+ http-equiv="Content-Language" content="en-us"><meta name="format-detection"
+ content="telephone=no"><meta name="format-detection" content="date=no"><meta
+ name="format-detection" content="address=no"><meta name="format-detection"
+ content="email=no"><style data-ac-keep="true"> .ExternalClass { width: 100%;
+ background: inherit; background-color: inherit; } .ExternalClass p,
+ .ExternalClass ul, .ExternalClass ol { Margin: 0; } .undoreset div p,
+ .undoreset p { margin-bottom: 20px; } div[class^="aolmail_divbody"] {
+ overflow: auto; } [owa] #ac-footer { padding: 20px 0px !important;
+ background: inherit; background-color: inherit; } </style><style
+ data-ac-keep="true">@media only screen and (max-width: 600px) {
+ =?utf-8?q?=2F*-----------------------------------------------------------?=
+ =?utf-8?q?--------------*\?= Abandoned Cart widget
+ \*------------------------------------------------------------------------*/
+ .td_abandoned-cart img {display: block;padding-right: 0
+ !important;padding-bottom: 0 !important;width: 100% !important;max-width:
+ 100% !important;height: auto !important;} body { padding: 0!important;
+ font-size:1em!important; } * { -webkit-box-sizing: border-box;
+ -moz-box-sizing: border-box; box-sizing: border-box; } *[class].divbody
+ {-webkit-text-size-adjust:none !important; width:auto !important;}
+ *[class].td_picture img {width:auto !important;} *[class].td_text {
+ line-height: 110%; } *[class].td_button { width: auto; } /* Collapse all
+ block elements */ :not(.body) table { display: block!important;
+ float:none!important; border-collapse:collapse !important; width:100%
+ !important; min-width:100% !important; clear:both!important; } :not(.body)
+ thead,:not(.body) tbody, :not(.body) tr { display:block!important;
+ float:none!important; width:100% !important; } :not(.body) th, :not(.body)
+ td, :not(.body) p { display:block!important; float:none!important; width:100%
+ !important; clear:both!important; } /* Remove browser default styling for
+ elements */ ul, ol { margin-left: 20px; margin-bottom: 10px; margin-top:
+ 10px; -webkit-margin-before: 0; -webkit-margin-after: 0;
+ -webkit-padding-start: 0; } /* Set default height for spacer once collapse */
+ *[class].spacer { height: auto!important; } a[href^=date]{ color:inherit
+ !important; text-decoration:none !important;} a[href^=telephone]{
+ color:inherit !important; text-decoration:none !important;} a[href^=address]{
+ color:inherit !important; text-decoration:none !important;} a[href^=email]{
+ color:inherit !important; text-decoration:none !important;} /* Default table
+ cell height */
+ =?utf-8?q?td=5Bheight=3D=220=22=5D{height=3A0px!important=3Bfont-size=3A0px!important=3Bl?=
+ =?utf-8?q?ine-height=3A0px!important=3B}td=5Bheight=3D=2211=22=5D{height=3A11px!importa?=
+ =?utf-8?q?nt=3Bfont-size=3A11px!important=3Bline-height=3A11px!important=3B}td=5Bhe?=
+ =?utf-8?q?ight=3D=2212=22=5D{height=3A12px!important=3Bfont-size=3A12px!important=3Blin?=
+ =?utf-8?q?e-height=3A12px!important=3B}?=
+ =?utf-8?q?_=2F*-----------------------------------------------------------?=
+ =?utf-8?q?--------------*\_Product_Widget?=
+ =?utf-8?q?_\*-----------------------------------------------------------?=
+ =?utf-8?q?--------------*=2F?= .td_product > div { float: none !important;
+ width: 100% !important; margin-bottom: 20px !important; } .td_product > div
+ img { width: 75% !important; } /* Default social icons */
+ *[class].ac-social-icon-16 {width:16px !important; height:16px !important;}
+ *[class].ac-social-icon-24 {width:24px !important; height:24px !important;}
+ *[class].ac-social-icon-28 {width:28px !important; height:28px !important;}
+ *[class].__ac_social_icons { margin-right: 0px !important; } }</style><style
+ data-ac-keep="true"> @media only screen and (max-width: 320px) {
+ #layout-row39837 .break-line { width: 100% !important; margin: auto
+ !important; } #layout-row39840 img { width: 100% !important; height: auto
+ !important; max-width: 117px !important; } #layout-row39843 img { width: 100%
+ !important; height: auto !important; max-width: 50px !important; }
+ #layout-row39844 img { width: 100% !important; height: auto !important;
+ max-width: 320px !important; } div.divbody { padding: 20px !important; }
+ .td_rss .rss-item img.iphone_large_image { width: auto !important; } u +
+ .body { display: table !important; width: 100vw !important; min-width: 100vw
+ !important; } u + .body table { display: table !important; width: 100%
+ !important; min-width: 100% !important; } u + .body td { display: block
+ !important; width: 100% !important; min-width: 100% !important; } u + .body
+ img { display: inline-block !important; margin: auto !important; width: auto
+ !important;vertical-align: bottom !important; } u + .body center { display:
+ block !important; margin: auto !important; width: 100% !important; min-width:
+ 100% !important; text-align: center !important; } u + .body
+ table._ac_social_table, u + .body table._ac_social_table td, u + .body
+ table._ac_social_table div, u + .body table._ac_social_table a { display:
+ inline-block !important; margin: auto !important; width: auto !important;
+ min-width: auto !important; text-align: center !important; } u + .body
+ table._ac_social_table img { display: inline-block !important; margin: auto
+ !important; width: 32px !important; min-width: 32px !important; max-width:
+ 32px !important; }}@media only screen and (max-width: 375px) {
+ #layout-row39837 .break-line { width: 100% !important; margin: auto
+ !important; } #layout-row39840 img { width: 100% !important; height: auto
+ !important; max-width: 117px !important; } #layout-row39843 img { width: 100%
+ !important; height: auto !important; max-width: 50px !important; }
+ #layout-row39844 img { width: 100% !important; height: auto !important;
+ max-width: 375px !important; } div.divbody { padding: 20px !important; }
+ .td_rss .rss-item img.iphone_large_image { width: auto !important; } u +
+ .body { display: table !important; width: 100vw !important; min-width: 100vw
+ !important; } u + .body table { display: table !important; width: 100%
+ !important; min-width: 100% !important; } u + .body td { display: block
+ !important; width: 100% !important; min-width: 100% !important; } u + .body
+ img { display: inline-block !important; margin: auto !important; width: auto
+ !important; vertical-align: bottom !important; } u + .bodycenter { display:
+ block !important; margin: auto !important; width: 100% !important; min-width:
+ 100% !important; text-align: center !important; } u + .body
+ table._ac_social_table, u + .body table._ac_social_table td, u + .body
+ table._ac_social_table div, u + .body table._ac_social_table a { display:
+ inline-block !important; margin: auto !important; width: auto !important;
+ min-width: auto !important; text-align: center !important; } u + .body
+ table._ac_social_table img { display: inline-block !important; margin: auto
+ !important; width: 32px !important; min-width: 32px !important; max-width:
+ 32px !important; }}@media only screen and (max-width: 414px) {
+ #layout-row39837 .break-line { width: 100% !important; margin: auto
+ !important; } #layout-row39840 img { width: 100% !important; height: auto
+ !important; max-width: 117px !important; } #layout-row39843 img { width: 100%
+ !important; height: auto !important; max-width: 50px !important; }
+ #layout-row39844 img { width: 100% !important; height: auto !important;
+ max-width: 414px !important; } div.divbody { padding: 20px !important; }
+ .td_rss .rss-item img.iphone_large_image { width: auto !important; } u +
+ .body { display: table !important; width: 100vw !important; min-width: 100vw
+ !important; } u + .body table { display: table !important; width: 100%
+ !important; min-width: 100% !important; } u + .body td { display: block
+ !important; width: 100% !important; min-width: 100% !important; } u + .body
+ img { display: inline-block !important; margin: auto !important; width: auto
+ !important; vertical-align: bottom !important; } u + .bodycenter { display:
+ block !important; margin: auto !important; width: 100% !important; min-width:
+ 100% !important; text-align: center !important; } u + .body
+ table._ac_social_table, u + .body table._ac_social_table td, u + .body
+ table._ac_social_table div, u + .body table._ac_social_table a { display:
+ inline-block !important; margin: auto !important; width: auto !important;
+ min-width: auto !important; text-align: center !important; } u + .body
+ table._ac_social_table img { display: inline-block !important; margin: auto
+ !important; width: 32px !important; min-width: 32px !important; max-width:
+ 32px !important; }}@media only screen and (max-width: 667px) {
+ #layout-row39837 .break-line { width: 100% !important; margin: auto
+ !important; } #layout-row39840 img { width: 100% !important; height: auto
+ !important; max-width: 117px !important; } #layout-row39843 img { width: 100%
+ !important; height: auto !important; max-width: 50px !important; }
+ #layout-row39844 img { width: 100% !important; height: auto !important;
+ max-width: 650px !important; } div.divbody { padding: 20px !important; }
+ .td_rss .rss-item img.iphone_large_image { width: auto !important; } u +
+ .body { display: table !important; width: 100vw !important; min-width: 100vw
+ !important; } u + .body table { display: table !important; width: 100%
+ !important; min-width: 100% !important; } u + .body td { display: block
+ !important; width: 100% !important; min-width: 100% !important; } u + .body
+ img { display: inline-block !important; margin: auto !important; width: auto
+ !important; vertical-align: bottom !important; } u + .bodycenter { display:
+ block !important; margin: auto !important; width: 100% !important; min-width:
+ 100% !important; text-align: center !important; } u + .body
+ table._ac_social_table, u + .body table._ac_social_table td, u + .body
+ table._ac_social_table div, u + .body table._ac_social_table a { display:
+ inline-block !important; margin: auto !important; width: auto !important;
+ min-width: auto !important; text-align: center !important; } u + .body
+ table._ac_social_table img { display: inline-block !important; margin: auto
+ !important; width: 32px !important; min-width: 32px !important; max-width:
+ 32px !important; }} </style><!--[if !mso]><!-- webfonts
+ --><!--<![endif]--><!--[if lt mso 12]> <![endif]--></head><body
+ id="ac-designer" class="body" style="font-family: Arial; line-height: 1.1;
+ margin: 0px; background-color: #ffffff; width: 100%; text-align: left;">	
+	<div style="display:none; padding:0; height:1px; font-size:1px;
+ background-color:inherit !important; color:inherit !important;
+ line-height:1px; mso-hide:all;">			81% off!		</div><div class="divbody"
+ style="margin: 0px; outline: none; padding: 0px; color: #000000; font-family:
+ arial; line-height: 1.1; width: 100%; background-color: #ffffff; background:
+ #ffffff; text-align: left;"><table class="template-table" border="0"
+ cellpadding="0" cellspacing="0" width="100%" align="left" style="font-size:
+ 14px; min-width: auto; mso-table-lspace: 0pt; mso-table-rspace: 0pt;
+ background-color: #ffffff; background: #ffffff;"><tr><td align="left"
+ valign="top" width="100%"><table class="template-table" border="0"
+ cellpadding="0" cellspacing="0" width="600" bgcolor="#ffffff"
+ style="font-size: 14px; min-width: auto; mso-table-lspace: 0pt;
+ mso-table-rspace: 0pt; max-width: 600px;"><tr><td
+ id="layout_table_05f24746052fc2758c031f8dcea47e92ba6c7180" valign="top"
+ align="left" width="600"><table cellpadding="0" cellspacing="0" border="0"
+ class="layout layout-table root-table" width="600" style="font-size: 14px;
+ min-width: 100%; mso-table-lspace: 0pt;mso-table-rspace: 0pt;"><tr><td
+ id="layout-row-margin39844" valign="top"><table width="100%" border="0"
+ cellpadding="0" cellspacing="0" style="font-size: 14px; min-width: 100%;
+ mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tr id="layout-row39844"
+ class="layout layout-row widget _widget_picture " align="center"><td
+ id="layout-row-padding39844" valign="top"><table width="100%" border="0"
+ cellpadding="0" cellspacing="0" style="font-size: 14px; min-width: 100%;
+ mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tr><td class="image-td"
+ align="center" valign="top" width="600"><a
+ =?utf-8?q?href=3D=22https=3A=2F=2Fdigitalmarketer47196=2Elt=2Eacemlnb=2Ecom=2FProd=2Flink-t?=
+ =?utf-8?q?racker=3FredirectUrl=3DaHR0cHMlM0ElMkYlMkZ3d3cuZGlnaXRhbG1hcmtldG?=
+ =?utf-8?q?VyLmNvbSUyRmxwJTJGc2VhcmNoLW1hcmtldGluZy1tYXN0ZXJ5JTJGJTNGdXR?=
+ =?utf-8?q?tX3NvdXJjZSUzRGFjdGl2ZWNhbXBhaWduJTI2dXRtX21lZGl1bSUzRGVtYWls?=
+ =?utf-8?q?JTI2dXRtX2NhbXBhaWduJTNEMjEwMiUyNTIwc2VvJTI1MjBjZXJ0aWZpY2F0a?=
+ =?utf-8?q?W9uJTI2dXRtX3Rlcm0lM0RtNg=3D=3D&a=3D25815130&account=3Ddigitalmarkete?=
+ =?utf-8?q?r47196%2Eactivehosted%2Ecom&email=3Di%2Bb14kkDvlB5v3Q7WQpYd2QOP?=
+ =?utf-8?q?8ZXmRzMvz3Yw%2BcA7gI%3D&s=3D454b211ef078a7ed2eadf56aefc7e759&i=3D?=
+ =?utf-8?q?1909A3943A1A80084=22?= style="margin: 0;outline: none; padding: 0;
+ color: #009ffd; display: block; min-width: 100%;"><img
+ =?utf-8?q?src=3D=22https=3A=2F=2Fdigitalmarketer47196=2Eimgus11=2Ecom=2Fpublic=2F=2Fae4a98e?=
+ =?utf-8?q?688fb2c86855f72e57f5c2707=2Epng=3Fr=3D864601903=22?= alt=""
+ width="449" style="border: none; display: block; outline: none; width: 449px;
+ opacity: 1; max-width:
+ 100%;"></a></td></tr></table></td></tr></table></td></tr><tr><td
+ id="layout-row-margin39849" valign="top" style="padding: 20px 5px 5px
+ 5px;"><table width="100%" border="0" cellpadding="0" cellspacing="0"
+ style="font-size: 14px; min-width: 100%; mso-table-lspace: 0pt;
+ mso-table-rspace: 0pt; border-collapse: initial !important;"><tr
+ id="layout-row39849" class="layout layout-row widget _widget_text style39849"
+ style="margin: 0; padding: 0;"><td id="layout-row-padding39849" valign="top"
+ style="padding: 5px;"><table width="100%" border="0" cellpadding="0"
+ cellspacing="0" style="font-size: 14px; min-width: 100%; mso-table-lspace:
+ 0pt; mso-table-rspace: 0pt;"><tr><td id="text_div37503" class="td_text
+ td_block" valign="top" align="left" width="580" style="line-height: 150%;
+ margin: 0; outline: none; padding: 0; color: inherit; font-size: 12px;
+ font-weight: inherit; line-height: 1.5; text-decoration: inherit;
+ font-family: Arial; mso-line-height-rule: exactly;"> <div style="line-height:
+ 150%; margin: 0; outline: none; padding: 0;line-height: 1.5;
+ mso-line-height-rule: exactly;" data-line-height="1.5"><div style="margin: 0;
+ outline: none; padding: 0; text-align: left;"><span style="color: inherit;
+ font-size: 16px; font-weight: inherit; line-height: inherit; text-decoration:
+ inherit; text-align: inherit;">Have you ever received a DigitalMarketer
+ certification, Ivan?</span><br></div><br><span style="color: inherit;
+ font-size: 16px; font-weight: inherit; line-height: inherit; text-decoration:
+ inherit;">If so, then you already know you're getting up-to-date education,
+ proven tactics, and strategies you can put to work right
+ away.</span><br><br><span style="color: inherit; font-size: 16px;
+ font-weight: inherit; line-height: inherit; text-decoration: inherit;">That
+ means, better leads and more sales for your business!</span><br><br><span
+ style="color: inherit; font-size: 16px; font-weight: inherit; line-height:
+ inherit; text-decoration: inherit;">And you can be sure you're getting expert
+ intel, because we do this stuff at DM, and we work with <span style="color:
+ inherit; font-size: inherit; font-weight: bold; line-height: inherit;
+ text-decoration: inherit;" class="">the world's best marketers doing this
+ stuff for <span style="color: inherit; font-size: inherit; font-weight:
+ inherit; line-height: inherit; text-decoration: inherit; font-style:italic;"
+ class="">their</span> businesses.</span></span><br><br><span style="color:
+ inherit; font-size: 16px; font-weight: inherit; line-height: inherit;
+ text-decoration: inherit;">And once we know what works we document the
+ ever-loving crap out of it so that you can do it too!</span><br><br><span
+ style="color: inherit; font-size: 16px; font-weight: inherit; line-height:
+ inherit; text-decoration: inherit;">Right now, you can get our <a
+ =?utf-8?q?href=3D=22https=3A=2F=2Fdigitalmarketer47196=2Elt=2Eacemlnb=2Ecom=2FProd=2Flink-t?=
+ =?utf-8?q?racker=3FredirectUrl=3DaHR0cHMlM0ElMkYlMkZ3d3cuZGlnaXRhbG1hcmtldG?=
+ =?utf-8?q?VyLmNvbSUyRmxwJTJGc2VhcmNoLW1hcmtldGluZy1tYXN0ZXJ5JTJGJTNGdXR?=
+ =?utf-8?q?tX3NvdXJjZSUzRGFjdGl2ZWNhbXBhaWduJTI2dXRtX21lZGl1bSUzRGVtYWls?=
+ =?utf-8?q?JTI2dXRtX2NhbXBhaWduJTNEMjEwMiUyNTIwc2VvJTI1MjBjZXJ0aWZpY2F0a?=
+ =?utf-8?q?W9uJTI2dXRtX3Rlcm0lM0RtNg=3D=3D&a=3D25815130&account=3Ddigitalmarkete?=
+ =?utf-8?q?r47196%2Eactivehosted%2Ecom&email=3Di%2Bb14kkDvlB5v3Q7WQpYd2QOP?=
+ =?utf-8?q?8ZXmRzMvz3Yw%2BcA7gI%3D&s=3D454b211ef078a7ed2eadf56aefc7e759&i=3D?=
+ =?utf-8?q?1909A3943A1A80084=22?= data-ac-default-color="1" target="_blank"
+ style="margin: 0; outline: none; padding: 0; color: #009ffd; text-decoration:
+ underline;"><span style="color: ;font-size: inherit; font-weight: inherit;
+ line-height: inherit; text-decoration: inherit;">Brand NEW Search Engine
+ Optimization Course and Certification</span></a>, updated with tested and
+ proven SEO tactics that get you found by your prospects, including:<br><br>1.
+ 42 NEW video instruction lessons led by 2 of the industry's <span
+ style="color: inherit; font-size: inherit; font-weight: bold; line-height:
+ inherit; text-decoration: inherit;" class="">leading Search Engine
+ Optimizers:</span><br><ul style="margin: 0 0 0 40px; padding: 0;"><li
+ style="display: list-item; line-height: inherit; list-style-type: disc;
+ margin: 0 0 0 3px;"><span style="color: inherit; font-size: 16px;
+ font-weight: inherit; line-height: inherit; text-decoration: inherit;"><span
+ style="color: inherit; font-size: inherit; font-weight: bold; line-height:
+ inherit; text-decoration: inherit;" class="">DigitalMarketer's senior SEO
+ Strategist</span> and Director of Content & Product,
+ AmandaPowell</span></li><li style="display: list-item; line-height: inherit;
+ list-style-type: disc; margin: 0 0 0 3px;"><span style="color: inherit;
+ font-size: 16px; font-weight: inherit; line-height: inherit; text-decoration:
+ inherit;"><span style="color: inherit; font-size: inherit; font-weight: bold;
+ line-height: inherit; text-decoration: inherit;" class="">Global SEO
+ Strategist at IBM</span>, Technical SEO specialist, and Search Engine Journal
+ contributor and industry event speaker, Jesse
+ McDonald</span></li></ul></span><span style="color: inherit; font-size: 16px;
+ font-weight: inherit; line-height: inherit; text-decoration: inherit;
+ text-align: inherit;">2. <span style="color: inherit; font-size: inherit;
+ font-weight: bold; line-height: inherit; text-decoration: inherit;"
+ class="">Course Workbook with 4 downloadable planning guides</span><br>3.
+ <span style="color: inherit; font-size: inherit; font-weight: bold;
+ line-height: inherit; text-decoration: inherit;"class="">Credential Badge &
+ Certificate</span> from DigitalMarketer</span><br style="font-size:
+ 16px;"><span style="color: inherit; font-size: 16px; font-weight: inherit;
+ line-height: inherit; text-decoration: inherit;"><br>And if all THAT'S not
+ enough...<br><br>To celebrate the launch of this brand new course, you can
+ <span style="color: inherit; font-size: inherit; font-weight: bold;
+ line-height: inherit; text-decoration: inherit;" class="">save $400</span>
+ (that's 81% OFF!) on our new SEO Certification right
+ now:</span><br></div><!--[if (gte mso 12)&(lte mso 15) ]><style
+ data-ac-keep="true" data-ac-inline="false"> #text_div37503, #text_div37503
+ div { line-height: 150% !important;
+ };</style><![endif]--></td></tr></table></td></tr></table></td></tr><tr><td
+ id="layout-row-margin39845" valign="top" style="padding: 5px;"><table
+ width="100%" border="0" cellpadding="0" cellspacing="0" style="font-size:
+ 14px; min-width: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;
+ border-collapse: initial !important;"><tr id="layout-row39845" class="layout
+ layout-row widget _widget_button style39845" style=""><td
+ id="layout-row-padding39845" valign="top" style="padding: 5px;"><table
+ width="100%" border="0" cellpadding="0" cellspacing="0" style="font-size:
+ 14px; min-width: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tr><td
+ class="td_button td_block customizable" valign="top" align="left"
+ width="580"> <div class="button-wrapper" style="margin: 0; outline: none;
+ padding: 0; text-align: center;"><!--[if mso]> <v:roundrect
+ xmlns:v="urn:schemas-microsoft-com:vml"
+ xmlns:w="urn:schemas-microsoft-com:office:word"
+ =?utf-8?q?href=3D=22https=3A=2F=2Fdigitalmarketer47196=2Elt=2Eacemlnb=2Ecom=2FProd=2Flink-t?=
+ =?utf-8?q?racker=3FredirectUrl=3DaHR0cHMlM0ElMkYlMkZ3d3cuZGlnaXRhbG1hcmtldG?=
+ =?utf-8?q?VyLmNvbSUyRmxwJTJGc2VhcmNoLW1hcmtldGluZy1tYXN0ZXJ5JTJGJTNGdXR?=
+ =?utf-8?q?tX3NvdXJjZSUzRGFjdGl2ZWNhbXBhaWduJTI2dXRtX21lZGl1bSUzRGVtYWls?=
+ =?utf-8?q?JTI2dXRtX2NhbXBhaWduJTNEMjEwMiUyNTIwc2VvJTI1MjBjZXJ0aWZpY2F0a?=
+ =?utf-8?q?W9uJTI2dXRtX3Rlcm0lM0RtNg=3D=3D&a=3D25815130&account=3Ddigitalmarkete?=
+ =?utf-8?q?r47196%2Eactivehosted%2Ecom&email=3Di%2Bb14kkDvlB5v3Q7WQpYd2QOP?=
+ =?utf-8?q?8ZXmRzMvz3Yw%2BcA7gI%3D&s=3D454b211ef078a7ed2eadf56aefc7e759&i=3D?=
+ =?utf-8?q?1909A3943A1A80084=22?= style="v-text-anchor:middle; width:386px;
+ height:62px; font-weight: bold;" arcsize="10%" strokecolor="#B5B5B5"
+ strokeweight="0pt" fillcolor="#23adf7" o:button="true" o:allowincell="true"
+ o:allowoverlap="false" > <v:textbox inset="2px,2px,2px,2px"> <center
+ style="color:#ffffff;font-family:Arial; font-size:18px; font-weight:
+ bold;line-height: 1.1;">Secure Your New Winning SEO Strategy</center>
+ </v:textbox> </v:roundrect><![endif]--> <a
+ =?utf-8?q?href=3D=22https=3A=2F=2Fdigitalmarketer47196=2Elt=2Eacemlnb=2Ecom=2FProd=2Flink-t?=
+ =?utf-8?q?racker=3FredirectUrl=3DaHR0cHMlM0ElMkYlMkZ3d3cuZGlnaXRhbG1hcmtldG?=
+ =?utf-8?q?VyLmNvbSUyRmxwJTJGc2VhcmNoLW1hcmtldGluZy1tYXN0ZXJ5JTJGJTNGdXR?=
+ =?utf-8?q?tX3NvdXJjZSUzRGFjdGl2ZWNhbXBhaWduJTI2dXRtX21lZGl1bSUzRGVtYWls?=
+ =?utf-8?q?JTI2dXRtX2NhbXBhaWduJTNEMjEwMiUyNTIwc2VvJTI1MjBjZXJ0aWZpY2F0a?=
+ =?utf-8?q?W9uJTI2dXRtX3Rlcm0lM0RtNg=3D=3D&a=3D25815130&account=3Ddigitalmarkete?=
+ =?utf-8?q?r47196%2Eactivehosted%2Ecom&email=3Di%2Bb14kkDvlB5v3Q7WQpYd2QOP?=
+ =?utf-8?q?8ZXmRzMvz3Yw%2BcA7gI%3D&s=3D454b211ef078a7ed2eadf56aefc7e759&i=3D?=
+ =?utf-8?q?1909A3943A1A80084=22?= style="margin: 0; outline: none; padding:
+ 12px; color: #ffffff; background-color: #23adf7; border: 0px solid #B5B5B5;
+ border-radius: 3px; font-family: Arial; font-size: 18px; display:
+ inline-block; line-height: 1.1; text-align: center; text-decoration: none;
+ mso-hide: all;"> <span
+ style="color:#ffffff;font-family:Arial;font-size:18px;font-weight: bold;">
+ Secure Your New Winning SEO Strategy </span> </a>
+ </div></td></tr></table></td></tr></table></td></tr><tr><td
+ id="layout-row-margin39846" valign="top" style="padding: 5px;"><table
+ width="100%" border="0" cellpadding="0" cellspacing="0" style="font-size:
+ 14px; min-width: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;
+ border-collapse: initial !important;"><tr id="layout-row39846" class="layout
+ layout-row widget _widget_text style39846" style="margin: 0; padding: 0;"><td
+ id="layout-row-padding39846" valign="top" style="padding: 5px;"><table
+ width="100%" border="0" cellpadding="0" cellspacing="0" style="font-size:
+ 14px; min-width: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tr><td
+ id="text_div37500" class="td_text td_block" valign="top" align="left"
+ width="580" style="line-height: 150%; margin: 0; outline: none; padding: 0;
+ color: inherit; font-size: 12px; font-weight: inherit; line-height: 1.5;
+ text-decoration: inherit; font-family: Arial; mso-line-height-rule:
+ exactly;"> <div data-line-height="1.5" style="line-height: 150%; margin: 0;
+ outline: none;padding: 0; line-height: 1.5; mso-line-height-rule: exactly;
+ font-size: 16px;"><span style="color: inherit; font-size: 16px; font-weight:
+ inherit; line-height: inherit; text-decoration: inherit;" class="">But do it
+ soon! Because this sale ends at midnight tomorrow night, and I'd rather you
+ didn't have to pay full price.<br><br>Talk soon,<br>Ryan<br><br><span
+ style="color: inherit; font-size: inherit; font-weight: bold; line-height:
+ inherit; text-decoration: inherit;" class="">P.S.</span> If you're serious
+ about getting your pages ranking in the #1 spot (and <span style="color:
+ inherit; font-size: inherit; font-weight: bold; line-height: inherit;
+ text-decoration: inherit;" class="">pulling in more sales!</span>), then my
+ new SEO course is the fastest, most informed way that I know of to help you
+ get it done.<br><br>You still have time to get it at the lowest price
+ offered, but only for...</span></div><!--[if (gte mso 12)&(lte mso 15)
+ ]><style data-ac-keep="true" data-ac-inline="false"> #text_div37500,
+ #text_div37500 div { line-height: 150% !important;
+ };</style><![endif]--></td></tr></table></td></tr></table></td></tr><tr><td
+ id="layout-row-margin39848" valign="top" style="padding: 0px;"><table
+ width="100%" border="0" cellpadding="0" cellspacing="0" style="font-size:
+ 14px; min-width: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;
+ border-collapse: initial !important;"><tr id="layout-row39848" class="layout
+ layout-row widget _widget_html style39848" style=""><td
+ id="layout-row-padding39848" valign="top" style="padding: 0px;"><table
+ width="100%" border="0" cellpadding="0" cellspacing="0" style="font-size:
+ 14px; min-width: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tr><td
+ id="html_div37502" width="600" align="left"> <center style="margin: 0;
+ outline: none; padding: 0;"><img
+ src="https://img1.niftyimages.com/6y5/l6-o/knjo" width="600"></center>
+ </td></tr></table></td></tr></table></td></tr><tr><td
+ id="layout-row-margin39847" valign="top" style="padding: 5px 5px 40px
+ 5px;"><table width="100%" border="0" cellpadding="0" cellspacing="0"
+ style="font-size: 14px; min-width: 100%; mso-table-lspace: 0pt;
+ mso-table-rspace: 0pt; border-collapse: initial !important;"><tr
+ id="layout-row39847" class="layout layout-row widget _widget_text style39847"
+ style="margin: 0; padding: 0;"><td id="layout-row-padding39847" valign="top"
+ style="padding: 5px;"><table width="100%" border="0" cellpadding="0"
+ cellspacing="0" style="font-size: 14px; min-width: 100%; mso-table-lspace:
+ 0pt; mso-table-rspace: 0pt;"><tr><td id="text_div37501" class="td_text
+ td_block" valign="top" align="left" width="580" style="line-height: 150%;
+ margin: 0; outline: none; padding: 0; color: inherit; font-size: 12px;
+ font-weight: inherit; line-height: 1.5; text-decoration: inherit;
+ font-family: Arial; mso-line-height-rule: exactly;"> <div style="line-height:
+ 150%; margin: 0; outline: none; padding: 0;line-height: 1.5;
+ mso-line-height-rule: exactly; font-size: 16px;"
+ data-line-height="1.5">Here's the link for you:<br><a
+ =?utf-8?q?href=3D=22https=3A=2F=2Fdigitalmarketer47196=2Elt=2Eacemlnb=2Ecom=2FProd=2Flink-t?=
+ =?utf-8?q?racker=3FredirectUrl=3DaHR0cHMlM0ElMkYlMkZ3d3cuZGlnaXRhbG1hcmtldG?=
+ =?utf-8?q?VyLmNvbSUyRmxwJTJGc2VhcmNoLW1hcmtldGluZy1tYXN0ZXJ5JTJGJTNGdXR?=
+ =?utf-8?q?tX3NvdXJjZSUzRGFjdGl2ZWNhbXBhaWduJTI2dXRtX21lZGl1bSUzRGVtYWls?=
+ =?utf-8?q?JTI2dXRtX2NhbXBhaWduJTNEMjEwMiUyNTIwc2VvJTI1MjBjZXJ0aWZpY2F0a?=
+ =?utf-8?q?W9uJTI2dXRtX3Rlcm0lM0RtNg=3D=3D&a=3D25815130&account=3Ddigitalmarkete?=
+ =?utf-8?q?r47196%2Eactivehosted%2Ecom&email=3Di%2Bb14kkDvlB5v3Q7WQpYd2QOP?=
+ =?utf-8?q?8ZXmRzMvz3Yw%2BcA7gI%3D&s=3D454b211ef078a7ed2eadf56aefc7e759&i=3D?=
+ =?utf-8?q?1909A3943A1A80084=22?= data-ac-default-color="1" target="_blank"
+ style="margin: 0; outline: none; padding: 0; color: #009ffd; text-decoration:
+ underline;"><span style="color: ; font-size: inherit; font-weight: inherit;
+ line-height: inherit; text-decoration:
+ =?utf-8?q?inherit=3B=22=3Ehttps=3A=2F=2Fwww=2Edigitalmarketer=2Ecom=2Flp=2Fsearch-marketing?=
+ =?utf-8?q?-mastery=2F=3C=2Fspan=3E=3C=2Fa=3E=3C=2Fdiv=3E=3C!--=5Bif?= (gte
+ mso 12)&(lte mso 15) ]><style data-ac-keep="true" data-ac-inline="false">
+ #text_div37501, #text_div37501 div { line-height: 150% !important;
+ };</style><![endif]--></td></tr></table></td></tr></table></td></tr><tr
+ id="layout-row39841" class="layout layout-row clear-this "><td
+ id="layout-row-padding39841" valign="top"><table width="100%" border="0"
+ cellpadding="0" cellspacing="0" style="font-size: 14px; min-width: 100%;
+ mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tr><td
+ id="layout_table_b3cb046d0661d268d8d59ac4291896dda7e568e2" valign="top"
+ width="125"><table cellpadding="0" cellspacing="0" border="0" class="layout
+ layout-table " width="125" style="font-size: 14px; min-width: 100%;
+ mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tr><td
+ id="layout-row-margin39840" valign="top"><table width="100%" border="0"
+ cellpadding="0" cellspacing="0" style="font-size: 14px; min-width: 100%;
+ mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tr id="layout-row39840"
+ class="layout layout-row widget _widget_picture " align="left"><td
+ id="layout-row-padding39840" valign="top"><table width="100%" border="0"
+ cellpadding="0" cellspacing="0" style="font-size: 14px; min-width:
+ 100%;mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tr><td class="image-td"
+ align="left" valign="top" width="125"><img
+ =?utf-8?q?src=3D=22https=3A=2F=2Fdigitalmarketer47196=2Eimgus11=2Ecom=2Fpublic=2F=2Fd2f8c32?=
+ =?utf-8?q?f80cdc98f8bbc4dd605f7cca0=2Epng=3Fr=3D1532057838=22?= alt=""
+ width="117" style="display: block; border: none; outline: none; width: 117px;
+ opacity: 1; max-width:
+ 100%;"></td></tr></table></td></tr></table></td></tr></table></td><td
+ id="layout_table_09aa1a9f04354f1ff1ba0a52ba2e2c77912d544f" valign="top"
+ width="475"><table cellpadding="0" cellspacing="0" border="0" class="layout
+ layout-table " width="475" style="font-size: 14px; min-width: 100%;
+ mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tr><td
+ id="layout-row-margin39835" valign="top" style="padding: 5px 0px 5px
+ 0;"><table width="100%" border="0" cellpadding="0" cellspacing="0"
+ style="font-size: 14px; min-width: 100%; mso-table-lspace: 0pt;
+ mso-table-rspace: 0pt; border-collapse: initial !important;"><tr
+ id="layout-row39835" class="layout layout-row widget _widget_text style39835"
+ style="margin: 0; padding: 0;"><td id="layout-row-padding39835" valign="top"
+ style="padding: 0;"><table width="100%" border="0" cellpadding="0"
+ cellspacing="0" style="font-size: 14px; min-width: 100%; mso-table-lspace:
+ 0pt; mso-table-rspace: 0pt;"><tr><td id="text_div37490" class="td_text
+ td_block" valign="top" align="left" width="475" style="line-height:131%;
+ margin: 0; outline: none; padding: 0; color: inherit; font-size: 12px;
+ font-weight: inherit; line-height: 1.31; text-decoration: inherit;
+ font-family: Arial; mso-line-height-rule: exactly;"> <div style="line-height:
+ 131%; margin: 0; outline: none; padding: 0; font-size: 15px; line-height:
+ 1.31; mso-line-height-rule: exactly;" data-line-height="1.31"> <div
+ style="margin: 0; outline: none; padding: 0;"> <div style="margin: 0;
+ outline: none; padding: 0;"> <div style="margin: 0; outline: none; padding:
+ 0;"> <span style="color: inherit; font-size: inherit; font-weight: inherit;
+ line-height: inherit; text-decoration: inherit; font-family: arial,
+ helvetica, sans;" class=""><span style="color: inherit; font-size: inherit;
+ font-weight: bold; line-height: inherit; text-decoration: inherit;" class="">
+ Ryan Deiss</span><br>Co-Founder & CEO<br>DigitalMarketer</span></div> </div>
+ </div> </div><!--[if (gte mso 12)&(lte mso 15) ]><style data-ac-keep="true"
+ data-ac-inline="false"> #text_div37490, #text_div37490 div { line-height:
+ 131% !important;
+ };</style><![endif]--></td></tr></table></td></tr></table></td></tr><tr><td
+ id="layout-row-margin39842" valign="top" style="padding: 0px;"><table
+ width="100%" border="0" cellpadding="0" cellspacing="0" style="font-size:
+ 14px; min-width: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;
+ border-collapse: initial !important;"><tr id="layout-row39842" class="layout
+ layout-row widget _widget_social style39842" style=""><td
+ id="layout-row-padding39842" valign="top" style="padding: 2px;"><table
+ width="100%" border="0" cellpadding="0" cellspacing="0" style="font-size:
+ 14px; min-width: 100%; mso-table-lspace: 0pt; mso-table-rspace:
+ 0pt;"><tr><td><table width="100%" cellspacing="0" cellpadding="0"
+ style="font-size: 14px; min-width: 100%; mso-table-lspace: 0pt;
+ mso-table-rspace: 0pt;"><tr><td width="475" align="left"> <center
+ style="margin: 0; outline: none; padding: 0; font-size: 0px;"> <table
+ class="_ac_social_table" cellspacing="0" cellpadding="0" align="left"
+ style="font-size: 0; min-width: auto!important; mso-table-lspace:
+ 0pt;mso-table-rspace: 0pt; margin: auto!important; display:
+ inline-block!important; text-align: left!important;"><tr><td align="center"
+ valign="middle" width="37"
+ =?utf-8?q?style=3D=22display=3Ainline-block!important=3Bfont-size=3A0=3Bwidth=3A37px!?=
+ =?utf-8?q?important=3B=22=3E=3Cdiv?= class="__ac_social_icons" style="margin:
+ 0; outline: none; padding: 0;"><a
+ =?utf-8?q?href=3D=22https=3A=2F=2Fdigitalmarketer47196=2Elt=2Eacemlnb=2Ecom=2FProd=2Flink-t?=
+ =?utf-8?q?racker=3FredirectUrl=3DaHR0cHMlM0ElMkYlMkZ0d2l0dGVyLmNvbSUyRnJ5YW?=
+ =?utf-8?q?5kZWlzcw=3D=3D&a=3D25815130&account=3Ddigitalmarketer47196%2Eactiveho?=
+ =?utf-8?q?sted%2Ecom&email=3Di%2Bb14kkDvlB5v3Q7WQpYd2QOP8ZXmRzMvz3Yw%2BcA?=
+ =?utf-8?q?7gI%3D&s=3D454b211ef078a7ed2eadf56aefc7e759&i=3D1909A3943A1A80085?=
+ =?utf-8?q?=22?= id="twitter" class="__ac_social_icon_link" style="margin: 0;
+ outline: none; padding: 0; color: #009ffd;"><img
+ =?utf-8?q?src=3D=22https=3A=2F=2Fdigitalmarketer47196=2Eimg-us6=2Ecom=2F=5Fsocial=5F=2Fflat-c?=
+ =?utf-8?q?olor-square-twitter=2Epng=22?= border="0" width="37" style="border:
+ none;"></a></div></td><td width="9"
+ =?utf-8?q?style=3D=22display=3Ainline-block!important=3Bfont-size=3A0=3Bwidth=3A9?=
+ =?utf-8?q?px!important=3B=22=3E=C2=A0=3C=2Ftd=3E=3Ctd_align=3D=22center=22_valign=3D=22middle=22?=
+ width="37"
+ =?utf-8?q?style=3D=22display=3Ainline-block!important=3Bfont-size=3A0=3Bwidth=3A37px!?=
+ =?utf-8?q?important=3B=22=3E=3Cdiv?= class="__ac_social_icons" style="margin:
+ 0; outline: none; padding: 0;"><a
+ =?utf-8?q?href=3D=22https=3A=2F=2Fdigitalmarketer47196=2Elt=2Eacemlnb=2Ecom=2FProd=2Flink-t?=
+ =?utf-8?q?racker=3FredirectUrl=3DaHR0cHMlM0ElMkYlMkZ3d3cubGlua2VkaW4uY29tJT?=
+ =?utf-8?q?JGaW4lMkZyeWFuZGVpc3MlMkY=3D&a=3D25815130&account=3Ddigitalmarketer?=
+ =?utf-8?q?47196%2Eactivehosted%2Ecom&email=3Di%2Bb14kkDvlB5v3Q7WQpYd2QOP8?=
+ =?utf-8?q?ZXmRzMvz3Yw%2BcA7gI%3D&s=3D454b211ef078a7ed2eadf56aefc7e759&i=3D1?=
+ =?utf-8?q?909A3943A1A80086=22?= id="linkedin" class="__ac_social_icon_link"
+ style="margin: 0; outline: none; padding: 0; color: #009ffd;"><img
+ =?utf-8?q?src=3D=22https=3A=2F=2Fdigitalmarketer47196=2Eimg-us6=2Ecom=2F=5Fsocial=5F=2Fflat-c?=
+ =?utf-8?q?olor-square-linkedin=2Epng=22?= border="0" width="37"
+ style="border: none;"></a></div></td></tr></table></center> </td>
+ =?utf-8?q?=3C=2Ftr=3E=3C=2Ftable=3E=3C=2Ftd=3E=3C=2Ftr=3E=3C=2Ftable=3E=3C=2Ftd=3E=3C=2Ftr=3E=3C=2Ftable=3E=3C=2Ftd=3E=3C=2Ftr=3E=3C=2F?=
+ =?utf-8?q?table=3E=3C=2Ftd=3E=3C=2Ftr=3E=3C=2Ftable=3E=3C=2Ftd=3E=3C=2Ftr=3E=3Ctr=3E=3Ctd?=
+ id="layout-row-margin39838" valign="top"><table width="100%" border="0"
+ cellpadding="0" cellspacing="0" style="font-size: 14px; min-width: 100%;
+ mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tr id="layout-row39838"
+ class="layout layout-row widget _widget_spacer "><td
+ id="layout-row-padding39838" valign="top"><table width="100%" border="0"
+ cellpadding="0" cellspacing="0" style="font-size: 14px; min-width: 100%;
+ mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tr><td valign="top"
+ height="20"><div class="spacer" style="margin: 0; outline: none; padding: 0;
+ height: 20px;"><table cellpadding="0" cellspacing="0" border="0" width="100%"
+ style="font-size: 14px; min-width: 100%; mso-table-lspace: 0pt;
+ mso-table-rspace: 0pt;"><tr><td class="spacer-body" valign="top" height="20"
+ =?utf-8?q?width=3D=22600=22=3E=C2=A0=3C=2Ftd=3E=3C=2Ftr=3E=3C=2Ftable=3E=3C=2Fdiv=3E=3C=2Ftd=3E=3C=2Ftr=3E=3C=2Ftable=3E=3C=2F?=
+ =?utf-8?q?td=3E=3C=2Ftr=3E=3C=2Ftable=3E=3C=2Ftd=3E=3C=2Ftr=3E=3Ctr=3E=3Ctd?=
+ id="layout-row-margin39837" valign="top"><table width="100%" border="0"
+ cellpadding="0" cellspacing="0" style="font-size: 14px; min-width: 100%;
+ mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tr id="layout-row39837"
+ class="layout layout-row widget _widget_break "><td
+ id="layout-row-padding39837" valign="top" style="line-height: 0;
+ mso-line-height-rule: exactly;"><table width="100%" border="0"
+ cellpadding="0" cellspacing="0" style="font-size: 14px; min-width: 100%;
+ mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse;
+ line-height: 0; mso-line-height-rule: exactly;"><tr><td height="12"
+ style="font-size: 12px; height: 12px; line-height: 0; mso-line-height-rule:
+ exactly;"></td></tr><tr><td align="center" height="1" width="600"
+ style="line-height: 0; mso-line-height-rule: exactly;"> <table align="center"
+ border="0" cellpadding="0" cellspacing="0" height="1" width="600"
+ style="font-size: 14px; min-width: auto!important; mso-table-lspace: 0pt;
+ mso-table-rspace: 0pt; border-collapse: collapse; line-height: 0;
+ mso-line-height-rule: exactly; width: 100%; max-width: 100%;"><tr><td
+ class="break-line" bgcolor="#000000" height="1" width="600"
+ style="line-height: 1px; mso-line-height-rule: exactly; height: 1px; width:
+ 600px; background-color: #000000;"> </td> </tr></table></td> </tr><tr><td
+ height="12" style="font-size: 12px; height: 12px; line-height: 0;
+ mso-line-height-rule:
+ exactly;"></td></tr></table></td></tr></table></td></tr><tr><td
+ id="layout-row-margin39839" valign="top"><table width="100%" border="0"
+ cellpadding="0" cellspacing="0" style="font-size: 14px; min-width: 100%;
+ mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tr id="layout-row39839"
+ class="layout layout-row widget _widget_spacer "><td
+ id="layout-row-padding39839" valign="top"><table width="100%" border="0"
+ cellpadding="0" cellspacing="0" style="font-size: 14px; min-width: 100%;
+ mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tr><td valign="top"
+ height="10"><div class="spacer" style="margin: 0; outline: none; padding: 0;
+ height: 10px;"><table cellpadding="0" cellspacing="0" border="0" width="100%"
+ style="font-size: 14px; min-width: 100%; mso-table-lspace: 0pt;
+ mso-table-rspace: 0pt;"><tr><td class="spacer-body" valign="top" height="10"
+ =?utf-8?q?width=3D=22600=22=3E=C2=A0=3C=2Ftd=3E=3C=2Ftr=3E=3C=2Ftable=3E=3C=2Fdiv=3E=3C=2Ftd=3E=3C=2Ftr=3E=3C=2Ftable=3E=3C=2F?=
+ =?utf-8?q?td=3E=3C=2Ftr=3E=3C=2Ftable=3E=3C=2Ftd=3E=3C=2Ftr=3E=3Ctr=3E=3Ctd?=
+ id="layout-row-margin39836" valign="top" style="padding: 0;"><table
+ width="100%" border="0" cellpadding="0" cellspacing="0" style="font-size:
+ 14px; min-width: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;
+ border-collapse: initial !important;"><tr id="layout-row39836" class="layout
+ layout-row widget _widget_text style39836" style="margin: 0; padding: 0;"><td
+ id="layout-row-padding39836" valign="top" style="padding: 0 0 20px 0;"><table
+ width="100%" border="0" cellpadding="0" cellspacing="0" style="font-size:
+ 14px; min-width: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tr><td
+ id="text_div37491" class="td_text td_block" valign="top" align="left"
+ width="600" style="line-height: 140%; margin: 0; outline: none; padding: 0;
+ color: inherit; font-size: 12px; font-weight: inherit; line-height: 1.4;
+ text-decoration: inherit; font-family: Arial; mso-line-height-rule:
+ exactly;"> <div style="line-height: 140%; margin: 0; outline: none; padding:
+ 0;line-height: 1.4; mso-line-height-rule: exactly; font-size: 11px;"
+ data-line-height="1.4"> <span class="" style="color: inherit; font-size:
+ 11px; font-weight: inherit; line-height: inherit; text-decoration: inherit;">
+ </span><div style="margin: 0; outline: none; padding: 0; text-align:
+ center;"><span style="color: #555555; font-size: 12px; font-weight: inherit;
+ line-height: inherit; text-decoration: inherit;" class="">Sent to:
+ nikitkovalevskiy@gmail.com</span></div><div style="margin: 0; outline: none;
+ padding: 0; text-align: center;"><span style="color: #555555; font-size:
+ 12px; font-weight: inherit; line-height: inherit; text-decoration: inherit;"
+ class=""><span style="color: #555555; font-size: 12px; font-weight: 400;
+ line-height: inherit; text-decoration: inherit; font-family: arial;
+ font-style: normal;">DigitalMarketer, 4330 Gaines Ranch Loop, 120, Austin, TX
+ 78735, United States</span><br><br></span></div><div style="margin: 0;
+ outline: none; padding: 0; text-align: center;"><span style="color: #555555;
+ font-size: 12px; font-weight: inherit; line-height: inherit; text-decoration:
+ inherit;" class=""><div style="margin: 0; outline: none; padding: 0; display:
+ inline;">Know someone =?utf-8?b?d2hv4oCZZA==?= like this email? Forward it to
+ a friend!<br>Did someone forward this email to you? <a
+ =?utf-8?q?href=3D=22https=3A=2F=2Fdigitalmarketer47196=2Elt=2Eacemlnb=2Ecom=2FProd=2Flink-t?=
+ =?utf-8?q?racker=3FredirectUrl=3DaHR0cHMlM0ElMkYlMkZ3d3cuZGlnaXRhbG1hcmtldG?=
+ =?utf-8?q?VyLmNvbSUyRmluc2lkZXIlMkY=3D&a=3D25815130&account=3Ddigitalmarketer?=
+ =?utf-8?q?47196%2Eactivehosted%2Ecom&email=3Di%2Bb14kkDvlB5v3Q7WQpYd2QOP8?=
+ =?utf-8?q?ZXmRzMvz3Yw%2BcA7gI%3D&s=3D454b211ef078a7ed2eadf56aefc7e759&i=3D1?=
+ =?utf-8?q?909A3943A1A80087=22?= style="margin: 0; outline: none; padding: 0;
+ color: #555555; text-decoration: underline;" class=""><span style="color:
+ #555555; font-size: inherit; font-weight: inherit; line-height: inherit;
+ text-decoration: inherit;">Become a subscriber!</span></a> <br>Don't want
+ future emails? </div><a
+ =?utf-8?q?href=3D=22http=3A=2F=2Fdigitalmarketer47196=2Eactivehosted=2Ecom=2Fproc=2Ephp=3Fn?=
+ =?utf-8?q?l=3D1&c=3D1909&m=3D3943&s=3D454b211ef078a7ed2eadf56aefc7e759&act=3Dunsu?=
+ =?utf-8?q?b=22?= style="margin: 0; outline: none; padding: 0; color: #555555;
+ text-decoration: underline;" target="_blank"><span style="color: #555555;
+ font-size: inherit; font-weight: inherit; line-height: inherit;
+ text-decoration: inherit;">Unsubscribe</span></a></span><br
+ style="text-align: inherit; color: #333333;"></div> </div><!--[if (gte mso
+ 12)&(lte mso 15) ]><style data-ac-keep="true" data-ac-inline="false">
+ #text_div37491, #text_div37491 div { line-height: 140% !important;
+ };</style><![endif]--></td></tr></table></td></tr></table></td></tr><tr><td
+ id="layout-row-margin39843" valign="top"><table width="100%" border="0"
+ cellpadding="0" cellspacing="0" style="font-size: 14px; min-width: 100%;
+ mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tr id="layout-row39843"
+ class="layout layout-row widget _widget_picture " align="center"><td
+ id="layout-row-padding39843" valign="top"><table width="100%" border="0"
+ cellpadding="0" cellspacing="0" style="font-size: 14px; min-width: 100%;
+ mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tr><td class="image-td"
+ align="center" valign="top" width="600"><img
+ =?utf-8?q?src=3D=22https=3A=2F=2Fdigitalmarketer47196=2Eimgus11=2Ecom=2Fpublic=2F=2F4f14aaa?=
+ =?utf-8?q?c5a5752b358e3a3217688a1c2=2Epng=3Fr=3D1686675965=22?= alt=""
+ width="50" style="display: block; border: none; outline: none; width: 50px;
+ opacity: 1; max-width:
+ =?utf-8?q?100%=3B=22=3E=3C=2Ftd=3E=3C=2Ftr=3E=3C=2Ftable=3E=3C=2Ftd=3E=3C=2Ftr=3E=3C=2Ftable=3E=3C=2Ftd=3E=3C=2Ftr=3E=3C=2Ftable=3E?=
+ =?utf-8?q?=3C=2Ftd=3E=3C=2Ftr=3E=3C=2Ftable=3E=3C=2Ftd=3E=3C=2Ftr=3E=3C=2Ftable=3E=3C=2Fdiv=3E=3Cimg?=
+ =?utf-8?q?_src=3D=22https=3A=2F=2Fdigitalmarketer47196=2Elt=2Eacemlnb=2Ecom=2FProd=2Flink-tr?=
+ =?utf-8?q?acker=3Fnl=3D1&c=3D1909&m=3D3943&s=3D454b211ef078a7ed2eadf56aefc7e759&l?=
+ =?utf-8?q?=3Dopen&account=3Ddigitalmarketer47196=2Eactivehosted=2Ecom=22?=
+ border="0" width="1" height="1"
+ =?utf-8?q?style=3D=22display=3Ablock=3Bwidth=3A1px!important=3Bmin-width=3A1px!import?=
+ =?utf-8?q?ant=3Bmax-width=3A1px!important=3Bheight=3A1px!important=3Bborder=3A0=3Bove?=
+ =?utf-8?q?rflow=3Ahidden=3B=22?= /><br clear="all" /></body></html>
+Content-Type: multipart/alternative; boundary="=-uapE5YAUuJN2324GGv7TGA=="
+
+--=-uapE5YAUuJN2324GGv7TGA==
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: base64
+Content-Id: <5b885e6a-2414-406f-bf30-87fe9c563297>
+
+aHR0cHM6Ly9kaWdpdGFsbWFya2V0ZXI0NzE5Ni5sdC5hY2VtbG5iLmNvbS9Qcm9kL2xpbmst
+dHJhY2tlcj9yZWRpcmVjdFVybD1hSFIwY0hNbE0wRWxNa1lsTWtaM2QzY3VaR2xuYVhSaGJH
+MWhjbXRsZEdWeUxtTnZiU1V5Um14d0pUSkdjMlZoY21Ob0xXMWhjbXRsZEdsdVp5MXRZWE4w
+WlhKNUpUSkdKVE5HZFhSdFgzTnZkWEpqWlNVelJHRmpkR2wyWldOaGJYQmhhV2R1SlRJMmRY
+UnRYMjFsWkdsMWJTVXpSR1Z0WVdsc0pUSTJkWFJ0WDJOaGJYQmhhV2R1SlRORU1qRXdNaVV5
+TlRJd2MyVnZKVEkxTWpCalpYSjBhV1pwWTJGMGFXOXVKVEkyZFhSdFgzUmxjbTBsTTBSdE5n
+PT0mYT0yNTgxNTEzMCZhY2NvdW50PWRpZ2l0YWxtYXJrZXRlcjQ3MTk2JTJFYWN0aXZlaG9z
+dGVkJTJFY29tJmVtYWlsPWklMkJiMTRra0R2bEI1djNRN1dRcFlkMlFPUDhaWG1Sek12ejNZ
+dyUyQmNBN2dJJTNEJnM9NDU0YjIxMWVmMDc4YTdlZDJlYWRmNTZhZWZjN2U3NTkmaT0xOTA5
+QTM5NDNBMUE4MDA4NA0KDQpIYXZlIHlvdSBldmVyIHJlY2VpdmVkIGEgRGlnaXRhbE1hcmtl
+dGVyIGNlcnRpZmljYXRpb24sIEl2YW4/DQoNCklmIHNvLCB0aGVuIHlvdSBhbHJlYWR5IGtu
+b3cgeW91J3JlIGdldHRpbmcgdXAtdG8tZGF0ZSBlZHVjYXRpb24sIHByb3Zlbg0KdGFjdGlj
+cywgYW5kIHN0cmF0ZWdpZXMgeW91IGNhbiBwdXQgdG8gd29yayByaWdodCBhd2F5Lg0KDQpU
+aGF0IG1lYW5zLCBiZXR0ZXIgbGVhZHMgYW5kIG1vcmUgc2FsZXMgZm9yIHlvdXIgYnVzaW5l
+c3MhDQoNCkFuZCB5b3UgY2FuIGJlIHN1cmUgeW91J3JlIGdldHRpbmcgZXhwZXJ0IGludGVs
+LCBiZWNhdXNlIHdlIGRvIHRoaXMNCnN0dWZmIGF0IERNLCBhbmQgd2Ugd29yayB3aXRoIHRo
+ZSB3b3JsZCdzIGJlc3QgbWFya2V0ZXJzIGRvaW5nIHRoaXMNCnN0dWZmIGZvciB0aGVpciBi
+dXNpbmVzc2VzLg0KDQpBbmQgb25jZSB3ZSBrbm93IHdoYXQgd29ya3Mgd2UgZG9jdW1lbnQg
+dGhlIGV2ZXItbG92aW5nIGNyYXAgb3V0IG9mIGl0DQpzbyB0aGF0IHlvdSBjYW4gZG8gaXQg
+dG9vIQ0KDQpSaWdodCBub3csIHlvdSBjYW4gZ2V0IG91ciBCcmFuZCBORVcgU2VhcmNoIEVu
+Z2luZSBPcHRpbWl6YXRpb24gQ291cnNlDQphbmQgQ2VydGlmaWNhdGlvbg0KLA0KdXBkYXRl
+ZCB3aXRoIHRlc3RlZCBhbmQgcHJvdmVuIFNFTyB0YWN0aWNzIHRoYXQgZ2V0IHlvdSBmb3Vu
+ZCBieSB5b3VyDQpwcm9zcGVjdHMsIGluY2x1ZGluZzoNCg0KMS4gNDIgTkVXIHZpZGVvIGlu
+c3RydWN0aW9uIGxlc3NvbnMgbGVkIGJ5IDIgb2YgdGhlIGluZHVzdHJ5J3MgbGVhZGluZw0K
+U2VhcmNoIEVuZ2luZSBPcHRpbWl6ZXJzOg0KKiBEaWdpdGFsTWFya2V0ZXIncyBzZW5pb3Ig
+U0VPIFN0cmF0ZWdpc3QgYW5kIERpcmVjdG9yIG9mIENvbnRlbnQgJg0KUHJvZHVjdCwgQW1h
+bmRhIFBvd2VsbA0KDQoqIEdsb2JhbCBTRU8gU3RyYXRlZ2lzdCBhdCBJQk0sIFRlY2huaWNh
+bCBTRU8gc3BlY2lhbGlzdCwgYW5kIFNlYXJjaA0KRW5naW5lIEpvdXJuYWwgY29udHJpYnV0
+b3IgYW5kIGluZHVzdHJ5IGV2ZW50IHNwZWFrZXIsIEplc3NlIE1jRG9uYWxkDQoNCjIuIENv
+dXJzZSBXb3JrYm9vayB3aXRoIDQgZG93bmxvYWRhYmxlIHBsYW5uaW5nIGd1aWRlcw0KMy4g
+Q3JlZGVudGlhbCBCYWRnZSAmIENlcnRpZmljYXRlIGZyb20gRGlnaXRhbE1hcmtldGVyDQoN
+CkFuZCBpZiBhbGwgVEhBVCdTIG5vdCBlbm91Z2guLi4NCg0KVG8gY2VsZWJyYXRlIHRoZSBs
+YXVuY2ggb2YgdGhpcyBicmFuZCBuZXcgY291cnNlLCB5b3UgY2FuIHNhdmUgJDQwMA0KKHRo
+YXQncyA4MSUgT0ZGISkgb24gb3VyIG5ldyBTRU8gQ2VydGlmaWNhdGlvbiByaWdodCBub3c6
+DQoNClNlY3VyZSBZb3VyIE5ldyBXaW5uaW5nIFNFTyBTdHJhdGVneQ0KDQpCdXQgZG8gaXQg
+c29vbiEgQmVjYXVzZSB0aGlzIHNhbGUgZW5kcyBhdCBtaWRuaWdodCB0b21vcnJvdyBuaWdo
+dCwgYW5kDQpJJ2QgcmF0aGVyIHlvdSBkaWRuJ3QgaGF2ZSB0byBwYXkgZnVsbCBwcmljZS4N
+Cg0KVGFsayBzb29uLA0KUnlhbg0KDQpQLlMuIElmIHlvdSdyZSBzZXJpb3VzIGFib3V0IGdl
+dHRpbmcgeW91ciBwYWdlcyByYW5raW5nIGluIHRoZSAjMSBzcG90DQooYW5kIHB1bGxpbmcg
+aW4gbW9yZSBzYWxlcyEpLCB0aGVuIG15IG5ldyBTRU8gY291cnNlIGlzIHRoZSBmYXN0ZXN0
+LA0KbW9zdCBpbmZvcm1lZCB3YXkgdGhhdCBJIGtub3cgb2YgdG8gaGVscCB5b3UgZ2V0IGl0
+IGRvbmUuDQoNCllvdSBzdGlsbCBoYXZlIHRpbWUgdG8gZ2V0IGl0IGF0IHRoZSBsb3dlc3Qg
+cHJpY2Ugb2ZmZXJlZCwgYnV0IG9ubHkNCmZvci4uLg0KDQpIZXJlJ3MgdGhlIGxpbmsgZm9y
+IHlvdToNCmh0dHBzOi8vZGlnaXRhbG1hcmtldGVyNDcxOTYubHQuYWNlbWxuYi5jb20vUHJv
+ZC9saW5rLXRyYWNrZXI/cmVkaXJlY3RVcmw9YUhSMGNITWxNMEVsTWtZbE1rWjNkM2N1Wkds
+bmFYUmhiRzFoY210bGRHVnlMbU52YlNVeVJteHdKVEpHYzJWaGNtTm9MVzFoY210bGRHbHVa
+eTF0WVhOMFpYSjVKVEpHJmE9MjU4MTUxMzAmYWNjb3VudD1kaWdpdGFsbWFya2V0ZXI0NzE5
+NiUyRWFjdGl2ZWhvc3RlZCUyRWNvbSZlbWFpbD1pJTJCYjE0a2tEdmxCNXYzUTdXUXBZZDJR
+T1A4WlhtUnpNdnozWXclMkJjQTdnSSUzRCZzPTQ1NGIyMTFlZjA3OGE3ZWQyZWFkZjU2YWVm
+YzdlNzU5Jmk9MTkwOUEzOTQzQTFBODAwODgNCg0KUnlhbiBEZWlzcw0KQ28tRm91bmRlciAm
+IENFTw0KRGlnaXRhbE1hcmtldGVyDQoNCmh0dHBzOi8vZGlnaXRhbG1hcmtldGVyNDcxOTYu
+bHQuYWNlbWxuYi5jb20vUHJvZC9saW5rLXRyYWNrZXI/cmVkaXJlY3RVcmw9YUhSMGNITWxN
+MEVsTWtZbE1rWjBkMmwwZEdWeUxtTnZiU1V5Um5KNVlXNWtaV2x6Y3c9PSZhPTI1ODE1MTMw
+JmFjY291bnQ9ZGlnaXRhbG1hcmtldGVyNDcxOTYlMkVhY3RpdmVob3N0ZWQlMkVjb20mZW1h
+aWw9aSUyQmIxNGtrRHZsQjV2M1E3V1FwWWQyUU9QOFpYbVJ6TXZ6M1l3JTJCY0E3Z0klM0Qm
+cz00NTRiMjExZWYwNzhhN2VkMmVhZGY1NmFlZmM3ZTc1OSZpPTE5MDlBMzk0M0ExQTgwMDg1
+IA0KDQrCoA0KDQpodHRwczovL2RpZ2l0YWxtYXJrZXRlcjQ3MTk2Lmx0LmFjZW1sbmIuY29t
+L1Byb2QvbGluay10cmFja2VyP3JlZGlyZWN0VXJsPWFIUjBjSE1sTTBFbE1rWWxNa1ozZDNj
+dWJHbHVhMlZrYVc0dVkyOXRKVEpHYVc0bE1rWnllV0Z1WkdWcGMzTWxNa1k9JmE9MjU4MTUx
+MzAmYWNjb3VudD1kaWdpdGFsbWFya2V0ZXI0NzE5NiUyRWFjdGl2ZWhvc3RlZCUyRWNvbSZl
+bWFpbD1pJTJCYjE0a2tEdmxCNXYzUTdXUXBZZDJRT1A4WlhtUnpNdnozWXclMkJjQTdnSSUz
+RCZzPTQ1NGIyMTFlZjA3OGE3ZWQyZWFkZjU2YWVmYzdlNzU5Jmk9MTkwOUEzOTQzQTFBODAw
+ODYgDQoNCsKgDQoNCsKgDQoNClNlbnQgdG86IG5pa2l0a292YWxldnNraXlAZ21haWwuY29t
+DQoNCkRpZ2l0YWxNYXJrZXRlciwgNDMzMCBHYWluZXMgUmFuY2ggTG9vcCwgMTIwLCBBdXN0
+aW4sIFRYIDc4NzM1LCBVbml0ZWQgU3RhdGVzDQoNCktub3cgc29tZW9uZSB3aG8nZCBsaWtl
+IHRoaXMgZW1haWw/IEZvcndhcmQgaXQgdG8gYSBmcmllbmQhDQpEaWQgc29tZW9uZSBmb3J3
+YXJkIHRoaXMgZW1haWwgdG8geW91PyBCZWNvbWUgYSBzdWJzY3JpYmVyIQ0KDQpEb24ndCB3
+YW50IGZ1dHVyZSBlbWFpbHM/IA0KDQpVbnN1YnNjcmliZSANCl9fX19fX19fX19fX19fX19f
+DQoNClNlbnQgdG8gbmlraXRrb3ZhbGV2c2tpeUBnbWFpbC5jb20NCg0KVW5zdWJzY3JpYmU6
+DQpodHRwOi8vZGlnaXRhbG1hcmtldGVyNDcxOTYuYWN0aXZlaG9zdGVkLmNvbS9wcm9jLnBo
+cD9ubD0xJmFtcDtjPTE5MDkmYW1wO209Mzk0MyZhbXA7cz00NTRiMjExZWYwNzhhN2VkMmVh
+ZGY1NmFlZmM3ZTc1OSZhbXA7YWN0PXVuc3ViDQoNCkRpZ2l0YWxNYXJrZXRlciwgNDMzMCBH
+YWluZXMgUmFuY2ggTG9vcCwgMTIwLCBBdXN0aW4sIFRYIDc4NzM1LCBVbml0ZWQgU3RhdGVz
+
+
+--=-uapE5YAUuJN2324GGv7TGA==
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+Content-Id: <fa50793e-b657-4c2b-8abb-4b3302fd6076>
+
+<!DOCTYPE html><html>
+<head><!--[if !mso]><meta http-equiv=3D"X-UA-Compatible" content=3D"IE=
+=3Dedge"><!--<![endif]--><meta http-equiv=3D"Content-Type" content=3D"=
+text/html; charset=3Dutf-8"><meta http-equiv=3D"Content-Language" cont=
+ent=3D"en-us"><meta name=3D"format-detection" content=3D"telephone=3Dn=
+o"><meta name=3D"format-detection" content=3D"date=3Dno"><meta name=3D=
+"format-detection" content=3D"address=3Dno"><meta name=3D"format-detec=
+tion" content=3D"email=3Dno"><style data-ac-keep=3D"true"> .ExternalCl=
+ass { width: 100%; background: inherit; background-color: inherit; } .=
+ExternalClass p, .ExternalClass ul, .ExternalClass ol { Margin: 0; } .=
+undoreset div p, .undoreset p { margin-bottom: 20px; } div[class^=3D"a=
+olmail_divbody"] { overflow: auto; } [owa] #ac-footer { padding: 20px =
+0px !important; background: inherit; background-color: inherit; } </st=
+yle><style data-ac-keep=3D"true">
+@media only screen and (max-width: 600px) { /*------------------------=
+-------------------------------------------------*\ Abandoned Cart wid=
+get \*----------------------------------------------------------------=
+--------*/ .td_abandoned-cart img {display: block;padding-right: 0 !im=
+portant;padding-bottom: 0 !important;width: 100% !important;max-width:=
+ 100% !important;height: auto !important;} body { padding: 0!important=
+; font-size:1em!important; } * { -webkit-box-sizing: border-box; -moz-=
+box-sizing: border-box; box-sizing: border-box; } *[class].divbody {-w=
+ebkit-text-size-adjust:none !important; width:auto !important;} *[clas=
+s].td_picture img {width:auto !important;} *[class].td_text { line-hei=
+ght: 110%; } *[class].td_button { width: auto; } /* Collapse all block=
+ elements */ :not(.body) table { display: block!important; float:none!=
+important; border-collapse:collapse !important; width:100% !important;=
+ min-width:100% !important; clear:both!important; } :not(.body) thead,
+:not(.body) tbody, :not(.body) tr { display:block!important; float:non=
+e!important; width:100% !important; } :not(.body) th, :not(.body) td, =
+:not(.body) p { display:block!important; float:none!important; width:1=
+00% !important; clear:both!important; } /* Remove browser default styl=
+ing for elements */ ul, ol { margin-left: 20px; margin-bottom: 10px; m=
+argin-top: 10px; -webkit-margin-before: 0; -webkit-margin-after: 0; -w=
+ebkit-padding-start: 0; } /* Set default height for spacer once collap=
+se */ *[class].spacer { height: auto!important; } a[href^=3Ddate]{ col=
+or:inherit !important; text-decoration:none !important;} a[href^=3Dtel=
+ephone]{ color:inherit !important; text-decoration:none !important;} a=
+[href^=3Daddress]{ color:inherit !important; text-decoration:none !imp=
+ortant;} a[href^=3Demail]{ color:inherit !important; text-decoration:n=
+one !important;} /* Default table cell height */ td[height=3D"0"]{heig=
+ht:0px!important;font-size:0px!important;line-height:0px!important;}
+td[height=3D"11"]{height:11px!important;font-size:11px!important;line-=
+height:11px!important;}
+td[height=3D"12"]{height:12px!important;font-size:12px!important;line-=
+height:12px!important;} /*--------------------------------------------=
+-----------------------------*\ Product Widget \*---------------------=
+----------------------------------------------------*/ .td_product > d=
+iv { float: none !important; width: 100% !important; margin-bottom: 20=
+px !important; } .td_product > div img { width: 75% !important; } /* D=
+efault social icons */ *[class].ac-social-icon-16 {width:16px !importa=
+nt; height:16px !important;} *[class].ac-social-icon-24 {width:24px !i=
+mportant; height:24px !important;} *[class].ac-social-icon-28 {width:2=
+8px !important; height:28px !important;} *[class].__ac_social_icons { =
+margin-right: 0px !important; } }
+</style><style data-ac-keep=3D"true"> @media only screen and (max-widt=
+h: 320px) { #layout-row39837 .break-line { width: 100% !important; mar=
+gin: auto !important; } #layout-row39840 img { width: 100% !important;=
+ height: auto !important; max-width: 117px !important; } #layout-row39=
+843 img { width: 100% !important; height: auto !important; max-width: =
+50px !important; } #layout-row39844 img { width: 100% !important; heig=
+ht: auto !important; max-width: 320px !important; } div.divbody { padd=
+ing: 20px !important; } .td_rss .rss-item img.iphone_large_image { wid=
+th: auto !important; } u + .body { display: table !important; width: 1=
+00vw !important; min-width: 100vw !important; } u + .body table { disp=
+lay: table !important; width: 100% !important; min-width: 100% !import=
+ant; } u + .body td { display: block !important; width: 100% !importan=
+t; min-width: 100% !important; } u + .body img { display: inline-block=
+ !important; margin: auto !important; width: auto !important;
+vertical-align: bottom !important; } u + .body center { display: block=
+ !important; margin: auto !important; width: 100% !important; min-widt=
+h: 100% !important; text-align: center !important; } u + .body table._=
+ac_social_table, u + .body table._ac_social_table td, u + .body table.=
+_ac_social_table div, u + .body table._ac_social_table a { display: in=
+line-block !important; margin: auto !important; width: auto !important=
+; min-width: auto !important; text-align: center !important; } u + .bo=
+dy table._ac_social_table img { display: inline-block !important; marg=
+in: auto !important; width: 32px !important; min-width: 32px !importan=
+t; max-width: 32px !important; }
+}
+@media only screen and (max-width: 375px) { #layout-row39837 .break-li=
+ne { width: 100% !important; margin: auto !important; } #layout-row398=
+40 img { width: 100% !important; height: auto !important; max-width: 1=
+17px !important; } #layout-row39843 img { width: 100% !important; heig=
+ht: auto !important; max-width: 50px !important; } #layout-row39844 im=
+g { width: 100% !important; height: auto !important; max-width: 375px =
+!important; } div.divbody { padding: 20px !important; } .td_rss .rss-i=
+tem img.iphone_large_image { width: auto !important; } u + .body { dis=
+play: table !important; width: 100vw !important; min-width: 100vw !imp=
+ortant; } u + .body table { display: table !important; width: 100% !im=
+portant; min-width: 100% !important; } u + .body td { display: block !=
+important; width: 100% !important; min-width: 100% !important; } u + .=
+body img { display: inline-block !important; margin: auto !important; =
+width: auto !important; vertical-align: bottom !important; } u + .body
+center { display: block !important; margin: auto !important; width: 10=
+0% !important; min-width: 100% !important; text-align: center !importa=
+nt; } u + .body table._ac_social_table, u + .body table._ac_social_tab=
+le td, u + .body table._ac_social_table div, u + .body table._ac_socia=
+l_table a { display: inline-block !important; margin: auto !important;=
+ width: auto !important; min-width: auto !important; text-align: cente=
+r !important; } u + .body table._ac_social_table img { display: inline=
+-block !important; margin: auto !important; width: 32px !important; mi=
+n-width: 32px !important; max-width: 32px !important; }
+}
+@media only screen and (max-width: 414px) { #layout-row39837 .break-li=
+ne { width: 100% !important; margin: auto !important; } #layout-row398=
+40 img { width: 100% !important; height: auto !important; max-width: 1=
+17px !important; } #layout-row39843 img { width: 100% !important; heig=
+ht: auto !important; max-width: 50px !important; } #layout-row39844 im=
+g { width: 100% !important; height: auto !important; max-width: 414px =
+!important; } div.divbody { padding: 20px !important; } .td_rss .rss-i=
+tem img.iphone_large_image { width: auto !important; } u + .body { dis=
+play: table !important; width: 100vw !important; min-width: 100vw !imp=
+ortant; } u + .body table { display: table !important; width: 100% !im=
+portant; min-width: 100% !important; } u + .body td { display: block !=
+important; width: 100% !important; min-width: 100% !important; } u + .=
+body img { display: inline-block !important; margin: auto !important; =
+width: auto !important; vertical-align: bottom !important; } u + .body
+center { display: block !important; margin: auto !important; width: 10=
+0% !important; min-width: 100% !important; text-align: center !importa=
+nt; } u + .body table._ac_social_table, u + .body table._ac_social_tab=
+le td, u + .body table._ac_social_table div, u + .body table._ac_socia=
+l_table a { display: inline-block !important; margin: auto !important;=
+ width: auto !important; min-width: auto !important; text-align: cente=
+r !important; } u + .body table._ac_social_table img { display: inline=
+-block !important; margin: auto !important; width: 32px !important; mi=
+n-width: 32px !important; max-width: 32px !important; }
+}
+@media only screen and (max-width: 667px) { #layout-row39837 .break-li=
+ne { width: 100% !important; margin: auto !important; } #layout-row398=
+40 img { width: 100% !important; height: auto !important; max-width: 1=
+17px !important; } #layout-row39843 img { width: 100% !important; heig=
+ht: auto !important; max-width: 50px !important; } #layout-row39844 im=
+g { width: 100% !important; height: auto !important; max-width: 650px =
+!important; } div.divbody { padding: 20px !important; } .td_rss .rss-i=
+tem img.iphone_large_image { width: auto !important; } u + .body { dis=
+play: table !important; width: 100vw !important; min-width: 100vw !imp=
+ortant; } u + .body table { display: table !important; width: 100% !im=
+portant; min-width: 100% !important; } u + .body td { display: block !=
+important; width: 100% !important; min-width: 100% !important; } u + .=
+body img { display: inline-block !important; margin: auto !important; =
+width: auto !important; vertical-align: bottom !important; } u + .body
+center { display: block !important; margin: auto !important; width: 10=
+0% !important; min-width: 100% !important; text-align: center !importa=
+nt; } u + .body table._ac_social_table, u + .body table._ac_social_tab=
+le td, u + .body table._ac_social_table div, u + .body table._ac_socia=
+l_table a { display: inline-block !important; margin: auto !important;=
+ width: auto !important; min-width: auto !important; text-align: cente=
+r !important; } u + .body table._ac_social_table img { display: inline=
+-block !important; margin: auto !important; width: 32px !important; mi=
+n-width: 32px !important; max-width: 32px !important; }
+} </style><!--[if !mso]><!-- webfonts --><!--<![endif]--><!--[if lt ms=
+o 12]> <![endif]--></head><body id=3D"ac-designer" class=3D"body" styl=
+e=3D"font-family: Arial; line-height: 1.1; margin: 0px; background-col=
+or: #ffffff; width: 100%; text-align: left;">		<div style=3D"display:n=
+one; padding:0; height:1px; font-size:1px; background-color:inherit !i=
+mportant; color:inherit !important; line-height:1px; mso-hide:all;">
+			81% off!
+		</div>
+<div class=3D"divbody" style=3D"margin: 0px; outline: none; padding: 0=
+px; color: #000000; font-family: arial; line-height: 1.1; width: 100%;=
+ background-color: #ffffff; background: #ffffff; text-align: left;"><t=
+able class=3D"template-table" border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0" width=3D"100%" align=3D"left" style=3D"font-size: 14px; min-w=
+idth: auto; mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-c=
+olor: #ffffff; background: #ffffff;"><tr><td align=3D"left" valign=3D"=
+top" width=3D"100%"><table class=3D"template-table" border=3D"0" cellp=
+adding=3D"0" cellspacing=3D"0" width=3D"600" bgcolor=3D"#ffffff" style=
+=3D"font-size: 14px; min-width: auto; mso-table-lspace: 0pt; mso-table=
+-rspace: 0pt; max-width: 600px;"><tr><td id=3D"layout_table_05f2474605=
+2fc2758c031f8dcea47e92ba6c7180" valign=3D"top" align=3D"left" width=3D=
+"600"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" class=3D=
+"layout layout-table root-table" width=3D"600" style=3D"font-size: 14p=
+x; min-width: 100%; mso-table-lspace: 0pt;
+mso-table-rspace: 0pt;"><tr><td id=3D"layout-row-margin39844" valign=3D=
+"top"><table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"font-size: 14px; min-width: 100%; mso-table-lspace: 0p=
+t; mso-table-rspace: 0pt;"><tr id=3D"layout-row39844" class=3D"layout =
+layout-row widget _widget_picture " align=3D"center"><td id=3D"layout-=
+row-padding39844" valign=3D"top"><table width=3D"100%" border=3D"0" ce=
+llpadding=3D"0" cellspacing=3D"0" style=3D"font-size: 14px; min-width:=
+ 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tr><td class=3D=
+"image-td" align=3D"center" valign=3D"top" width=3D"600"><a href=3D"ht=
+tps://digitalmarketer47196.lt.acemlnb.com/Prod/link-tracker?redirectUr=
+l=3DaHR0cHMlM0ElMkYlMkZ3d3cuZGlnaXRhbG1hcmtldGVyLmNvbSUyRmxwJTJGc2Vhcm=
+NoLW1hcmtldGluZy1tYXN0ZXJ5JTJGJTNGdXRtX3NvdXJjZSUzRGFjdGl2ZWNhbXBhaWdu=
+JTI2dXRtX21lZGl1bSUzRGVtYWlsJTI2dXRtX2NhbXBhaWduJTNEMjEwMiUyNTIwc2VvJT=
+I1MjBjZXJ0aWZpY2F0aW9uJTI2dXRtX3Rlcm0lM0RtNg=3D=3D&a=3D25815130&accoun=
+t=3Ddigitalmarketer47196%2Eactivehosted%2Ecom&email=3Di%2Bb14kkDvlB5v3=
+Q7WQpYd2QOP8ZXmRzMvz3Yw%2BcA7gI%3D&s=3D454b211ef078a7ed2eadf56aefc7e75=
+9&i=3D1909A3943A1A80084" style=3D"margin: 0;
+outline: none; padding: 0; color: #009ffd; display: block; min-width: =
+100%;"><img src=3D"https://digitalmarketer47196.imgus11.com/public//ae=
+4a98e688fb2c86855f72e57f5c2707.png?r=3D864601903" alt=3D"" width=3D"44=
+9" style=3D"border: none; display: block; outline: none; width: 449px;=
+ opacity: 1; max-width: 100%;"></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td id=3D"layout-row-margin39849" valign=3D"top" style=3D"padding:=
+ 20px 5px 5px 5px;"><table width=3D"100%" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" style=3D"font-size: 14px; min-width: 100%; mso-ta=
+ble-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: initial !impo=
+rtant;"><tr id=3D"layout-row39849" class=3D"layout layout-row widget _=
+widget_text style39849" style=3D"margin: 0; padding: 0;"><td id=3D"lay=
+out-row-padding39849" valign=3D"top" style=3D"padding: 5px;"><table wi=
+dth=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D=
+"font-size: 14px; min-width: 100%; mso-table-lspace: 0pt; mso-table-rs=
+pace: 0pt;"><tr><td id=3D"text_div37503" class=3D"td_text td_block" va=
+lign=3D"top" align=3D"left" width=3D"580" style=3D"line-height: 150%; =
+margin: 0; outline: none; padding: 0; color: inherit; font-size: 12px;=
+ font-weight: inherit; line-height: 1.5; text-decoration: inherit; fon=
+t-family: Arial; mso-line-height-rule: exactly;"> <div style=3D"line-h=
+eight: 150%; margin: 0; outline: none; padding: 0;
+line-height: 1.5; mso-line-height-rule: exactly;" data-line-height=3D"=
+1.5"><div style=3D"margin: 0; outline: none; padding: 0; text-align: l=
+eft;"><span style=3D"color: inherit; font-size: 16px; font-weight: inh=
+erit; line-height: inherit; text-decoration: inherit; text-align: inhe=
+rit;">Have you ever received a DigitalMarketer certification, Ivan?</s=
+pan><br></div>
+<br><span style=3D"color: inherit; font-size: 16px; font-weight: inher=
+it; line-height: inherit; text-decoration: inherit;">If so, then you a=
+lready know you're getting up-to-date education, proven tactics, and s=
+trategies you can put to work right away.</span><br><br><span style=3D=
+"color: inherit; font-size: 16px; font-weight: inherit; line-height: i=
+nherit; text-decoration: inherit;">That means, better leads and more s=
+ales for your business!</span><br><br><span style=3D"color: inherit; f=
+ont-size: 16px; font-weight: inherit; line-height: inherit; text-decor=
+ation: inherit;">And you can be sure you're getting expert intel, beca=
+use we do this stuff at DM, and we work with <span style=3D"color: inh=
+erit; font-size: inherit; font-weight: bold; line-height: inherit; tex=
+t-decoration: inherit;" class=3D"">the world's best marketers doing th=
+is stuff for <span style=3D"color: inherit; font-size: inherit; font-w=
+eight: inherit; line-height: inherit; text-decoration: inherit; font-s=
+tyle:
+italic;" class=3D"">their</span> businesses.</span></span><br><br><spa=
+n style=3D"color: inherit; font-size: 16px; font-weight: inherit; line=
+-height: inherit; text-decoration: inherit;">And once we know what wor=
+ks we document the ever-loving crap out of it so that you can do it to=
+o!</span><br><br><span style=3D"color: inherit; font-size: 16px; font-=
+weight: inherit; line-height: inherit; text-decoration: inherit;">Righ=
+t now, you can get our <a href=3D"https://digitalmarketer47196.lt.acem=
+lnb.com/Prod/link-tracker?redirectUrl=3DaHR0cHMlM0ElMkYlMkZ3d3cuZGlnaX=
+RhbG1hcmtldGVyLmNvbSUyRmxwJTJGc2VhcmNoLW1hcmtldGluZy1tYXN0ZXJ5JTJGJTNG=
+dXRtX3NvdXJjZSUzRGFjdGl2ZWNhbXBhaWduJTI2dXRtX21lZGl1bSUzRGVtYWlsJTI2dX=
+RtX2NhbXBhaWduJTNEMjEwMiUyNTIwc2VvJTI1MjBjZXJ0aWZpY2F0aW9uJTI2dXRtX3Rl=
+cm0lM0RtNg=3D=3D&a=3D25815130&account=3Ddigitalmarketer47196%2Eactiveh=
+osted%2Ecom&email=3Di%2Bb14kkDvlB5v3Q7WQpYd2QOP8ZXmRzMvz3Yw%2BcA7gI%3D=
+&s=3D454b211ef078a7ed2eadf56aefc7e759&i=3D1909A3943A1A80084" data-ac-d=
+efault-color=3D"1" target=3D"_blank" style=3D"margin: 0; outline: none=
+; padding: 0; color: #009ffd; text-decoration: underline;"><span style=
+=3D"color: ;
+font-size: inherit; font-weight: inherit; line-height: inherit; text-d=
+ecoration: inherit;">Brand NEW Search Engine Optimization Course and C=
+ertification</span></a>, updated with tested and proven SEO tactics th=
+at get you found by your prospects, including:<br><br>1. 42 NEW video =
+instruction lessons led by 2 of the industry's <span style=3D"color: i=
+nherit; font-size: inherit; font-weight: bold; line-height: inherit; t=
+ext-decoration: inherit;" class=3D"">leading Search Engine Optimizers:=
+</span><br><ul style=3D"margin: 0 0 0 40px; padding: 0;"><li style=3D"=
+display: list-item; line-height: inherit; list-style-type: disc; margi=
+n: 0 0 0 3px;"><span style=3D"color: inherit; font-size: 16px; font-we=
+ight: inherit; line-height: inherit; text-decoration: inherit;"><span =
+style=3D"color: inherit; font-size: inherit; font-weight: bold; line-h=
+eight: inherit; text-decoration: inherit;" class=3D"">DigitalMarketer'=
+s senior SEO Strategist</span> and Director of Content & Product, Aman=
+da
+Powell</span></li><li style=3D"display: list-item; line-height: inheri=
+t; list-style-type: disc; margin: 0 0 0 3px;"><span style=3D"color: in=
+herit; font-size: 16px; font-weight: inherit; line-height: inherit; te=
+xt-decoration: inherit;"><span style=3D"color: inherit; font-size: inh=
+erit; font-weight: bold; line-height: inherit; text-decoration: inheri=
+t;" class=3D"">Global SEO Strategist at IBM</span>, Technical SEO spec=
+ialist, and Search Engine Journal contributor and industry event speak=
+er, Jesse McDonald</span></li></ul></span><span style=3D"color: inheri=
+t; font-size: 16px; font-weight: inherit; line-height: inherit; text-d=
+ecoration: inherit; text-align: inherit;">2. <span style=3D"color: inh=
+erit; font-size: inherit; font-weight: bold; line-height: inherit; tex=
+t-decoration: inherit;" class=3D"">Course Workbook with 4 downloadable=
+ planning guides</span><br>3. <span style=3D"color: inherit; font-size=
+: inherit; font-weight: bold; line-height: inherit; text-decoration: i=
+nherit;"
+class=3D"">Credential Badge & Certificate</span> from DigitalMarketer<=
+/span><br style=3D"font-size: 16px;"><span style=3D"color: inherit; fo=
+nt-size: 16px; font-weight: inherit; line-height: inherit; text-decora=
+tion: inherit;"><br>And if all THAT'S not enough...<br><br>To celebrat=
+e the launch of this brand new course, you can <span style=3D"color: i=
+nherit; font-size: inherit; font-weight: bold; line-height: inherit; t=
+ext-decoration: inherit;" class=3D"">save $400</span> (that's 81% OFF!=
+) on our new SEO Certification right now:</span><br></div>
+<!--[if (gte mso 12)&(lte mso 15) ]>
+<style data-ac-keep=3D"true" data-ac-inline=3D"false"> #text_div37503,=
+ #text_div37503 div { line-height: 150% !important; };
+</style>
+<![endif]--></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td id=3D"layout-row-margin39845" valign=3D"top" style=3D"padding:=
+ 5px;"><table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0" style=3D"font-size: 14px; min-width: 100%; mso-table-lspace: 0=
+pt; mso-table-rspace: 0pt; border-collapse: initial !important;"><tr i=
+d=3D"layout-row39845" class=3D"layout layout-row widget _widget_button=
+ style39845" style=3D""><td id=3D"layout-row-padding39845" valign=3D"t=
+op" style=3D"padding: 5px;"><table width=3D"100%" border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0" style=3D"font-size: 14px; min-width: 100%=
+; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tr><td class=3D"td_b=
+utton td_block customizable" valign=3D"top" align=3D"left" width=3D"58=
+0"> <div class=3D"button-wrapper" style=3D"margin: 0; outline: none; p=
+adding: 0; text-align: center;">
+<!--[if mso]> <v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" x=
+mlns:w=3D"urn:schemas-microsoft-com:office:word" href=3D"https://digit=
+almarketer47196.lt.acemlnb.com/Prod/link-tracker?redirectUrl=3DaHR0cHM=
+lM0ElMkYlMkZ3d3cuZGlnaXRhbG1hcmtldGVyLmNvbSUyRmxwJTJGc2VhcmNoLW1hcmtld=
+GluZy1tYXN0ZXJ5JTJGJTNGdXRtX3NvdXJjZSUzRGFjdGl2ZWNhbXBhaWduJTI2dXRtX21=
+lZGl1bSUzRGVtYWlsJTI2dXRtX2NhbXBhaWduJTNEMjEwMiUyNTIwc2VvJTI1MjBjZXJ0a=
+WZpY2F0aW9uJTI2dXRtX3Rlcm0lM0RtNg=3D=3D&a=3D25815130&account=3Ddigital=
+marketer47196%2Eactivehosted%2Ecom&email=3Di%2Bb14kkDvlB5v3Q7WQpYd2QOP=
+8ZXmRzMvz3Yw%2BcA7gI%3D&s=3D454b211ef078a7ed2eadf56aefc7e759&i=3D1909A=
+3943A1A80084" style=3D"v-text-anchor:middle; width:386px; height:62px;=
+ font-weight: bold;" arcsize=3D"10%" strokecolor=3D"#B5B5B5" strokewei=
+ght=3D"0pt" fillcolor=3D"#23adf7" o:button=3D"true" o:allowincell=3D"t=
+rue" o:allowoverlap=3D"false" > <v:textbox inset=3D"2px,2px,2px,2px"> =
+<center style=3D"color:#ffffff;font-family:Arial; font-size:18px; font=
+-weight: bold;line-height: 1.1;">Secure Your New Winning SEO Strategy<=
+/center> </v:textbox> </v:roundrect>
+<![endif]--> <a href=3D"https://digitalmarketer47196.lt.acemlnb.com/Pr=
+od/link-tracker?redirectUrl=3DaHR0cHMlM0ElMkYlMkZ3d3cuZGlnaXRhbG1hcmtl=
+dGVyLmNvbSUyRmxwJTJGc2VhcmNoLW1hcmtldGluZy1tYXN0ZXJ5JTJGJTNGdXRtX3NvdX=
+JjZSUzRGFjdGl2ZWNhbXBhaWduJTI2dXRtX21lZGl1bSUzRGVtYWlsJTI2dXRtX2NhbXBh=
+aWduJTNEMjEwMiUyNTIwc2VvJTI1MjBjZXJ0aWZpY2F0aW9uJTI2dXRtX3Rlcm0lM0RtNg=
+=3D=3D&a=3D25815130&account=3Ddigitalmarketer47196%2Eactivehosted%2Eco=
+m&email=3Di%2Bb14kkDvlB5v3Q7WQpYd2QOP8ZXmRzMvz3Yw%2BcA7gI%3D&s=3D454b2=
+11ef078a7ed2eadf56aefc7e759&i=3D1909A3943A1A80084" style=3D"margin: 0;=
+ outline: none; padding: 12px; color: #ffffff; background-color: #23ad=
+f7; border: 0px solid #B5B5B5; border-radius: 3px; font-family: Arial;=
+ font-size: 18px; display: inline-block; line-height: 1.1; text-align:=
+ center; text-decoration: none; mso-hide: all;"> <span style=3D"color:=
+#ffffff;font-family:Arial;font-size:18px;font-weight: bold;"> Secure Y=
+our New Winning SEO Strategy </span> </a> </div>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td id=3D"layout-row-margin39846" valign=3D"top" style=3D"padding:=
+ 5px;"><table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0" style=3D"font-size: 14px; min-width: 100%; mso-table-lspace: 0=
+pt; mso-table-rspace: 0pt; border-collapse: initial !important;"><tr i=
+d=3D"layout-row39846" class=3D"layout layout-row widget _widget_text s=
+tyle39846" style=3D"margin: 0; padding: 0;"><td id=3D"layout-row-paddi=
+ng39846" valign=3D"top" style=3D"padding: 5px;"><table width=3D"100%" =
+border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"font-size: 1=
+4px; min-width: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><=
+tr><td id=3D"text_div37500" class=3D"td_text td_block" valign=3D"top" =
+align=3D"left" width=3D"580" style=3D"line-height: 150%; margin: 0; ou=
+tline: none; padding: 0; color: inherit; font-size: 12px; font-weight:=
+ inherit; line-height: 1.5; text-decoration: inherit; font-family: Ari=
+al; mso-line-height-rule: exactly;"> <div data-line-height=3D"1.5" sty=
+le=3D"line-height: 150%; margin: 0; outline: none;
+padding: 0; line-height: 1.5; mso-line-height-rule: exactly; font-size=
+: 16px;"><span style=3D"color: inherit; font-size: 16px; font-weight: =
+inherit; line-height: inherit; text-decoration: inherit;" class=3D"">B=
+ut do it soon! Because this sale ends at midnight tomorrow night, and =
+I'd rather you didn't have to pay full price.<br><br>Talk soon,<br>Rya=
+n<br><br><span style=3D"color: inherit; font-size: inherit; font-weigh=
+t: bold; line-height: inherit; text-decoration: inherit;" class=3D"">P=
+.S.</span> If you're serious about getting your pages ranking in the #=
+1 spot (and <span style=3D"color: inherit; font-size: inherit; font-we=
+ight: bold; line-height: inherit; text-decoration: inherit;" class=3D"=
+">pulling in more sales!</span>), then my new SEO course is the fastes=
+t, most informed way that I know of to help you get it done.<br><br>Yo=
+u still have time to get it at the lowest price offered, but only for.=
+..</span></div>
+<!--[if (gte mso 12)&(lte mso 15) ]>
+<style data-ac-keep=3D"true" data-ac-inline=3D"false"> #text_div37500,=
+ #text_div37500 div { line-height: 150% !important; };
+</style>
+<![endif]--></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td id=3D"layout-row-margin39848" valign=3D"top" style=3D"padding:=
+ 0px;"><table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0" style=3D"font-size: 14px; min-width: 100%; mso-table-lspace: 0=
+pt; mso-table-rspace: 0pt; border-collapse: initial !important;"><tr i=
+d=3D"layout-row39848" class=3D"layout layout-row widget _widget_html s=
+tyle39848" style=3D""><td id=3D"layout-row-padding39848" valign=3D"top=
+" style=3D"padding: 0px;"><table width=3D"100%" border=3D"0" cellpaddi=
+ng=3D"0" cellspacing=3D"0" style=3D"font-size: 14px; min-width: 100%; =
+mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tr><td id=3D"html_div3=
+7502" width=3D"600" align=3D"left"> <center style=3D"margin: 0; outlin=
+e: none; padding: 0;"><img src=3D"https://img1.niftyimages.com/6y5/l6-=
+o/knjo" width=3D"600"></center> </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td id=3D"layout-row-margin39847" valign=3D"top" style=3D"padding:=
+ 5px 5px 40px 5px;"><table width=3D"100%" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" style=3D"font-size: 14px; min-width: 100%; mso-ta=
+ble-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: initial !impo=
+rtant;"><tr id=3D"layout-row39847" class=3D"layout layout-row widget _=
+widget_text style39847" style=3D"margin: 0; padding: 0;"><td id=3D"lay=
+out-row-padding39847" valign=3D"top" style=3D"padding: 5px;"><table wi=
+dth=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D=
+"font-size: 14px; min-width: 100%; mso-table-lspace: 0pt; mso-table-rs=
+pace: 0pt;"><tr><td id=3D"text_div37501" class=3D"td_text td_block" va=
+lign=3D"top" align=3D"left" width=3D"580" style=3D"line-height: 150%; =
+margin: 0; outline: none; padding: 0; color: inherit; font-size: 12px;=
+ font-weight: inherit; line-height: 1.5; text-decoration: inherit; fon=
+t-family: Arial; mso-line-height-rule: exactly;"> <div style=3D"line-h=
+eight: 150%; margin: 0; outline: none; padding: 0;
+line-height: 1.5; mso-line-height-rule: exactly; font-size: 16px;" dat=
+a-line-height=3D"1.5">Here's the link for you:<br><a href=3D"https://d=
+igitalmarketer47196.lt.acemlnb.com/Prod/link-tracker?redirectUrl=3DaHR=
+0cHMlM0ElMkYlMkZ3d3cuZGlnaXRhbG1hcmtldGVyLmNvbSUyRmxwJTJGc2VhcmNoLW1hc=
+mtldGluZy1tYXN0ZXJ5JTJGJTNGdXRtX3NvdXJjZSUzRGFjdGl2ZWNhbXBhaWduJTI2dXR=
+tX21lZGl1bSUzRGVtYWlsJTI2dXRtX2NhbXBhaWduJTNEMjEwMiUyNTIwc2VvJTI1MjBjZ=
+XJ0aWZpY2F0aW9uJTI2dXRtX3Rlcm0lM0RtNg=3D=3D&a=3D25815130&account=3Ddig=
+italmarketer47196%2Eactivehosted%2Ecom&email=3Di%2Bb14kkDvlB5v3Q7WQpYd=
+2QOP8ZXmRzMvz3Yw%2BcA7gI%3D&s=3D454b211ef078a7ed2eadf56aefc7e759&i=3D1=
+909A3943A1A80084" data-ac-default-color=3D"1" target=3D"_blank" style=3D=
+"margin: 0; outline: none; padding: 0; color: #009ffd; text-decoration=
+: underline;"><span style=3D"color: ; font-size: inherit; font-weight:=
+ inherit; line-height: inherit; text-decoration: inherit;">https://www=
+.digitalmarketer.com/lp/search-marketing-mastery/</span></a></div>
+<!--[if (gte mso 12)&(lte mso 15) ]>
+<style data-ac-keep=3D"true" data-ac-inline=3D"false"> #text_div37501,=
+ #text_div37501 div { line-height: 150% !important; };
+</style>
+<![endif]--></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr id=3D"layout-row39841" class=3D"layout layout-row clear-this "><td=
+ id=3D"layout-row-padding39841" valign=3D"top"><table width=3D"100%" b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"font-size: 14=
+px; min-width: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><t=
+r><td id=3D"layout_table_b3cb046d0661d268d8d59ac4291896dda7e568e2" val=
+ign=3D"top" width=3D"125"><table cellpadding=3D"0" cellspacing=3D"0" b=
+order=3D"0" class=3D"layout layout-table " width=3D"125" style=3D"font=
+-size: 14px; min-width: 100%; mso-table-lspace: 0pt; mso-table-rspace:=
+ 0pt;"><tr><td id=3D"layout-row-margin39840" valign=3D"top"><table wid=
+th=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"=
+font-size: 14px; min-width: 100%; mso-table-lspace: 0pt; mso-table-rsp=
+ace: 0pt;"><tr id=3D"layout-row39840" class=3D"layout layout-row widge=
+t _widget_picture " align=3D"left"><td id=3D"layout-row-padding39840" =
+valign=3D"top"><table width=3D"100%" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" style=3D"font-size: 14px; min-width: 100%;
+mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tr><td class=3D"image-=
+td" align=3D"left" valign=3D"top" width=3D"125"><img src=3D"https://di=
+gitalmarketer47196.imgus11.com/public//d2f8c32f80cdc98f8bbc4dd605f7cca=
+0.png?r=3D1532057838" alt=3D"" width=3D"117" style=3D"display: block; =
+border: none; outline: none; width: 117px; opacity: 1; max-width: 100%=
+;"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+<td id=3D"layout_table_09aa1a9f04354f1ff1ba0a52ba2e2c77912d544f" valig=
+n=3D"top" width=3D"475"><table cellpadding=3D"0" cellspacing=3D"0" bor=
+der=3D"0" class=3D"layout layout-table " width=3D"475" style=3D"font-s=
+ize: 14px; min-width: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0=
+pt;"><tr><td id=3D"layout-row-margin39835" valign=3D"top" style=3D"pad=
+ding: 5px 0px 5px 0;"><table width=3D"100%" border=3D"0" cellpadding=3D=
+"0" cellspacing=3D"0" style=3D"font-size: 14px; min-width: 100%; mso-t=
+able-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: initial !imp=
+ortant;"><tr id=3D"layout-row39835" class=3D"layout layout-row widget =
+_widget_text style39835" style=3D"margin: 0; padding: 0;"><td id=3D"la=
+yout-row-padding39835" valign=3D"top" style=3D"padding: 0;"><table wid=
+th=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"=
+font-size: 14px; min-width: 100%; mso-table-lspace: 0pt; mso-table-rsp=
+ace: 0pt;"><tr><td id=3D"text_div37490" class=3D"td_text td_block" val=
+ign=3D"top" align=3D"left" width=3D"475" style=3D"line-height:
+131%; margin: 0; outline: none; padding: 0; color: inherit; font-size:=
+ 12px; font-weight: inherit; line-height: 1.31; text-decoration: inher=
+it; font-family: Arial; mso-line-height-rule: exactly;"> <div style=3D=
+"line-height: 131%; margin: 0; outline: none; padding: 0; font-size: 1=
+5px; line-height: 1.31; mso-line-height-rule: exactly;" data-line-heig=
+ht=3D"1.31"> <div style=3D"margin: 0; outline: none; padding: 0;"> <di=
+v style=3D"margin: 0; outline: none; padding: 0;"> <div style=3D"margi=
+n: 0; outline: none; padding: 0;"> <span style=3D"color: inherit; font=
+-size: inherit; font-weight: inherit; line-height: inherit; text-decor=
+ation: inherit; font-family: arial, helvetica, sans;" class=3D""><span=
+ style=3D"color: inherit; font-size: inherit; font-weight: bold; line-=
+height: inherit; text-decoration: inherit;" class=3D""> Ryan Deiss</sp=
+an><br>Co-Founder & CEO<br>DigitalMarketer</span></div>
+ </div>
+ </div>
+ </div>
+<!--[if (gte mso 12)&(lte mso 15) ]>
+<style data-ac-keep=3D"true" data-ac-inline=3D"false"> #text_div37490,=
+ #text_div37490 div { line-height: 131% !important; };
+</style>
+<![endif]--></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td id=3D"layout-row-margin39842" valign=3D"top" style=3D"padding:=
+ 0px;"><table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0" style=3D"font-size: 14px; min-width: 100%; mso-table-lspace: 0=
+pt; mso-table-rspace: 0pt; border-collapse: initial !important;"><tr i=
+d=3D"layout-row39842" class=3D"layout layout-row widget _widget_social=
+ style39842" style=3D""><td id=3D"layout-row-padding39842" valign=3D"t=
+op" style=3D"padding: 2px;"><table width=3D"100%" border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0" style=3D"font-size: 14px; min-width: 100%=
+; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tr><td><table width=3D=
+"100%" cellspacing=3D"0" cellpadding=3D"0" style=3D"font-size: 14px; m=
+in-width: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tr><td=
+ width=3D"475" align=3D"left"> <center style=3D"margin: 0; outline: no=
+ne; padding: 0; font-size: 0px;"> <table class=3D"_ac_social_table" ce=
+llspacing=3D"0" cellpadding=3D"0" align=3D"left" style=3D"font-size: 0=
+; min-width: auto!important; mso-table-lspace: 0pt;
+mso-table-rspace: 0pt; margin: auto!important; display: inline-block!i=
+mportant; text-align: left!important;"><tr><td align=3D"center" valign=
+=3D"middle" width=3D"37" style=3D"display:inline-block!important;font-=
+size:0;width:37px!important;"><div class=3D"__ac_social_icons" style=3D=
+"margin: 0; outline: none; padding: 0;"><a href=3D"https://digitalmark=
+eter47196.lt.acemlnb.com/Prod/link-tracker?redirectUrl=3DaHR0cHMlM0ElM=
+kYlMkZ0d2l0dGVyLmNvbSUyRnJ5YW5kZWlzcw=3D=3D&a=3D25815130&account=3Ddig=
+italmarketer47196%2Eactivehosted%2Ecom&email=3Di%2Bb14kkDvlB5v3Q7WQpYd=
+2QOP8ZXmRzMvz3Yw%2BcA7gI%3D&s=3D454b211ef078a7ed2eadf56aefc7e759&i=3D1=
+909A3943A1A80085" id=3D"twitter" class=3D"__ac_social_icon_link" style=
+=3D"margin: 0; outline: none; padding: 0; color: #009ffd;"><img src=3D=
+"https://digitalmarketer47196.img-us6.com/_social_/flat-color-square-t=
+witter.png" border=3D"0" width=3D"37" style=3D"border: none;"></a></di=
+v>
+</td>
+<td width=3D"9" style=3D"display:inline-block!important;font-size:0;wi=
+dth:9px!important;">=C2=A0</td>
+<td align=3D"center" valign=3D"middle" width=3D"37" style=3D"display:i=
+nline-block!important;font-size:0;width:37px!important;"><div class=3D=
+"__ac_social_icons" style=3D"margin: 0; outline: none; padding: 0;"><a=
+ href=3D"https://digitalmarketer47196.lt.acemlnb.com/Prod/link-tracker=
+?redirectUrl=3DaHR0cHMlM0ElMkYlMkZ3d3cubGlua2VkaW4uY29tJTJGaW4lMkZyeWF=
+uZGVpc3MlMkY=3D&a=3D25815130&account=3Ddigitalmarketer47196%2Eactiveho=
+sted%2Ecom&email=3Di%2Bb14kkDvlB5v3Q7WQpYd2QOP8ZXmRzMvz3Yw%2BcA7gI%3D&=
+s=3D454b211ef078a7ed2eadf56aefc7e759&i=3D1909A3943A1A80086" id=3D"link=
+edin" class=3D"__ac_social_icon_link" style=3D"margin: 0; outline: non=
+e; padding: 0; color: #009ffd;"><img src=3D"https://digitalmarketer471=
+96.img-us6.com/_social_/flat-color-square-linkedin.png" border=3D"0" w=
+idth=3D"37" style=3D"border: none;"></a></div>
+</td>
+</tr>
+</table>
+</center> </td>
+ </tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td id=3D"layout-row-margin39838" valign=3D"top"><table width=3D"1=
+00%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"font-si=
+ze: 14px; min-width: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0p=
+t;"><tr id=3D"layout-row39838" class=3D"layout layout-row widget _widg=
+et_spacer "><td id=3D"layout-row-padding39838" valign=3D"top"><table w=
+idth=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D=
+"font-size: 14px; min-width: 100%; mso-table-lspace: 0pt; mso-table-rs=
+pace: 0pt;"><tr><td valign=3D"top" height=3D"20"><div class=3D"spacer"=
+ style=3D"margin: 0; outline: none; padding: 0; height: 20px;"><table =
+cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" style=3D=
+"font-size: 14px; min-width: 100%; mso-table-lspace: 0pt; mso-table-rs=
+pace: 0pt;"><tr><td class=3D"spacer-body" valign=3D"top" height=3D"20"=
+ width=3D"600">=C2=A0</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td id=3D"layout-row-margin39837" valign=3D"top"><table width=3D"1=
+00%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"font-si=
+ze: 14px; min-width: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0p=
+t;"><tr id=3D"layout-row39837" class=3D"layout layout-row widget _widg=
+et_break "><td id=3D"layout-row-padding39837" valign=3D"top" style=3D"=
+line-height: 0; mso-line-height-rule: exactly;"><table width=3D"100%" =
+border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"font-size: 1=
+4px; min-width: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; bo=
+rder-collapse: collapse; line-height: 0; mso-line-height-rule: exactly=
+;"><tr><td height=3D"12" style=3D"font-size: 12px; height: 12px; line-=
+height: 0; mso-line-height-rule: exactly;"></td>
+</tr>
+<tr><td align=3D"center" height=3D"1" width=3D"600" style=3D"line-heig=
+ht: 0; mso-line-height-rule: exactly;"> <table align=3D"center" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" height=3D"1" width=3D"600" =
+style=3D"font-size: 14px; min-width: auto!important; mso-table-lspace:=
+ 0pt; mso-table-rspace: 0pt; border-collapse: collapse; line-height: 0=
+; mso-line-height-rule: exactly; width: 100%; max-width: 100%;"><tr><t=
+d class=3D"break-line" bgcolor=3D"#000000" height=3D"1" width=3D"600" =
+style=3D"line-height: 1px; mso-line-height-rule: exactly; height: 1px;=
+ width: 600px; background-color: #000000;"> </td>
+ </tr>
+</table>
+</td>
+ </tr>
+<tr><td height=3D"12" style=3D"font-size: 12px; height: 12px; line-hei=
+ght: 0; mso-line-height-rule: exactly;"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td id=3D"layout-row-margin39839" valign=3D"top"><table width=3D"1=
+00%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"font-si=
+ze: 14px; min-width: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0p=
+t;"><tr id=3D"layout-row39839" class=3D"layout layout-row widget _widg=
+et_spacer "><td id=3D"layout-row-padding39839" valign=3D"top"><table w=
+idth=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D=
+"font-size: 14px; min-width: 100%; mso-table-lspace: 0pt; mso-table-rs=
+pace: 0pt;"><tr><td valign=3D"top" height=3D"10"><div class=3D"spacer"=
+ style=3D"margin: 0; outline: none; padding: 0; height: 10px;"><table =
+cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" style=3D=
+"font-size: 14px; min-width: 100%; mso-table-lspace: 0pt; mso-table-rs=
+pace: 0pt;"><tr><td class=3D"spacer-body" valign=3D"top" height=3D"10"=
+ width=3D"600">=C2=A0</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td id=3D"layout-row-margin39836" valign=3D"top" style=3D"padding:=
+ 0;"><table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" style=3D"font-size: 14px; min-width: 100%; mso-table-lspace: 0pt; =
+mso-table-rspace: 0pt; border-collapse: initial !important;"><tr id=3D=
+"layout-row39836" class=3D"layout layout-row widget _widget_text style=
+39836" style=3D"margin: 0; padding: 0;"><td id=3D"layout-row-padding39=
+836" valign=3D"top" style=3D"padding: 0 0 20px 0;"><table width=3D"100=
+%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"font-size=
+: 14px; min-width: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;=
+"><tr><td id=3D"text_div37491" class=3D"td_text td_block" valign=3D"to=
+p" align=3D"left" width=3D"600" style=3D"line-height: 140%; margin: 0;=
+ outline: none; padding: 0; color: inherit; font-size: 12px; font-weig=
+ht: inherit; line-height: 1.4; text-decoration: inherit; font-family: =
+Arial; mso-line-height-rule: exactly;"> <div style=3D"line-height: 140=
+%; margin: 0; outline: none; padding: 0;
+line-height: 1.4; mso-line-height-rule: exactly; font-size: 11px;" dat=
+a-line-height=3D"1.4"> <span class=3D"" style=3D"color: inherit; font-=
+size: 11px; font-weight: inherit; line-height: inherit; text-decoratio=
+n: inherit;"> </span><div style=3D"margin: 0; outline: none; padding: =
+0; text-align: center;"><span style=3D"color: #555555; font-size: 12px=
+; font-weight: inherit; line-height: inherit; text-decoration: inherit=
+;" class=3D"">Sent to: nikitkovalevskiy@gmail.com</span></div>
+<div style=3D"margin: 0; outline: none; padding: 0; text-align: center=
+;"><span style=3D"color: #555555; font-size: 12px; font-weight: inheri=
+t; line-height: inherit; text-decoration: inherit;" class=3D""><span s=
+tyle=3D"color: #555555; font-size: 12px; font-weight: 400; line-height=
+: inherit; text-decoration: inherit; font-family: arial; font-style: n=
+ormal;">DigitalMarketer, 4330 Gaines Ranch Loop, 120, Austin, TX 78735=
+, United States</span><br><br></span></div>
+<div style=3D"margin: 0; outline: none; padding: 0; text-align: center=
+;"><span style=3D"color: #555555; font-size: 12px; font-weight: inheri=
+t; line-height: inherit; text-decoration: inherit;" class=3D""><div st=
+yle=3D"margin: 0; outline: none; padding: 0; display: inline;">Know so=
+meone who=E2=80=99d like this email? Forward it to a friend!<br>Did so=
+meone forward this email to you? <a href=3D"https://digitalmarketer471=
+96.lt.acemlnb.com/Prod/link-tracker?redirectUrl=3DaHR0cHMlM0ElMkYlMkZ3=
+d3cuZGlnaXRhbG1hcmtldGVyLmNvbSUyRmluc2lkZXIlMkY=3D&a=3D25815130&accoun=
+t=3Ddigitalmarketer47196%2Eactivehosted%2Ecom&email=3Di%2Bb14kkDvlB5v3=
+Q7WQpYd2QOP8ZXmRzMvz3Yw%2BcA7gI%3D&s=3D454b211ef078a7ed2eadf56aefc7e75=
+9&i=3D1909A3943A1A80087" style=3D"margin: 0; outline: none; padding: 0=
+; color: #555555; text-decoration: underline;" class=3D""><span style=3D=
+"color: #555555; font-size: inherit; font-weight: inherit; line-height=
+: inherit; text-decoration: inherit;">Become a subscriber!</span></a> =
+<br>Don't want future emails? </div>
+<a href=3D"http://digitalmarketer47196.activehosted.com/proc.php?nl=3D=
+1&c=3D1909&m=3D3943&s=3D454b211ef078a7ed2eadf56aefc7e759&act=3Dunsub" =
+style=3D"margin: 0; outline: none; padding: 0; color: #555555; text-de=
+coration: underline;" target=3D"_blank"><span style=3D"color: #555555;=
+ font-size: inherit; font-weight: inherit; line-height: inherit; text-=
+decoration: inherit;">Unsubscribe</span></a></span><br style=3D"text-a=
+lign: inherit; color: #333333;"></div>
+ </div>
+<!--[if (gte mso 12)&(lte mso 15) ]>
+<style data-ac-keep=3D"true" data-ac-inline=3D"false"> #text_div37491,=
+ #text_div37491 div { line-height: 140% !important; };
+</style>
+<![endif]--></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td id=3D"layout-row-margin39843" valign=3D"top"><table width=3D"1=
+00%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"font-si=
+ze: 14px; min-width: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0p=
+t;"><tr id=3D"layout-row39843" class=3D"layout layout-row widget _widg=
+et_picture " align=3D"center"><td id=3D"layout-row-padding39843" valig=
+n=3D"top"><table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" style=3D"font-size: 14px; min-width: 100%; mso-table-lspace=
+: 0pt; mso-table-rspace: 0pt;"><tr><td class=3D"image-td" align=3D"cen=
+ter" valign=3D"top" width=3D"600"><img src=3D"https://digitalmarketer4=
+7196.imgus11.com/public//4f14aaac5a5752b358e3a3217688a1c2.png?r=3D1686=
+675965" alt=3D"" width=3D"50" style=3D"display: block; border: none; o=
+utline: none; width: 50px; opacity: 1; max-width: 100%;"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<img src=3D"https://digitalmarketer47196.lt.acemlnb.com/Prod/link-trac=
+ker?nl=3D1&c=3D1909&m=3D3943&s=3D454b211ef078a7ed2eadf56aefc7e759&l=3D=
+open&account=3Ddigitalmarketer47196.activehosted.com" border=3D"0" wid=
+th=3D"1" height=3D"1" style=3D"display:block;width:1px!important;min-w=
+idth:1px!important;max-width:1px!important;height:1px!important;border=
+:0;overflow:hidden;" /><br clear=3D"all" /></body>
+</html>
+--=-uapE5YAUuJN2324GGv7TGA==--

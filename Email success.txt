@@ -1,0 +1,8 @@
+Dear human, 
+
+Mail has been gotten successfully at {0}
+
+See attached screenshot of an error.
+
+Regards,
+Email Automation Robot

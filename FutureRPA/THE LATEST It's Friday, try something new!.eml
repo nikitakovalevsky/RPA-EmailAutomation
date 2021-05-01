@@ -1,0 +1,3294 @@
+Delivered-To: nikitkovalevskiy@gmail.com
+Received: by 172.16.224.35 with SMTP
+	id axgrxyqepup3h4871ifh4eegod6tfkib7brwea; Fri, 16 Apr 2021 20:05:00 GMT
+X-Google-Smtp-Source: ABdhPJxMoWBkqLXydRsihssIu+WKOmb5wSuAMvqZvb2c+wvEhpVCq8e+EDWzYm+h6wMvIjyBGm2Z
+X-Received: by 2002:a05:622a:14c9:: with SMTP id
+ u9mr778420qtx.313.1618603501279;        Fri, 16 Apr 2021 13:05:01 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1618603501; cv=none; d=google.com;
+	s=arc-20160816;
+	b=SCSmsHDEzGmaQrhdb0zyyJr4y9U/5KYs18TFq3/+ybF/OXBbodxWFTGM2DXlUYRfChPrv6YjxVm
+	kpFVNZetU34gb4iuak13+PqShY3KZ6UWSg0OHaeui5utLyFkziVL2ApmYzULAjct0364FcqIwM/eA
+	frYI7A+0cnJLr/FCGtPt3tS38sW4x7AJmc558vksbzoZ1xJoaF/Cw5Ojpi8oCMsHzFRZjS6ynFXVl
+	/56WISreD0p6z/5KO+d6RWVl9v7sNhwP3+pmQXC2QbfOqi97cN+rQ2AHR/KUhzmaDlDkSImQacMtX
+	mSGYyfK9/rh4xOgK7hVOtBkha4uVHldFQUjg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com;
+	s=arc-20160816;
+	h=feedback-id:precedence:form-sub:mime-version:subject:message-id:to:
+	reply-to:from:date:list-unsubscribe:dkim-signature:dkim-signature;
+	bh=YPcQCOacF8FhmJ5cMCMfEwdIlK7+iUFC26gwAToMxi4=;
+	b=GfW1MsJpzHscXfTXqmFymIFUxsUF0XF4jB7DnkOyZL9pc33n9bDICk5eS5sa9T6vKrtZniaYvWG
+	ytt12IA681khHiSq+kVNLUp60WaHdtQ9l06FjRJZFolMZdJ2ciR7fsnRDdKuuZR/GN6rh0KAPgkFr
+	0GzL59CdtYFhYDuCLkzWq636hdDLKYj214+66t06fQ4hD5x9jyHuDPRiITWPAwlLXdWh9x/Tbk+Oi
+	iuv6K/KD9JvNxjwWCDLD9FVWNtkOCYnxVEGzYZOUqHPCnwH0mIm0mqck2aHHB9+OBcdcV0X8/4i7V
+	pIVqnp27O+RI0QiEEjxEMgKiFuVw0bEz4GLg==
+ARC-Authentication-Results: i=1; mx.google.com;
+	dkim=pass header.i=@bf01x.hubspotemail.net header.s=hs1 header.b=FEChB+Ph;
+	dkim=pass header.i=@impactplus.com header.s=hs2-145335 header.b=okuvM9n+;
+	spf=pass
+	(google.com: domain of 1axbhz9dqi49z07uk4uemvh1ybf65rg0txymdy@bf01x.hubspotemail.net designates 158.247.18.74 as permitted sender)
+	smtp.mailfrom=1axbhz9dqi49z07uk4uemvh1ybf65rg0txymdy@bf01x.hubspotemail.net;
+	dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=impactplus.com
+Return-Path: <1axbhz9dqi49z07uk4uemvh1ybf65rg0txymdy@bf01x.hubspotemail.net>
+Received-SPF: pass (google.com: domain of
+ 1axbhz9dqi49z07uk4uemvh1ybf65rg0txymdy@bf01x.hubspotemail.net designates
+ 158.247.18.74 as permitted sender) client-ip=158.247.18.74;
+Authentication-Results: mx.google.com;
+	dkim=pass header.i=@bf01x.hubspotemail.net header.s=hs1 header.b=FEChB+Ph;
+	dkim=pass header.i=@impactplus.com header.s=hs2-145335 header.b=okuvM9n+;
+	spf=pass
+	(google.com: domain of 1axbhz9dqi49z07uk4uemvh1ybf65rg0txymdy@bf01x.hubspotemail.net designates 158.247.18.74 as permitted sender)
+	smtp.mailfrom=1axbhz9dqi49z07uk4uemvh1ybf65rg0txymdy@bf01x.hubspotemail.net;
+	dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=impactplus.com
+DKIM-Signature: v=1; s=hs2-145335; d=impactplus.com; i=@impactplus.com;
+	h=sender:from:reply-to:to:subject:mime-version:content-type:list-unsubscribe:
+	form-sub:feedback-id; a=rsa-sha256; c=relaxed/relaxed;
+	bh=YPcQCOacF8FhmJ5cMCMfEwdIlK7+iUFC26gwAToMxi4=;
+	b=okuvM9n+4/j2Cadaavtt8LgbwrpFyOJeflEQcm+d+YxYyeDInYtFYXxgQU3N2qvvW93J9MF90AX
+	dMGisWYEypCpBZjqrAh/8ANqkvW8wtbQGN+zJ0IlLjPkOL102ohbNyYhUYz0O1eVOZBhxDsjuqabw
+	v91RWCDUX7xIEQpPFTJAtAfWv0o9ZIpDZtfjMaRjrzL/x6MVyx75U980z3ApxVg5TNrK7H7vzn4DS
+	0BX6M5LyB68Ok3hy0050WxXflaeZKLURscLFTRz8DhgHkHBwDTKwCnVlhS2RWiLrZc+gDFGGdUkit
+	O6AJ2K6cbltXU+9+iRzFjM14PLgWSu1gqmXA==; q=dns/txt; t=1618603500;
+X-HS-Cid: 1axfbaw9pxg55kxnk7l15ul6wck5p9ju6s3geu
+List-Unsubscribe: =?utf-8?q?=3Cmailto=3A1axcu9qil4x3wkkq63tg6fi1adoqd4pfd62cie=40bf01x=2Ehubspote?=
+ =?utf-8?q?mail=2Enet=3Fsubject=3Dunsubscribe=3E?=
+Date: Fri, 16 Apr 2021 16:05:00 -0400
+From: Connor DeLaney <cdelaney@impactplus.com>
+Reply-To: cdelaney@impactplus.com
+To: nikitkovalevskiy@gmail.com
+Message-ID: <1618603325031.de6e8ba2-c236-4944-b1a3-9f0795aaed7f@bf01x.hubspotemail.net>
+Subject: THE LATEST: It's Friday, try something new!
+MIME-Version: 1.0
+Form-Sub: v=1; ip=none
+Precedence: bulk
+X-Report-Abuse-To: abuse@hubspot.com (see
+ https://www.hubspot.com/abuse-complaints)
+Feedback-ID: aedefd:aicatavy:aidf:HubSpot
+Uid: 3
+Folder: SearchEngines
+Sender: Connor DeLaney <cdelaney@impactplus.com>
+PlainText: It's been a long week. Why not find a fun new hobby to get into?
+ P.S Enjoy your weekly nonsense!Happy Friday y'all!I'm going to keep the intro
+ pretty short and sweet today since you and I both are looking forward to
+ shutting it down and relaxing this weekend.As you head into the weekend, take
+ a moment to think about something new you could (or should) be doing.For me,
+ I've been working on breaking my YouTube habit and replacing it with
+ something new like card games or volunteering.In all honesty, I'm fighting a
+ losing battle so far, but over time I'm confident it'll happen!Our community
+ in IMPACT+ has been chatting about this topic and surprising ourselves with
+ new habits or activities to try. Hop in and let us know what you're up to for
+ this weekend
+ =?utf-8?q?=28https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fe2t=2Fsc2=2FMm-nFbkMTfJW6mgx117GLTkbW?=
+ =?utf-8?q?79Tc3G6kfPHVW861MqQ8FSpPJf1KTlgd03?= ) and then check back in on
+ Monday to let us know how it went!Surprise yourself with a new habit!
+ =?utf-8?q?=28https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fe2t=2Fsc2=2FMm-nFbkMTfJW6mgx117GLTkbW?=
+ =?utf-8?q?79Tc3G6kfPHVW861MqQ8FSpPJf1KTlgd13?= )And now, here's THE
+ LATEST...18 email marketing best practices you need to know for 2021
+ (14-minute read
+ =?utf-8?q?=28https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fe2t=2Fsc2=2FMm-nFbkMTfJW6mgx117GLTkbW?=
+ =?utf-8?q?79Tc3G6kfPHVW861MqQ8FSpPJf1KTlgd23?= ) )Email marketing is a
+ critical component of almost any marketing strategy today. However, it only
+ works if you do it the right way. Don't worry, we've got you covered.
+ IMPACT's Director of Marketing and local email wizard Kristen Harold has put
+ together a best practices guide to email marketing, including best practices
+ for what emails to send, whom to send them to, and how to generate results
+ =?utf-8?q?=28https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fe2t=2Fsc2=2FMm-nFbkMTfJW6mgx117GLTkbW?=
+ =?utf-8?q?79Tc3G6kfPHVW861MqQ8FSpPJf1KTlgd33_=29_=2E=F0=9F=93=9A?= Related
+ reads and resources:- 8 email newsletter mistakes that are killing your
+ click-through rates
+ =?utf-8?q?=28https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fe2t=2Fsc2=2FMm-nFbkMTfJW6mgx117GLTkbW?=
+ =?utf-8?q?79Tc3G6kfPHVW861MqQ8FSpPJf1KTlgd43?= )- Should you be buying email
+ marketing lists in 2021?
+ =?utf-8?q?=28https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fe2t=2Fsc2=2FMm-nFbkMTfJW6mgx117GLTkbW?=
+ =?utf-8?q?79Tc3G6kfPHVW861MqQ8FSpPJf1KTlgd53_=29-_IMPACT+_course=3A?=
+ =?utf-8?b?IEluYm91bmRlcuKAmXM=?= Guide to Email Marketing
+ =?utf-8?q?=28https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fe2t=2Fsc2=2FMm-nFbkMTfJW6mgx117GLTkbW?=
+ =?utf-8?q?79Tc3G6kfPHVW861MqQ8FSpPJf1KTlgd63?= )5 virtual sales appointment
+ strategies that will help you close deals faster (9-minute read
+ =?utf-8?q?=28https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fe2t=2Fsc2=2FMm-nFbkMTfJW6mgx117GLTkbW?=
+ =?utf-8?q?79Tc3G6kfPHVW861MqQ8FSpPJf1KTlgd73?= ) )Virtual sales appointments
+ don't come naturally to everyone. I sound like a broken record, but sales
+ teams had to do a lot of adjusting to their sales strategies in recent
+ memory. That's why IMPACT+ Product Manager Myriah Anderson is here to save
+ the day with her 5 key strategies for closing more deals in a virtual selling
+ environment.
+ =?utf-8?q?=28https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fe2t=2Fsc2=2FMm-nFbkMTfJW6mgx117GLTkbW?=
+ =?utf-8?q?79Tc3G6kfPHVW861MqQ8FSpPJf1KTlgd83_=29=F0=9F=93=9A?= Related reads
+ and resources:- Virtual Selling Summit 2021 - Register today!
+ =?utf-8?q?=28https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fe2t=2Fsc2=2FMm-nFbkMTfJW6mgx117GLTkbW?=
+ =?utf-8?q?79Tc3G6kfPHVW861MqQ8FSpPJf1KTlgd93?= )- Why virtual sales will
+ continue to dominate in a post-COVID world
+ =?utf-8?q?=28https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fe2t=2Fsc2=2FMm-nFbkMTfJW6mgx117GLTkbW?=
+ =?utf-8?q?79Tc3G6kfPHVW861MqQ8FSpPJf1KTlgdb3?= )- IMPACT+ on demand: How to
+ Add Video to Your Entire Sales Process
+ =?utf-8?q?=28https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fe2t=2Fsc2=2FMm-nFbkMTfJW6mgx117GLTkbW?=
+ =?utf-8?q?79Tc3G6kfPHVW861MqQ8FSpPJf1KTlgdc3?= )IMPACT+ community
+ exclusivesToday's takeaway is to always keep yourself on your toes! Adam is
+ getting into (re)building new habits. What surprising new habits are you
+ building for yourself?
+ =?utf-8?q?=28https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fe2t=2Fsc2=2FMm-nFbkMTfJW6mgx117GLTkbW?=
+ =?utf-8?q?79Tc3G6kfPHVW861MqQ8FSpPJf1KTlgdd3?= )IM+ post friday 4-16
+ =?utf-8?q?=28https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fe2t=2Fsc2=2FMm-nFbkMTfJW6mgx117GLTkbW?=
+ =?utf-8?q?79Tc3G6kfPHVW861MqQ8FSpPJf1KTlgdf3?= )Pro on-demand: Inbounder's
+ Guide to Google Suite ToolsKevin Google Search LATEST
+ =?utf-8?q?=28https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fe2t=2Fsc2=2FMm-nFbkMTfJW6mgx117GLTkbW?=
+ =?utf-8?q?79Tc3G6kfPHVW861MqQ8FSpPJf1KTlgdg3?= )Google offers a range of free
+ tools businesses can use to learn more about how search engines and real
+ buyers view and use their websites and assets. This course is built for you
+ to watch and apply at the same time and I can personally guarantee
+ =?utf-8?b?eW914oCZbGw=?= have a fuller understanding of how to use
+ =?utf-8?b?R29vZ2xl4oCZcw==?= suite of tools to measure and improve your They
+ Ask, You Answer, and overall inbound marketing.Master Google Suite for your
+ business
+ =?utf-8?q?=28https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fe2t=2Fsc2=2FMm-nFbkMTfJW6mgx117GLTkbW?=
+ =?utf-8?q?79Tc3G6kfPHVW861MqQ8FSpPJf1KTlgdh3?= )Not a pro member? Start your
+ 14-day free trial and get access
+ =?utf-8?q?=28https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fe2t=2Fsc2=2FMm-nFbkMTfJW6mgx117GLTkbW?=
+ =?utf-8?q?79Tc3G6kfPHVW861MqQ8FSpPJf1KTlgdj3?= ) !Your Friday nonsenseThe
+ world needs a giggle. Every Friday we include some nonsense to make you
+ laugh, smile, and feel ridiculously related to:My Stress Levels
+ =?utf-8?q?=28https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fe2t=2Fsc2=2FMm-nFbkMTfJW6mgx117GLTkbW?=
+ =?utf-8?q?79Tc3G6kfPHVW861MqQ8FSpPJf1KTlgdk3?= )This captures this week's
+ stress levels perfectly. It also showcases my ability to overthink very
+ simple things...Connor DeLaneyCommunity & Events
+ Manager,cdelaney@impactplus.com
+ =?utf-8?q?=28https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fe2t=2Fsc2=2FMm-nFbkMTfJW6mgx117GLTkbW?=
+ =?utf-8?q?79Tc3G6kfPHVW861MqQ8FSpPJf1KTlgdl3?= )P.S. We've got a bunch of new
+ courses and lessons in IMPACT+! This new content ranges from pillar content
+ =?utf-8?q?=28https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fe2t=2Fsc2=2FMm-nFbkMTfJW6mgx117GLTkbW?=
+ =?utf-8?q?79Tc3G6kfPHVW861MqQ8FSpPJf1KTlgdm3?= ) , assignment prospecting
+ =?utf-8?q?=28https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fe2t=2Fsc2=2FMm-nFbkMTfJW6mgx117GLTkbW?=
+ =?utf-8?q?79Tc3G6kfPHVW861MqQ8FSpPJf1KTlgdn3?= ) , maximizing HubSpot
+ reporting
+ =?utf-8?q?=28https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fe2t=2Fsc2=2FMm-nFbkMTfJW6mgx117GLTkbW?=
+ =?utf-8?q?79Tc3G6kfPHVW861MqQ8FSpPJf1KTlgdp3?= ) , and even virtual event
+ sponsorships
+ =?utf-8?q?=28https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fe2t=2Fsc2=2FMm-nFbkMTfJW6mgx117GLTkbW?=
+ =?utf-8?q?79Tc3G6kfPHVW861MqQ8FSpPJf1KTlgdq3?= ) . Go check them out for
+ yourself!IMPACT teaches business leaders how to build high-performing teams
+ that achieve extraordinary digital sales and marketing results through
+ coaching, online training, and in-person experiences. We look forward to
+ joining you on your journey to becoming a hero for your own company at
+ impactplus.com
+ =?utf-8?q?=28https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fe2t=2Fsc2=2FMm-nFbkMTfJW6mgx117GLTkbW?=
+ =?utf-8?q?79Tc3G6kfPHVW861MqQ8FSpPJf1KTlgdr3?= ) .Creating heroes, growing
+ businesses, changing lives.Sent with =?utf-8?b?8J+SmQ==?= by IMPACTIMPACT,
+ 470 James Street, Suite 10, New Haven, CTManage preferences
+ =?utf-8?q?=28https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fhs=2Fmanage-preferences=2Funsubscribe?=
+ =?utf-8?q?=3Fd=3DVngD1f8LDYK6W41S-FJ4fK4-gW3zd5=5F-4cLxYJW2m40Kf3T0pbmW43T2Pd?=
+ =?utf-8?q?6TxGHzW17f7hv9lRkXmW971G176tf82WW5mMkhg8YJ1TTV28XfP5GCrb7MGKd?=
+ =?utf-8?q?=5FP20N8lW373dzF6cdq55W6Q1zhV6h0-wh51CHx31&v=3D3&=5Fhsenc=3Dp2ANqtz-9?=
+ =?utf-8?q?tyiC9ViKhawToa=5F=5FLoosjaWtivQHqZrh6V7Jw-lb0GdPTDJTItPmuPdsksxU2?=
+ =?utf-8?q?WJmPQaJ8gLS5lz1PCYXuh8-V7MVrPUynqRqr2vB8Us7z0hl1Hp4&=5Fhsmi=3D121?=
+ =?utf-8?q?819596_=29__|_Unsubscribe?=
+ =?utf-8?q?_=28https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fhs=2Fmanage-preferences=2Funsubscribe?=
+ =?utf-8?q?-all=3Fd=3DVngD1f8LDYK6W41S-FJ4fK4-gW3zd5=5F-4cLxYJW2m40Kf3T0pbmW43?=
+ =?utf-8?q?T2Pd6TxGHzW17f7hv9lRkXmW971G176tf82WW5mMkhg8YJ1TTV28XfP5GCrb7?=
+ =?utf-8?q?MGKd=5FP20N8lW373dzF6cdq55W6Q1zhV6h0-wh51CHx31&v=3D3&=5Fhsenc=3Dp2ANq?=
+ =?utf-8?q?tz-9tyiC9ViKhawToa=5F=5FLoosjaWtivQHqZrh6V7Jw-lb0GdPTDJTItPmuPdsk?=
+ =?utf-8?q?sxU2WJmPQaJ8gLS5lz1PCYXuh8-V7MVrPUynqRqr2vB8Us7z0hl1Hp4&=5Fhsmi?=
+ =?utf-8?q?=3D121819596?= )
+HtmlBody: <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html
+ xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml"
+ xmlns:o="urn:schemas-microsoft-com:office:office"><head>        <title>THE
+ LATEST: It's Friday, try something new!</title>        <meta
+ property="og:title" content="THE LATEST: It's Friday, try something new!">       
+ <meta name="twitter:title" content="THE LATEST: It's Friday, try something
+ new!">        <meta http-equiv="Content-Type" content="text/html;
+ charset=utf-8">                <style type="text/css"
+ id="hs-inline-css">/*<![CDATA[*/  /* everything in this node will be inlined
+ */  /* ==== Page Styles ==== */  body, #backgroundTable {     
+ background-color: #f2f2f2; /* Use body to determine background color */     
+ font-family: sans-serif;  }  #templateTable {      width: 600px;     
+ background-color: #ffffff;      -webkit-font-smoothing: antialiased;  }  h1,
+ .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {      display:block;     
+ font-weight:bold;      line-height:100%;      margin-top:0;     
+ margin-right:0;      margin-bottom:10px;      margin-left:0;  }  h1, .h1 {     
+ font-size:26px;  }  h2, .h2 {      font-size:20px;  }  h3, .h3 {     
+ font-size:15px;  }  h4, .h4 {      font-size:13px;  }  h5, .h5 {     
+ font-size:11px;  }  h6, .h6 {      font-size:10px;  }  /* ==== Header Styles
+ ==== */  #headerTable {      background-color: #f2f2f2;      color:#444444;     
+ font-family:sans-serif;      font-size:10px;      line-height:120%;     
+ text-align:right;      border-collapse: separate !important;     
+ padding-right: 30px;  }  #headerTable a:link, #headerTable a:visited, /*Y*/
+ #headerTable a .yshortcuts /*Y*/{      font-weight:normal;     
+ text-decoration:underline;  }  /* ==== Template Wrapper Styles ==== */ 
+ #contentCell {      padding: 10px 20px;      background-color: #f2f2f2;  } 
+ #contentTableOuter {      border-collapse: separate !important;     
+ background-color: #ffffff;            box-shadow: 0px 1px rgba(0, 0, 0, 0.1);           
+ padding: 30px;  }  #contentTableInner {      width: 600px;  }  /* ==== Body
+ Styles ==== */  .bodyContent {      color:#444444;     
+ font-family:sans-serif;      font-size: 15px;      line-height:150%;     
+ text-align:left;  }  /* ==== Column Styles ==== */  table.columnContentTable
+ {      border-collapse:separate !important;      border-spacing:0;     
+ background-color: #ffffff;  }  td.columnContent {      color:#444444;     
+ font-family:sans-serif;      font-size:15px;      line-height:120%;     
+ padding-top:20px;      padding-right:20px;      padding-bottom:20px;     
+ padding-left:20px;  }  /* ==== Footer Styles ==== */  #footerTable {     
+ background-color: #f2f2f2;  }  #footerTable a {      color: #999999;  } 
+ #footerTable {      color:#999999;      font-family:sans-serif;     
+ font-size:12px;      line-height:120%;      padding-top:20px;     
+ padding-right:20px;      padding-bottom:20px;      padding-left:20px;     
+ text-align:center;  }  #footerTable a:link, #footerTable a:visited, /*Y*/
+ #footerTable a .yshortcuts /*Y*/{      font-weight:normal;     
+ text-decoration:underline;  }  .hs-image-social-sharing-24 {      max-width:
+ 24px;      max-height: 24px;  }  /* ==== Standard Resets ==== */ 
+ .ExternalClass{      width:100%;  } /* Force HM to display emails at full
+ width */  .ExternalClass, .ExternalClass p, .ExternalClass span,
+ .ExternalClass font, .ExternalClass td, .ExternalClass div {     
+ line-height: 100%;  } /* Force HM to display normal line spacing */  body,
+ table, td, p, a, li, blockquote{      -webkit-text-size-adjust:100%;     
+ -ms-text-size-adjust:100%;  } /* Prevent WebKit and Windows mobile changing
+ default text sizes */  table, td {      mso-table-lspace:0pt;     
+ mso-table-rspace:0pt;  } /* Remove spacing between tables in Outlook 2007 and
+ up */  img {      vertical-align: bottom;     
+ -ms-interpolation-mode:bicubic;  } /* Allow smoother rendering of resized
+ image in Internet Explorer */  /* Reset Styles */  body {      margin:0;     
+ padding:0;  }  table {      border-collapse:collapse !important;  }  body,
+ #backgroundTable, #bodyCell{      height:100% !important;      margin:0;     
+ padding:0;      width:100% !important;  }  a:link, a:visited {     
+ border-bottom: none;  }  /* iOS automatically adds a link to addresses */  /*
+ Style the footer with the same color as the footer text */  #footer a {     
+ color: #999999;;      -webkit-text-size-adjust: none;      text-decoration:
+ underline;      font-weight: normal  }/*]]>*/</style>        <!--[if
+ !mso]><!-- --><style type="text/css">/*<![CDATA[*/  /* ==== Mobile Styles
+ ==== */  /* Constrain email width for small screens */  @media screen and
+ (max-width: 650px) {      table#backgroundTable {          width: 95%
+ !important;      }      table#templateTable {          max-width:600px
+ !important;          width:100% !important;      }     
+ table#contentTableInner {          max-width:600px !important;         
+ width:100% !important;      }      /* Makes image expand to take 100% of
+ width*/      img {          width: 100% !important;          height: auto
+ !important;      }      #contentCell {          padding: 10px 10px
+ !important;      }      #headerTable {          padding-right: 15.0px
+ !important;      }      #contentTableOuter {          padding: 15.0px
+ !important;      }  }  @media only screen and (max-width: 480px) {      /*
+ ==== Client-Specific Mobile Styles ==== */      body, table, td, p, a, li,
+ blockquote{          -webkit-text-size-adjust:none !important;      } /*
+ Prevent Webkit platforms from changing default text sizes */      body{         
+ width:100% !important;          min-width:100% !important;      } /* Prevent
+ iOS Mail from adding padding to the body */      /* ==== Mobile Reset Styles
+ ==== */      td#bodyCell {          padding:10px !important;      }      /*
+ ==== Mobile Template Styles ==== */      table#templateTable {         
+ max-width:600px !important;          width:100% !important;      }     
+ table#contentTableInner {          max-width:600px !important;         
+ width:100% !important;      }      /* ==== Image Alignment Styles ==== */     
+ h1, .h1 {          font-size:26px !important;          line-height:125%
+ !important;      }      h2, .h2 {          font-size:20px !important;         
+ line-height:125% !important;      }      h3, .h3 {          font-size:15px
+ !important;          line-height:125% !important;      }      h4, .h4 {         
+ font-size:13px !important;          line-height:125% !important;      }     
+ h5, .h5 {          font-size:11px !important;          line-height:125%
+ !important;      }      h6, .h6 {          font-size:10px !important;         
+ line-height:125% !important;      }      .hide {          display:none
+ !important;      } /* Hide to save space */      /* ==== Body Styles ==== */     
+ td.bodyContent {          font-size:16px !important;         
+ line-height:145% !important;      }      /* ==== Footer Styles ==== */     
+ td#footerTable {          padding-left: 0px !important;         
+ padding-right: 0px !important;          font-size:12px !important;         
+ line-height:145% !important;      }      /* ==== Image Alignment Styles ====
+ */      table.alignImageTable {          width: 100% !important;      }     
+ td.imageTableTop {          display: none !important;          /*padding-top:
+ 10px !important;*/      }      td.imageTableRight {          display: none
+ !important;      }      td.imageTableBottom {          padding-bottom: 10px
+ !important;      }      td.imageTableLeft {          display: none
+ !important;      }      /* ==== Column Styles ==== */      td.column {         
+ display: block !important;          width: 100% !important;         
+ padding-top: 0 !important;          padding-right: 0 !important;         
+ padding-bottom: 0 !important;          padding-left: 0 !important;      }     
+ td.columnContent {          font-size:14px !important;         
+ line-height:145% !important;          padding-top: 10px !important;         
+ padding-right: 10px !important;          padding-bottom: 10px !important;         
+ padding-left: 10px !important;      }      #contentCell {          padding:
+ 10px 0px !important;      }      #headerTable {          padding-right:
+ 15.0px !important;      }      #contentTableOuter {          padding: 15.0px
+ !important;      }  }/*]]>*/</style><!--<![endif]-->        <style
+ type="text/css" data-hse-inline-css="true">  h1, h2, h3, h4, h5, h6, p, li{   
+ font-family: Lato,Tahoma,sans-serif;    color: #444444;  }  h1{   
+ font-size:28px;    line-height: 1.25em;    font-weight: 800;    color:
+ #444444;    margin-top:24px;  }  h2, h2 > span{    font-size:22px;    color:
+ #555555;    line-height: 1.25em;    font-weight: 800 !important;   
+ margin-top:24px;  }  h3, h3 > span{    font-size:20px;    color: #555555;   
+ line-height: 1.25em;    font-weight: 800 !important;    margin-top:24px;  } 
+ p, p span, li, li span{    font-weight: 500;    font-size:18px;   
+ line-height:1.5em;   }  a{    color:#1082c1;  }  ul{    padding-left: 18px; 
+ }  li{    margin-bottom: 10px;  }  .bylineSection p,  .bylineSection p *{   
+ font-size:15px !important;  }  #templateTable, #contentTableInner{   
+ width:550px;  }    body, #backgroundTable, #contentCell{   
+ background:#ffffff !important;  }  #contentTableOuter{    border:0
+ !important;    box-shadow: none !important;  }  #hs_cos_wrapper_logo_image{   
+ text-align:center;  }  .latestIntro{    padding: 0px 0px 20px 0px !important; 
+ }  .footer p{    margin: 5px 0px !important;    font-size: 10px !important;   
+ color: #bbbbbb !important;  }  .footer p a{    color: #bbbbbb;  }  @media
+ screen and (max-width: 650px){    .hs_cos_wrapper_type_social_sharing img {     
+ width: inherit !important;     }  }  /* MEDIA QUERIES */  @media only screen
+ and (max-width: 650px){    #templateTable{      max-width:550px;     
+ width:100% !important;    }    .latestLogo{      max-width: 220px;     
+ padding-bottom: 10px !important;      margin: 0 auto;    }  }  @media screen
+ and (max-width: 480px){    h1, .h1, h1 > span {      font-size: 24px
+ !important;      line-height: 125% !important;    }    h2, .h2, h2 > span {     
+ font-size: 20px !important;      line-height: 125% !important;    }   
+ .bylineSection p,    .bylineSection p span,    .bylineSection p *{     
+ font-size:14px !important;    }    /*p, p span, li, li span{     
+ font-size:16px !important;    }*/    td.columnContent {      padding-top: 0px
+ !important;      padding-right: 0px !important;      padding-bottom: 0px
+ !important;      padding-left: 0px !important;    }    .latestIntro.column {     
+ padding-bottom: 20px !important;    }  }</style>        <!--[if gte mso 9]>         
+ <xml>            <o:OfficeDocumentSettings>              <o:AllowPNG/>             
+ <o:PixelsPerInch>96</o:PixelsPerInch>            </o:OfficeDocumentSettings>         
+ </xml>        <![endif]-->    <meta name="generator" content="HubSpot"><meta
+ property="og:url"
+ =?utf-8?q?content=3D=22https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2F-temporary-slug-41db8e5e-?=
+ =?utf-8?q?69ec-432b-ab87-47a318f89cdf=22=3E=3Cmeta?=
+ name="x-apple-disable-message-reformatting"><meta name="robots"
+ content="noindex,follow"></head>    <body class=""
+ style="background-color:#f2f2f2; font-family:sans-serif;
+ -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; height:100%
+ !important; margin:0; padding:0; width:100% !important; background:#ffffff
+ !important" leftmargin="0" marginwidth="0" topmargin="0" marginheight="0"
+ offset="0" bgcolor="#f2f2f2">        <!-- Preview text (text which appears
+ right after subject) -->        <div id="preview_text"
+ =?utf-8?q?style=3D=22display=3Anone=3Bfont-size=3A1px=3Bcolor=3A#f2f2f2=3Bline-height=3A1?=
+ =?utf-8?q?px=3Bmax-height=3A0px=3Bmax-width=3A0px=3Bopacity=3A0=3Boverflow=3Ahidden=3B=22=3E?=           
+ It's been a long week. Why not find a fun new hobby to get into? P.S Enjoy
+ your weekly nonsense!        </div>        <!--  The  backgroundTable table
+ manages the color of the background and then the templateTable maintains the
+ body of         the email template, including preheader & footer. This is the
+ only table you set the width of to, everything else is set to         100%
+ and in the CSS above. Having the width here within the table is just a small
+ win for Lotus Notes. -->        <!-- Begin backgroundTable -->         
+ <table align="center" bgcolor="#f2f2f2" border="0" cellpadding="0"
+ cellspacing="0" height="100%" width="100%" id="backgroundTable"
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse
+ !important; background-color:#f2f2f2; font-family:sans-serif; height:100%
+ !important; margin:0; padding:0; width:100% !important; background:#ffffff
+ !important">            <tbody><tr>                <td align="center"
+ valign="top" id="bodyCell" style="-webkit-text-size-adjust:100%;
+ -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt;
+ height:100% !important; margin:0; padding:0; width:100% !important"
+ height="100%" width="100%"> <!-- When nesting tables within a TD, align
+ center keeps it well, centered. -->                    <!-- Begin Template
+ Container -->                    <!-- This holds everything together in a
+ nice container -->                    <table border="0" cellpadding="0"
+ cellspacing="0" id="templateTable" style="-webkit-text-size-adjust:100%;
+ -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt;
+ border-collapse:collapse !important; background-color:#ffffff;
+ -webkit-font-smoothing:antialiased; width:550px" width="550"
+ bgcolor="#ffffff">                        <tbody><tr>                           
+ <td align="center" valign="top" style="-webkit-text-size-adjust:100%;
+ -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt">                               
+ <!-- Begin Template Preheader -->                                <div
+ class="header-container-wrapper"></div><table border="0" cellpadding="0"
+ cellspacing="0" width="100%" id="headerTable"
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ mso-table-lspace:0pt; mso-table-rspace:0pt; background-color:#f2f2f2;
+ color:#444444; font-family:sans-serif; font-size:10px; line-height:120%;
+ text-align:right; border-collapse:separate !important; padding-right:30px"
+ bgcolor="#f2f2f2" align="right">                                    <!--end
+ header wrapper -->                                </table>                               
+ <!-- End Template Preheader -->                            </td>                       
+ </tr>                        <tr>                            <td
+ align="center" valign="top" id="contentCell"
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ mso-table-lspace:0pt; mso-table-rspace:0pt; padding:10px 20px;
+ background-color:#f2f2f2; background:#ffffff !important" bgcolor="#f2f2f2">                               
+ <!-- Begin Template Wrapper -->                                <!-- This
+ separates the preheader which usually contains the "open in browser, etc"
+ content                                from the actual body of the email. Can
+ alternatively contain the footer too, but I choose not                               
+ to so that it stays outside of the border. -->                               
+ <table border="0" cellpadding="0" cellspacing="0" width="100%"
+ id="contentTableOuter" style="-webkit-text-size-adjust:100%;
+ -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt;
+ border-collapse:separate !important; background-color:#ffffff; padding:30px;
+ box-shadow:none !important; border:1px solid #cccccc; border-bottom:1px solid
+ #acacac" bgcolor="#ffffff">                                    <tbody><tr>                                       
+ <td align="center" valign="top" style="-webkit-text-size-adjust:100%;
+ -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt">                                           
+ <div class="body-container-wrapper"></div><table border="0" cellpadding="0"
+ cellspacing="0" id="contentTableInner" style="-webkit-text-size-adjust:100%;
+ -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt;
+ border-collapse:collapse !important; width:550px" width="550">                                               
+ <tbody><tr><td align="left" valign="top" class="bodyContent" width="100%"
+ colspan="12" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ mso-table-lspace:0pt; mso-table-rspace:0pt; color:#444444;
+ font-family:sans-serif; font-size:15px; line-height:150%;
+ text-align:left"><table cellpadding="0" cellspacing="0" border="0"
+ width="100%" class="templateColumnWrapper"
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse
+ !important">            <tbody><tr><td valign="top" colspan="12"
+ width="100.0%" class=" column" style="-webkit-text-size-adjust:100%;
+ -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt;
+ width:100.0%; text-align:left; padding:0; font-family:sans-serif;
+ font-size:15px; line-height:1.5em; color:#444444" align="left"><table
+ border="0" cellpadding="0" cellspacing="0" width="100%"
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:separate
+ !important; border-spacing:0; background-color:#ffffff" class="latestLogo
+ columnContentTable" bgcolor="#ffffff"><tbody><tr><td align="left"
+ valign="top" class="columnContent widget-span widget-type-custom_widget"
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ mso-table-lspace:0pt; mso-table-rspace:0pt; padding-top:20px;
+ padding-right:20px; padding-left:20px; text-align:left; padding:0;
+ font-family:sans-serif; font-size:15px; line-height:1.5em; color:#444444;
+ padding-bottom:20px" data-widget-type="custom_widget"><div
+ class="layout-widget-wrapper"><div
+ id="hs_cos_wrapper_module_15372236239261467" class="hs_cos_wrapper
+ hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="color: inherit;
+ font-size: inherit; line-height: inherit;" data-hs-cos-general-type="widget"
+ data-hs-cos-type="module"><table class="hse-image-wrapper"
+ role="presentation" width="100%" cellpadding="0" cellspacing="0"
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse
+ !important">    <tbody>        <tr>            <td align="center"
+ valign="top" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ mso-table-lspace:0pt; mso-table-rspace:0pt; text-align:center; padding:0px;
+ font-size:0px">                                <img alt="IMPACT+ Presents THE
+ LATEST - Email"
+ =?utf-8?q?src=3D=22https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fhs-fs=2Fhubfs=2FThe%20Latest%20fr?=
+ =?utf-8?q?om%20IMPACT=2FIMPACT+%20Presents%20The%20Latest%20-%20Logos=2FEma?=
+ =?utf-8?q?il=2FIMPACT+%20Presents%20THE%20LATEST%20-%20Email=2Epng=3Fwidth=3D54?=
+ =?utf-8?q?0&amp=3Bupscale=3Dtrue&amp=3Bname=3DIMPACT+%20Presents%20THE%20LATEST?=
+ =?utf-8?q?%20-%20Email=2Epng=22?= style="vertical-align:bottom;
+ -ms-interpolation-mode:bicubic; max-width:100%; font-size:16px" width="270"
+ align="middle"
+ =?utf-8?q?srcset=3D=22https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fhs-fs=2Fhubfs=2FThe%20Latest%2?=
+ =?utf-8?q?0from%20IMPACT=2FIMPACT+%20Presents%20The%20Latest%20-%20Logos=2F?=
+ =?utf-8?q?Email=2FIMPACT+%20Presents%20THE%20LATEST%20-%20Email=2Epng=3Fupsca?=
+ =?utf-8?q?le=3Dtrue&amp=3Bwidth=3D540&amp=3Bupscale=3Dtrue&amp=3Bname=3DIMPACT+%20Pre?=
+ =?utf-8?q?sents%20THE%20LATEST%20-%20Email=2Epng_270w=2C?=
+ =?utf-8?q?_https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fhs-fs=2Fhubfs=2FThe%20Latest%20from%20?=
+ =?utf-8?q?IMPACT=2FIMPACT+%20Presents%20The%20Latest%20-%20Logos=2FEmail=2FIM?=
+ =?utf-8?q?PACT+%20Presents%20THE%20LATEST%20-%20Email=2Epng=3Fupscale=3Dtrue&?=
+ =?utf-8?q?amp=3Bwidth=3D1080&amp=3Bupscale=3Dtrue&amp=3Bname=3DIMPACT+%20Presents%2?=
+ =?utf-8?q?0THE%20LATEST%20-%20Email=2Epng?= 540w" sizes="(max-width: 270px)
+ 100vw, 270px">                            </td>        </tr>   
+ </tbody></table></div></div><!--end layout-widget-wrapper
+ --></td></tr></tbody></table><!--end widget-table -->   </td>           </tr>   
+ </tbody></table>   </td></tr><tr><td align="left" valign="top"
+ class="bodyContent" width="100%" colspan="12"
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ mso-table-lspace:0pt; mso-table-rspace:0pt; color:#444444;
+ font-family:sans-serif; font-size:15px; line-height:150%;
+ text-align:left"><table cellpadding="0" cellspacing="0" border="0"
+ width="100%" class="templateColumnWrapper"
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse
+ !important">            <tbody><tr><td valign="top" colspan="12"
+ width="100.0%" class=" column" style="-webkit-text-size-adjust:100%;
+ -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt;
+ width:100.0%; text-align:left; padding:0; font-family:sans-serif;
+ font-size:15px; line-height:1.5em; color:#444444" align="left"><div
+ class="widget-span widget-type-email_body " style=""
+ data-widget-type="email_body"><div id="hs_cos_wrapper_hs_email_body"
+ class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text"
+ style="color: inherit; font-size: inherit; line-height: inherit;"
+ data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><p
+ style="margin-bottom: 1em; -webkit-text-size-adjust:100%;
+ -ms-text-size-adjust:100%; font-family:Lato, Tahoma, sans-serif;
+ color:#444444; font-weight:500; font-size:18px; line-height:1.5em">Happy
+ Friday y'all!&nbsp;</p><p style="margin-bottom: 1em;
+ -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; font-family:Lato,
+ Tahoma, sans-serif; color:#444444; font-weight:500; font-size:18px;
+ line-height:1.5em">I'm going to keep the intro pretty short and sweet today
+ since you and I both are looking forward to shutting it down and relaxing
+ this weekend.&nbsp;</p><p style="margin-bottom: 1em;
+ -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; font-family:Lato,
+ Tahoma, sans-serif; color:#444444; font-weight:500; font-size:18px;
+ line-height:1.5em">As you head into the weekend, take a moment to think about
+ something new you could (or should) be doing.&nbsp;</p><p
+ style="margin-bottom: 1em; -webkit-text-size-adjust:100%;
+ -ms-text-size-adjust:100%; font-family:Lato, Tahoma, sans-serif;
+ color:#444444; font-weight:500; font-size:18px; line-height:1.5em">For me,
+ I've been working on breaking my YouTube habit and replacing it with
+ something new like card games or volunteering.&nbsp;</p><p
+ style="margin-bottom: 1em; -webkit-text-size-adjust:100%;
+ -ms-text-size-adjust:100%; font-family:Lato, Tahoma, sans-serif;
+ color:#444444; font-weight:500; font-size:18px; line-height:1.5em">In all
+ honesty, I'm fighting a losing battle so far, but over time I'm confident
+ it'll happen!&nbsp;</p><p style="margin-bottom: 1em;
+ -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; font-family:Lato,
+ Tahoma, sans-serif; color:#444444; font-weight:500; font-size:18px;
+ line-height:1.5em">Our community in IMPACT+ has been chatting about this
+ topic and surprising ourselves with new habits or activities to try. <a
+ =?utf-8?q?href=3D=22https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fe2t=2Ftc=2FVX3J8h5Z7lpwN2wy4CLg-?=
+ =?utf-8?q?6frW4FBnYy4qtf1-N3NdJHD3p=5Fb1V1-WJV7CgLtdW6t4Wmf2GS7KmW66=5F7zp4?=
+ =?utf-8?q?J00phW1h-=5F654BcF3jW1g0mGm3YwrRVW1yGRGw2T86lNW803Gll3kS=5FR7MpPm?=
+ =?utf-8?q?mBpT4=5F7W6lF8=5F02Dk-yNW4WQGbJ52k1P7W3f=5FHKG6Nlb8gW48=5FF5v2-5wF9W8?=
+ =?utf-8?q?dxvsv34PZ86W4gRZ7k7n7wxRW5Fddjm4dSHvmW9h4R=5F-7D=5FxfSW11f1Nr39td?=
+ =?utf-8?q?VPW2tKm563rY4d-W2MdcwY4bFjwbW23s2VW55CdngVf26sF6DQyxpW7pMw5J8?=
+ =?utf-8?q?v2NYRW8T=5F0cg8gtfF4W8Pzm=5FJ5klBh7W7sGD=5FV2YpQGcVGrcls6=5FzYtgW8BNN?=
+ =?utf-8?q?b72dZMWsVjmG7m34bjCMW616zz041yXvlN15MDX8-QSB9W8tBk1Q2y=5Fw3H36F?=
+ =?utf-8?q?K1=22?= rel="noopener" style="-webkit-text-size-adjust:100%;
+ -ms-text-size-adjust:100%; color:#1082c1" data-hs-link-id="0"
+ target="_blank">Hop in and let us know what you're up to for this weekend</a>
+ and then check back in on Monday to let us know how it went!&nbsp;</p><p
+ style="margin-bottom: 1em; -webkit-text-size-adjust:100%;
+ -ms-text-size-adjust:100%; font-family:Lato, Tahoma, sans-serif;
+ color:#444444; font-weight:500; font-size:18px;
+ line-height:1.5em"></p><center><!--HubSpot Call-to-Action Code --><span
+ class="hs-cta-wrapper" data-hs-img-pg="51045a48-9dec-4357-8409-c1523a31a09a"
+ id="hs-cta-wrapper-51045a48-9dec-4357-8409-c1523a31a09a"><span
+ class="hs-cta-node hs-cta-51045a48-9dec-4357-8409-c1523a31a09a"
+ id="hs-cta-51045a48-9dec-4357-8409-c1523a31a09a"><a
+ =?utf-8?q?href=3D=22https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fe2t=2Ftc=2FVX3J8h5Z7lpwN2wy4CLg-?=
+ =?utf-8?q?6frW4FBnYy4qtf1-N3NdJHD5V93wV3Zsc37CgRtJW6tkPX36h4Z9=5FN71p4G=5Fn?=
+ =?utf-8?q?ZHYrN93q0ctGKbGrW5PYXGt7vzhCWF5-bQ4M-wR1V7wyYt72n9r5W2trCqw1c?=
+ =?utf-8?q?v8QLW8D7yM38ZhQjRW8-43n46CK6TrW80XYPy8l3lvxVgyFWY7CmY22W4Xd-r?=
+ =?utf-8?q?-5cRZkRW6ldFbl3jxtW6W6SN3FJ9hLZf7W1584qZ2SDw0dW95gwqN6=5FWLsgW7?=
+ =?utf-8?q?bnr9b29HPWDW2SXkFx3=5F5XNdW1wbZQV5DLnF3VV0qWw4gRn58N8vKxv-NWrph?=
+ =?utf-8?q?W20CLQl3x94xkW2dnhcc7XMvTqW3ZT39839VttKVN8jtt36CbCYW4VZsz819S?=
+ =?utf-8?q?8vrN8lkGBmcgxKcW3cxyWp8x5-XnW2dBTK62L6mRHW5cB9KQ6=5FqqJ7W3K=5Fdmr?=
+ =?utf-8?q?3CFGjfW2RRrm37sqBGqW8YNJ919b95JlW7w1ByD3XNVc=5FVSJD2Q6CtsZCW4d7?=
+ =?utf-8?q?Gfs4pqJj2W566LNY9fNVKwW3Ry5qY70BYMRW8x5q4S6S36YkW2XFw3=5F1mvB=5FF?=
+ =?utf-8?q?W4XXXts4XDWKZW5Kk=5FPZ825jSWW7=5F07g58L9FCbW33ZKFC2bqSFMW1Y3p8Q6h?=
+ =?utf-8?q?YKkhV3dbkq3wkJb6390g1=22?= target="_blank"
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ color:#1082c1" data-hs-link-id="0"><img class="hs-cta-img"
+ id="hs-cta-img-51045a48-9dec-4357-8409-c1523a31a09a"
+ style="vertical-align:bottom; -ms-interpolation-mode:bicubic;
+ border-width:0px; margin:0 auto; display:block; margin-top:20px;
+ margin-bottom:20px; width:auto !important; max-width:100% !important"
+ mce_noresize="1"
+ =?utf-8?q?src=3D=22https=3A=2F=2Fhsctaimages=2Enet=2Fctas=2Fv2=2Fpublic=2Fcs=2Fil=2F=3Fpg=3D51045a4?=
+ =?utf-8?q?8-9dec-4357-8409-c1523a31a09a&amp=3Bpid=3D145335&amp=3Becid=3DACsprvv?=
+ =?utf-8?q?HZSjyXCPFJEk3NrxYVXmNVBsEghT9md0ts1Pgrvxc0QVtPA90CRv=5F9n9gCeFV?=
+ =?utf-8?q?LkSz5Qrs&amp=3Bhseid=3D121819596&amp=3Bhsic=3Dfalse=22?=
+ alt="Surprise yourself with a new habit!"
+ =?utf-8?q?srcset=3D=22https=3A=2F=2Fhsctaimages=2Enet=2Fctas=2Fv2=2Fpublic=2Fcs=2Fil=2F=3Fpg=3D5104?=
+ =?utf-8?q?5a48-9dec-4357-8409-c1523a31a09a&amp=3Bpid=3D145335&amp=3Becid=3DACsp?=
+ =?utf-8?q?rvvHZSjyXCPFJEk3NrxYVXmNVBsEghT9md0ts1Pgrvxc0QVtPA90CRv=5F9n9gC?=
+ =?utf-8?q?eFVLkSz5Qrs&amp=3Bhseid=3D121819596&amp=3Bhsic=3Dfalse&amp=3Bdsf=3D2_2x=2C?=
+ =?utf-8?q?_https=3A=2F=2Fhsctaimages=2Enet=2Fctas=2Fv2=2Fpublic=2Fcs=2Fil=2F=3Fpg=3D51045a48-9de?=
+ =?utf-8?q?c-4357-8409-c1523a31a09a&amp=3Bpid=3D145335&amp=3Becid=3DACsprvvHZSjy?=
+ =?utf-8?q?XCPFJEk3NrxYVXmNVBsEghT9md0ts1Pgrvxc0QVtPA90CRv=5F9n9gCeFVLkSz5?=
+ =?utf-8?q?Qrs&amp=3Bhseid=3D121819596&amp=3Bhsic=3Dfalse&amp=3Bdsf=3D3_3x=2C?=
+ =?utf-8?q?_https=3A=2F=2Fhsctaimages=2Enet=2Fctas=2Fv2=2Fpublic=2Fcs=2Fil=2F=3Fpg=3D51045a48-9de?=
+ =?utf-8?q?c-4357-8409-c1523a31a09a&amp=3Bpid=3D145335&amp=3Becid=3DACsprvvHZSjy?=
+ =?utf-8?q?XCPFJEk3NrxYVXmNVBsEghT9md0ts1Pgrvxc0QVtPA90CRv=5F9n9gCeFVLkSz5?=
+ =?utf-8?q?Qrs&amp=3Bhseid=3D121819596&amp=3Bhsic=3Dfalse&amp=3Bdsf=3D4?= 4x"
+ align="middle" width="auto"></a></span></span><!-- end HubSpot Call-to-Action
+ Code --></center><p style="margin-bottom: 1em; -webkit-text-size-adjust:100%;
+ -ms-text-size-adjust:100%; font-family:Lato, Tahoma, sans-serif;
+ color:#444444; font-weight:500; font-size:18px;
+ line-height:1.5em"></p></div></div><!--end widget-span -->   </td>          
+ </tr>    </tbody></table>   </td></tr><tr><td align="left" valign="top"
+ class="bodyContent" width="100%" colspan="12"
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ mso-table-lspace:0pt; mso-table-rspace:0pt; color:#444444;
+ font-family:sans-serif; font-size:15px; line-height:150%;
+ text-align:left"><table cellpadding="0" cellspacing="0" border="0"
+ width="100%" class="templateColumnWrapper"
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse
+ !important">            <tbody><tr><td valign="top" colspan="12"
+ width="100.0%" class=" column" style="-webkit-text-size-adjust:100%;
+ -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt;
+ width:100.0%; text-align:left; padding:0; font-family:sans-serif;
+ font-size:15px; line-height:1.5em; color:#444444" align="left"><table
+ border="0" cellpadding="0" cellspacing="0" width="100%"
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:separate
+ !important; border-spacing:0; background-color:#ffffff" class="
+ columnContentTable" bgcolor="#ffffff"><tbody><tr><td align="left"
+ valign="top" class="columnContent widget-span widget-type-custom_widget"
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ mso-table-lspace:0pt; mso-table-rspace:0pt; padding-right:20px;
+ padding-bottom:20px; padding-left:20px; text-align:left; padding:0;
+ font-family:sans-serif; font-size:15px; line-height:1.5em; color:#444444;
+ padding-top:15px" data-widget-type="custom_widget"><div
+ class="layout-widget-wrapper"><div
+ id="hs_cos_wrapper_module_1616708529172173" class="hs_cos_wrapper
+ hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="color: inherit;
+ font-size: inherit; line-height: inherit;" data-hs-cos-general-type="widget"
+ data-hs-cos-type="module"><div style="border-top:2px solid
+ #EEEEEE;"></div></div></div><!--end layout-widget-wrapper
+ --></td></tr></tbody></table><!--end widget-table -->   </td>           </tr>   
+ </tbody></table>   </td></tr><tr><td align="left" valign="top"
+ class="bodyContent" width="100%" colspan="12"
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ mso-table-lspace:0pt; mso-table-rspace:0pt; color:#444444;
+ font-family:sans-serif; font-size:15px; line-height:150%;
+ text-align:left"><table cellpadding="0" cellspacing="0" border="0"
+ width="100%" class="templateColumnWrapper"
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse
+ !important">            <tbody><tr><td valign="top" colspan="12"
+ width="100.0%" class=" column" style="-webkit-text-size-adjust:100%;
+ -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt;
+ width:100.0%; text-align:left; padding:0; font-family:sans-serif;
+ font-size:15px; line-height:1.5em; color:#444444" align="left"><div
+ class="widget-span widget-type-custom_widget highlights" style=""
+ data-widget-type="custom_widget"><div class="layout-widget-wrapper"><div
+ id="hs_cos_wrapper_module_153693808694778" class="hs_cos_wrapper
+ hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text
+ widget-type-rich_text" style="color: inherit; font-size: inherit;
+ line-height: inherit;" data-hs-cos-general-type="widget"
+ data-hs-cos-type="module"><div id="hs_cos_wrapper_module_153693808694778_"
+ class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text"
+ style="color: inherit; font-size: inherit; line-height: inherit;"
+ data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><h1
+ style="display:block; margin-right:0; margin-bottom:10px; margin-left:0;
+ font-family:Lato, Tahoma, sans-serif; font-size:28px; font-weight:800;
+ color:#444444; margin-top:24px; line-height:175%">And now, here's <em>THE
+ LATEST</em>...&nbsp;</h1><h2 style="display:block; margin-right:0;
+ margin-bottom:10px; margin-left:0; font-family:Lato, Tahoma, sans-serif;
+ font-size:22px; color:#555555; line-height:1.25em; font-weight:800
+ !important; margin-top:24px"><span style="line-height:1.25em;
+ margin-top:24px; color:#555555; font-family:Lato, Tahoma, sans-serif;
+ font-size:22px; font-weight:800">18 email marketing best practices you need
+ to know for 2021 (</span><a
+ =?utf-8?q?href=3D=22https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fe2t=2Ftc=2FVX3J8h5Z7lpwN2wy4CLg-?=
+ =?utf-8?q?6frW4FBnYy4qtf1-N3NdJHk3p=5F9LV1-WJV7CgKgWW886SD48xd=5F0qW7Cb=5FDv7?=
+ =?utf-8?q?5HcftW7QXWZj55QcjvW3bp79Z7yGvMDW4ljcJF4GLr=5F9VFF0fF1HrSZcW5QkY?=
+ =?utf-8?q?p66=5F4TKLW6ldBMw8nHYnTN447DB9lW=5F-zW3Pt5kb2F4SjHW7Ty5Pb571HQmW8?=
+ =?utf-8?q?7D1St6CrYGYW8SSy-K9m0zvTW97N5jx3HLPJNN2kBCpbBXHBnVGhgLX65bKpD?=
+ =?utf-8?q?W6X-3sx5g=5FKv0W65ZbhJ4NPQbgW71G7Mq3xCPVcW4H0x5=5F1snnb9W13Dmp77X?=
+ =?utf-8?q?VZNgN8MTH4vzhdYyMRHZyYDM7dHW6HGq3f72xzzGW80zpJD4zVWmYN9c5fwdk?=
+ =?utf-8?q?pJgcW7KQHPV8wPNJ-VcckqW6c7HBD3c3H1=22?= rel="noopener"
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ color:#1082c1" data-hs-link-id="0" target="_blank">14-minute read</a><span
+ style="line-height:1.25em; margin-top:24px; color:#555555; font-family:Lato,
+ Tahoma, sans-serif; font-size:22px; font-weight:800">)&nbsp;</span></h2><p
+ style="margin-bottom: 1em; -webkit-text-size-adjust:100%;
+ -ms-text-size-adjust:100%; font-family:Lato, Tahoma, sans-serif;
+ color:#444444; font-weight:500; font-size:18px; line-height:1.5em"><span
+ style="font-size:18px; line-height:1.5em; font-weight:normal">Email marketing
+ is a critical component of almost any marketing strategy today. However, it
+ only works if you do it the right way. Don't worry, we've got you covered.
+ IMPACT's Director of Marketing and local email wizard Kristen Harold has put
+ together a </span><span style="font-size:18px; line-height:1.5em;
+ font-weight:bold"><strong><a 
+ =?utf-8?q?href=3D=22https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fe2t=2Ftc=2FVX3J8h5Z7lpwN2wy4CLg-?=
+ =?utf-8?q?6frW4FBnYy4qtf1-N3NdJHk3p=5F9LV1-WJV7CgXLyW1Fkv6w7xNLWMN4SlvP7Y?=
+ =?utf-8?q?BjvfN4Pv3kMPYbnfW6V8Cz072jD5GW7w=5F9Qw8kcZBTW6gxx4S1DRGTgW6QRw2?=
+ =?utf-8?q?S8NDNGVW8DXn8B2JBndyW67fTr11W9zpSW8MWPFx4xvhWLW1lyq4b3nLwFdM5?=
+ =?utf-8?q?BHp0=5FBvGRN68wxYTDd9nYN7qYMCKBtp7KMvQpvKq3n17W2Vzclb3pLHJrW6TP?=
+ =?utf-8?q?xk91=5F1NjqN4f1ljKMjrVwW2y1BYm87Rj8DW3XZpQB2n0ZyNW17wvl=5F7dwM37W?=
+ =?utf-8?q?1kzZP45frgWDN2dSX4P=5FCNV1VPvZJm2=5F-96FW3m1g9v2-9y57N7WJt72cBxvC?=
+ =?utf-8?q?W96rQSF2fSYPKW5cLpvm7KLfY12hf1=22?= rel="noopener"
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ color:#1082c1" data-hs-link-id="1" target="_blank">best practices guide to
+ email marketing, including best practices for what emails to send, whom to
+ send them to, and how to generate results</a>.</strong></span></p><h3
+ style="display:block; margin-right:0; margin-bottom:10px; margin-left:0;
+ font-family:Lato, Tahoma, sans-serif; font-size:20px; color:#555555;
+ line-height:1.25em; font-weight:800 !important; margin-top:24px"><span
+ style="color:#555555; line-height:1.25em; margin-top:24px; font-size:20px;
+ =?utf-8?b?Zm9udC13ZWlnaHQ6Ym9sZCI+8J+Tmg==?= </span><span
+ style="color:#555555; line-height:1.25em; margin-top:24px; font-size:20px;
+ font-weight:normal">Related reads and resources:</span></h3><ul
+ style="padding-left:18px; line-height:150%"><li
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ font-family:Lato, Tahoma, sans-serif; color:#444444; font-weight:500;
+ font-size:18px; line-height:1.5em; margin-bottom:10px"><a
+ =?utf-8?q?href=3D=22https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fe2t=2Ftc=2FVX3J8h5Z7lpwN2wy4CLg-?=
+ =?utf-8?q?6frW4FBnYy4qtf1-N3NdJH13p=5F9rV1-WJV7CgSlGVlhqmb9jqjcfW1SHk0N6=5F?=
+ =?utf-8?q?kpQGW5jr-2C6l0Zg6W8BJscM8-mqTlW2FKyXL23p0h4W7MfwmV9ft00sVDDvM?=
+ =?utf-8?q?=5F7gZ3JYW1jg5QX8WH0xpW326SCs2kqL-6VwslR18LYymYW4-6srw4Qygw0W72?=
+ =?utf-8?q?419l9kFwctW5Xh4pw7LzPl6W139wzB6XXZDzW4sHPmc5g0g8XW73pyQv3nGZ2?=
+ =?utf-8?q?WW8tzGpt2GBqKkW32ZcdB2kY8szW5hHv-V8Nb0VvN3f0Gd0mpzXXW6511DQ3c?=
+ =?utf-8?q?VzX2W4T63328-Sl8kW8HD98C8LHZXBW1=5Ff7yp6VdCr1W29vtWN4H0YjqW22b5?=
+ =?utf-8?q?TB7lTvPQ38RC1=22?= rel="noopener"
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ color:#1082c1" data-hs-link-id="0" target="_blank">8 email newsletter
+ mistakes that are killing your click-through rates</a></li><li
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ font-family:Lato, Tahoma, sans-serif; color:#444444; font-weight:500;
+ font-size:18px; line-height:1.5em; margin-bottom:10px"><a
+ =?utf-8?q?href=3D=22https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fe2t=2Ftc=2FVX3J8h5Z7lpwN2wy4CLg-?=
+ =?utf-8?q?6frW4FBnYy4qtf1-N3NdJH13p=5F9rV1-WJV7CgGLwW7grTdK4nPhNcW8bNV3j7?=
+ =?utf-8?q?1QxqvN4QcKmxRZr8BVY0M7s4Rsb=5FRW3VrRQ67=5F7CBNW3LFMw46ss=5FZBW53dt8?=
+ =?utf-8?q?x4xyKxVVyd1gd2mv=5F0sVbwJVZ3c6pYMN6lzs9RtdQWrW5L=5FJ6=5F2KMV55W18wB?=
+ =?utf-8?q?D68WBr=5F4W7bmTyp48Z5CcW2-tRqy8hqXL6W8xdRDv7NMLqJW3f=5FLQk1wLfD2W?=
+ =?utf-8?q?8zv7vb8QMK4kW7ZTbkX8XVRmYW1-YD7j94z8JwN27BBTl3D1QNVDrK-J75BlK?=
+ =?utf-8?q?1VSj=5F078by91WW5R4cJk71q9QXW50J5gS6mVwPpW8=5F9DXJ7dfJQ6W4V2DmW6p?=
+ =?utf-8?q?GL6x31y81=22?= rel="noopener" style="-webkit-text-size-adjust:100%;
+ -ms-text-size-adjust:100%; color:#1082c1" data-hs-link-id="0"
+ target="_blank">Should you be buying email marketing lists in
+ 2021?</a></li><li style="-webkit-text-size-adjust:100%;
+ -ms-text-size-adjust:100%; font-family:Lato, Tahoma, sans-serif;
+ color:#444444; font-weight:500; font-size:18px; line-height:1.5em;
+ margin-bottom:10px"><strong>IMPACT+ course: </strong><a
+ =?utf-8?q?href=3D=22https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fe2t=2Ftc=2FVX3J8h5Z7lpwN2wy4CLg-?=
+ =?utf-8?q?6frW4FBnYy4qtf1-N3NdJHk3p=5F9LV1-WJV7CgF03W5pjlpB83TBsnW3k4PJk7?=
+ =?utf-8?q?8Mc6YW1fKmDy13JMVCW83Tcvj90rg9LW7NsZpN5j=5FxcxW8M=5F=5F0J2qPDVLW60J?=
+ =?utf-8?q?4fd5g5515W1lVWKN6HNRGPW4qwzt=5F6HjdDxW317BgX6wpqkHW24l5mH6Bn=5FXj?=
+ =?utf-8?q?N8F0lz=5FK5m1QW1yPQkg59xxDyW6BV9tj7R1tWFW7xplN41DT3MRW38qrJs87c?=
+ =?utf-8?q?-2SW2RDKCS5LRsd9Vcd3Vj1ycrxTW1m4P7s3HgH3HV=5FrfqV6vk1rDMmFwKjx6?=
+ =?utf-8?q?FdCV5vVWH4Z-xRlW8KgtWz2nNMG5W6J-Gt07lnkJfW6PRrvT8Y-tH0V=5FqhzQ8?=
+ =?utf-8?q?G3RKzW35XrW41Y=5FnDtN3GN-vkTSH643js81=22?= rel="noopener"
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ color:#1082c1" data-hs-link-id="0"
+ =?utf-8?q?target=3D=22=5Fblank=22=3EInbounder=E2=80=99s?= Guide to Email
+ Marketing</a></li></ul><h2 style="display:block; margin-right:0;
+ margin-bottom:10px; margin-left:0; font-family:Lato, Tahoma, sans-serif;
+ font-size:22px; color:#555555; line-height:1.25em; font-weight:800
+ !important; margin-top:24px">5 virtual sales appointment strategies that will
+ help you close deals faster (<a
+ =?utf-8?q?href=3D=22https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fe2t=2Ftc=2FVX3J8h5Z7lpwN2wy4CLg-?=
+ =?utf-8?q?6frW4FBnYy4qtf1-N3NdJHk3p=5F9LV1-WJV7CgNtqW7x24rd6bdptSW2nJ3S22?=
+ =?utf-8?q?33cCvW4J06SR7ljRsMW6s3WVZ5xhvJFW8VQkjy34Jf6VW1B6WwS25CXrVW7pr?=
+ =?utf-8?q?M1S7kgXPtW1XZVwS2DfjB=5FW6-5BSS4pDCDrW4VxRhH4sKbjxW4pmm9L5H7Vwr?=
+ =?utf-8?q?Vgn4Tr7T3V9xN2Y6Cwwyfg-1W5mvmvR7WxknVW7mh4cH5ZccLKW2YGswX7zFd?=
+ =?utf-8?q?b0VtHHNd3=5F0NzhW3Xm5z36vZ5HfW2GH4gJ7Qr13pW6BPX7X1RGkhSW1k7Q3p5?=
+ =?utf-8?q?v183nVhtXCc5FSfFtVrvlHT9hVvxmW2QS8jH4Ngh5tVbwmKx90nJ3LW4S=5Ff5k?=
+ =?utf-8?q?253qbrW1PDqwv6R=5F3fYW57p87N2DGnd=5F38Vq1=22?= rel="noopener"
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ color:#1082c1" data-hs-link-id="0" target="_blank">9-minute read</a>)</h2><p
+ style="margin-bottom: 1em; -webkit-text-size-adjust:100%;
+ -ms-text-size-adjust:100%; font-family:Lato, Tahoma, sans-serif;
+ color:#444444; font-weight:500; font-size:18px; line-height:1.5em">Virtual
+ sales appointments don't come naturally to everyone. I sound like a broken
+ record, but sales teams had to do a lot of adjusting to their sales
+ strategies in recent memory. <span style="font-size:18px; line-height:1.5em;
+ font-weight:normal">That's why IMPACT+ Product Manager Myriah Anderson is
+ </span><strong><a
+ =?utf-8?q?href=3D=22https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fe2t=2Ftc=2FVX3J8h5Z7lpwN2wy4CLg-?=
+ =?utf-8?q?6frW4FBnYy4qtf1-N3NdJHk3p=5F9LV1-WJV7CgMG=5FN81ytCFY5DnHW1x=5FWyN68?=
+ =?utf-8?q?Y1hyW5x91cj7kpS5WW5sq5Qd6y9lPbW7FS9Y48KH0M7W2YP0PQ5Cs=5F94W8M6b?=
+ =?utf-8?q?Ss8LS714N2psZ=5F46psqHW5PfCTh84fhdJW1PrFwH3gJ5xMW3g69TZ8z6KwzW7?=
+ =?utf-8?q?z7Fmh7MQ1WfN5KlWGT6XZHLW5KP6rm4RkY3rW76N3Zf4rpWysW5dDPw9873Ll?=
+ =?utf-8?q?1W7=5FkYB66JZ9RxW4qjmhn57x4yLW3tzN-l3rJP60W6x-XW63xT8GLW4jR9hh6?=
+ =?utf-8?q?cSDJHW4QxHwB1xBBzPW6CCzxS6M0l3JW2KxxTR8BhPNFW2tJ8w57LgBYKVm1w?=
+ =?utf-8?q?tW4xfxG8W7XXxRs2HlYX9W5VbC8X23fhH331Nk1=22?= rel="noopener"
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ color:#1082c1" data-hs-link-id="1" target="_blank">here to save the day with
+ her 5 key strategies for closing more deals in a virtual selling
+ environment.</a></strong></p><p style="margin-bottom: 1em;
+ -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; font-family:Lato,
+ Tahoma, sans-serif; color:#444444; line-height:1.5em; font-weight:bold;
+ =?utf-8?q?font-size=3A20px=22=3E=3Cstrong=3E=F0=9F=93=9A?= Related reads and
+ resources:</strong></p><ul style="padding-left:18px; line-height:150%"><li
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ font-family:Lato, Tahoma, sans-serif; color:#444444; font-weight:500;
+ font-size:18px; line-height:1.5em; margin-bottom:10px"><a
+ =?utf-8?q?href=3D=22https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fe2t=2Ftc=2FVX3J8h5Z7lpwN2wy4CLg-?=
+ =?utf-8?q?6frW4FBnYy4qtf1-N3NdJH13p=5F9rV1-WJV7CgZXZW5J7sHd3hLKH3W8S64sJ2?=
+ =?utf-8?q?TWzS6W5C=5F64t5d5TXmW5mgP798xlBq1W5wzfzB1tRqTHW47Wwr=5F6YMPTrVsQW?=
+ =?utf-8?q?xj7gh=5F=5FQW1KStH081lsgXLLYxLgtwjDW5LNscH8TsHwyW5JNNBM3vDbBTW7jw?=
+ =?utf-8?q?zMG363W0jW7S0fqd5KKFbRW43KZ3Q3ChMNbW4-lcxD4VLyH1VZfsgj3hB79QW?=
+ =?utf-8?q?4Bk4QN4M61=5FXW53VxTS76mw-1W7FfH6c6jP=5FmsW3XTT6C4msmlHV9nGtm609g?=
+ =?utf-8?q?nBVgqrh42ZkfHgW27pvH27RGpNsVN5j2X6ZpKFZW3PLP4g78ZsXmN85hFK4YK?=
+ =?utf-8?q?XCF3b9P1=22?= rel="noopener" style="-webkit-text-size-adjust:100%;
+ -ms-text-size-adjust:100%; color:#1082c1" data-hs-link-id="0"
+ target="_blank">Virtual Selling Summit 2021 - Register today!</a></li><li
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ font-family:Lato, Tahoma, sans-serif; color:#444444; font-weight:500;
+ font-size:18px; line-height:1.5em; margin-bottom:10px"><a
+ =?utf-8?q?href=3D=22https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fe2t=2Ftc=2FVX3J8h5Z7lpwN2wy4CLg-?=
+ =?utf-8?q?6frW4FBnYy4qtf1-N3NdJH13p=5F9rV1-WJV7CgMdnW3BKPZC2WvnDYW8PvX281?=
+ =?utf-8?q?f2c9KN49-BTqQrTlmW5dS=5Fxq6lsLwFW928jLC6R62KVN1tfJ8RJWyZYW74mcz?=
+ =?utf-8?q?z7Xn6zrW4MqjzF41Q7BNW1mR3qD12z-7sN5=5FS6dN=5F2MWCVfwYQc80RX-gW5w9?=
+ =?utf-8?q?CtV2MjSP8V3gNpd7N-HyTW4hy1=5FN8KHLQZW2k9MY43Qc-JJW8h38pW5YPCZJW?=
+ =?utf-8?q?771NyM41CQZjW80GB8g7Gw2xPW1fpWrx35T9FWW4rV6P086HWTMW3bJH0r6JW?=
+ =?utf-8?q?knSV8N90k3z0D7lW2MmmJR8kRd7JW6gJLjw61FjBlW10npcL5SQdPMW6J9617?=
+ =?utf-8?q?5KmqNW3hX71=22?= rel="noopener"
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ color:#1082c1" data-hs-link-id="0" target="_blank">Why virtual sales will
+ continue to dominate in a post-COVID world</a></li><li
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ font-family:Lato, Tahoma, sans-serif; color:#444444; font-weight:500;
+ font-size:18px; line-height:1.5em; margin-bottom:10px"><a
+ =?utf-8?q?href=3D=22https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fe2t=2Ftc=2FVX3J8h5Z7lpwN2wy4CLg-?=
+ =?utf-8?q?6frW4FBnYy4qtf1-N3NdJHD3p=5Fb1V1-WJV7CgStNW4k4qqQ635MmmW3ytFNn6?=
+ =?utf-8?q?dTZZvW3hdfnH58lKqBW7r=5FGx=5F8N=5FwgMW4C5tjY2=5FH8ttW3ZXf3j3-jNlRW1c1?=
+ =?utf-8?q?Zcn7p-L0VW3b2MdZ3pLjRVVTs8sj36NHk2W5vvhsY1ZjSK5W27lft94Y8QDQW?=
+ =?utf-8?q?4BdN-W8qq-LGW1wyB=5FV6pBk7WW33Wdhh7vnShSN36lzxCtj3C6N3lrYStqzC5?=
+ =?utf-8?q?WW5B6WWR14DKPCW13GhKm3jRglhVJqyjB8Gv6kcW4Tg6wl3WVRMyVJCN=5FJ55x?=
+ =?utf-8?q?4q4N3jC6msF04KWW3-mn-c605fmdW2nQ7FY3q1TsKVLxf9-3FdQgjW7m7mr=5F1?=
+ =?utf-8?q?-rYbgN1bJGvXNX02YW1xKGhk77vmtZW4lTQpS3Rhh9QW5kQ4qN7RfHnP3q2L1?=
+ =?utf-8?q?=22?= rel="noopener" style="-webkit-text-size-adjust:100%;
+ -ms-text-size-adjust:100%; color:#1082c1" data-hs-link-id="0"
+ target="_blank"></a><strong>IMPACT+ on demand: </strong><a
+ =?utf-8?q?href=3D=22https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fe2t=2Ftc=2FVX3J8h5Z7lpwN2wy4CLg-?=
+ =?utf-8?q?6frW4FBnYy4qtf1-N3NdJHD3p=5Fb1V1-WJV7Cg-5CW4GlZpW8JKKTHW5KmvXn6?=
+ =?utf-8?q?LjW=5FqVW4cWX7W0WTQW5DQPMW6jjRnlW2dRMfW8DxT-WN3Rp11Yql8SjW3jLQG?=
+ =?utf-8?q?11BpZ9WN5sn83LWPyd3W4WSXvN7FP8TjW67xJQL7DMXzbW87lk2Q6B5=5FK2W4H?=
+ =?utf-8?q?1lJZ2by5pPW2VH5rJ7m5bw8W7Dfr0D6WZD9KW25S0tm6DltQBW6mqR8=5F4gBWV?=
+ =?utf-8?q?lVKrhYt4Xb4KrW2Fgyzp2xVzVVW1St7b57KMXw2N1kx5gYH310xW7BJph-2Qg?=
+ =?utf-8?q?BNFW8Nq0pc30kqS1W6B5TWS3MB5wKW9m2TZs7plK8BW4tcfGh5VcHpdN1q779?=
+ =?utf-8?q?7LrT70W93DnPP7gyg3QW31qMDg6HYVNTN8VgKKG8=5FkKDW6kfjBz4h-6k-36V9?=
+ =?utf-8?q?1=22?= rel="noopener" style="-webkit-text-size-adjust:100%;
+ -ms-text-size-adjust:100%; color:#1082c1; font-weight:normal"
+ data-hs-link-id="0" target="_blank">How to Add Video to Your Entire Sales
+ Process</a><strong><br></strong></li></ul></div></div></div><!--end
+ layout-widget-wrapper --></div><!--end widget-span -->   </td>          
+ </tr>    </tbody></table>   </td></tr><tr><td align="left" valign="top"
+ class="bodyContent" width="100%" colspan="12"
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ mso-table-lspace:0pt; mso-table-rspace:0pt; color:#444444;
+ font-family:sans-serif; font-size:15px; line-height:150%;
+ text-align:left"><table cellpadding="0" cellspacing="0" border="0"
+ width="100%" class="templateColumnWrapper"
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse
+ !important">            <tbody><tr><td valign="top" colspan="12"
+ width="100.0%" class=" column" style="-webkit-text-size-adjust:100%;
+ -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt;
+ width:100.0%; text-align:left; padding:0; font-family:sans-serif;
+ font-size:15px; line-height:1.5em; color:#444444" align="left"><table
+ border="0" cellpadding="0" cellspacing="0" width="100%"
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:separate
+ !important; border-spacing:0; background-color:#ffffff" class="
+ columnContentTable" bgcolor="#ffffff"><tbody><tr><td align="left"
+ valign="top" class="columnContent widget-span widget-type-custom_widget"
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ mso-table-lspace:0pt; mso-table-rspace:0pt; padding-right:20px;
+ padding-left:20px; text-align:left; padding:0; font-family:sans-serif;
+ font-size:15px; line-height:1.5em; color:#444444; padding-top:20px;
+ padding-bottom:15px" data-widget-type="custom_widget"><div
+ class="layout-widget-wrapper"><div
+ id="hs_cos_wrapper_module_1616710233636238" class="hs_cos_wrapper
+ hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="color: inherit;
+ font-size: inherit; line-height: inherit;" data-hs-cos-general-type="widget"
+ data-hs-cos-type="module"><div style="border-top:2px solid
+ #EEEEEE;"></div></div></div><!--end layout-widget-wrapper
+ --></td></tr></tbody></table><!--end widget-table -->   </td>           </tr>   
+ </tbody></table>   </td></tr><tr><td align="left" valign="top"
+ class="bodyContent" width="100%" colspan="12"
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ mso-table-lspace:0pt; mso-table-rspace:0pt; color:#444444;
+ font-family:sans-serif; font-size:15px; line-height:150%;
+ text-align:left"><table cellpadding="0" cellspacing="0" border="0"
+ width="100%" class="templateColumnWrapper"
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse
+ !important">            <tbody><tr><td valign="top" colspan="12"
+ width="100.0%" class=" column" style="-webkit-text-size-adjust:100%;
+ -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt;
+ width:100.0%; text-align:left; padding:0; font-family:sans-serif;
+ font-size:15px; line-height:1.5em; color:#444444" align="left"><div
+ class="widget-span widget-type-custom_widget exclusivesSection" style=""
+ data-widget-type="custom_widget"><div class="layout-widget-wrapper"><div
+ id="hs_cos_wrapper_module_153693818374297" class="hs_cos_wrapper
+ hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text
+ widget-type-rich_text" style="color: inherit; font-size: inherit;
+ line-height: inherit;" data-hs-cos-general-type="widget"
+ data-hs-cos-type="module"><div id="hs_cos_wrapper_module_153693818374297_"
+ class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text"
+ style="color: inherit; font-size: inherit; line-height: inherit;"
+ data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><h1
+ style="display:block; margin-right:0; margin-bottom:10px; margin-left:0;
+ font-family:Lato, Tahoma, sans-serif; font-size:28px; font-weight:800;
+ color:#444444; margin-top:24px; line-height:125%">IMPACT+ community
+ exclusives</h1><p style="margin-bottom: 1em; -webkit-text-size-adjust:100%;
+ -ms-text-size-adjust:100%; font-family:Lato, Tahoma, sans-serif;
+ color:#444444; font-weight:500; font-size:18px; line-height:1.5em">Today's
+ takeaway is to always keep&nbsp;<em>yourself</em> on your toes! Adam is
+ getting into (re)building new habits. <a
+ =?utf-8?q?href=3D=22https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fe2t=2Ftc=2FVX3J8h5Z7lpwN2wy4CLg-?=
+ =?utf-8?q?6frW4FBnYy4qtf1-N3NdJHD3p=5Fb1V1-WJV7CgM=5FKW4Z-TWB2MCLz4W62Vx6G2?=
+ =?utf-8?q?pW1C2W84wgt48=5F2c9hW86-LC22J5t32W2JSgYX3T0QVqW1nPFn83ZBRBBW4L1?=
+ =?utf-8?q?Skk5jLdhfW8l1R2p1vCJ0wW2WB0wd5Bj66RW5TS3Wt4n89GJVzM6k057K4CfW?=
+ =?utf-8?q?31HmT51Zg2zdW9j4Dpj6pKGktW1WbGLj3R3HpRW62=5FzSD4b91jnM3WCxZcBC8?=
+ =?utf-8?q?MW2yWLSW2TPxkVW6m=5F2j71P7LDyW8tyL6R1ySnpgW6T8txL1mCySqVm8-fy2l?=
+ =?utf-8?q?hjqKW7hckkS39wGdbVX5JqW48Xc5-W6g=5Fv6w2KLhGJD18P5Y5Cz5W4BkhS18g?=
+ =?utf-8?q?KFrLW7Z76Rj4VjHq4W8pVkyl7pbT3NN43srQT8QnzbW7ChzSr3sj2x43mY51=22?=
+ rel="noopener" style="-webkit-text-size-adjust:100%;
+ -ms-text-size-adjust:100%; color:#1082c1" data-hs-link-id="1"
+ target="_blank">What surprising new habits are you building for
+ yourself?</a></p><center><a
+ =?utf-8?q?href=3D=22https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fe2t=2Ftc=2FVX3J8h5Z7lpwN2wy4CLg-?=
+ =?utf-8?q?6frW4FBnYy4qtf1-N3NdJHD3p=5Fb1V1-WJV7CgBsqW7YYxF83J6vQnW7Vrd661?=
+ =?utf-8?q?MXhj3W9dt46y4YTqgVW9kPtt54VgS5FW528fTv34CCnkW4QCRpY7g815GW1Tx?=
+ =?utf-8?q?Njz28-DhJW7w1VzT5XB--MW4yYqTl35nxtqW2Cw1k58hG02MW3cLwkz32psjX?=
+ =?utf-8?q?W2tTL5q54ZRFmW2tFDPz1c2Fk7W4RHQTM1B3wb9W7Jt65T7fG5RfW54XnMm8l?=
+ =?utf-8?q?kgrlW4dB5mf89J65vW1Tl8bY3=5FWLCXW5HNFqn5Fz5-7W9g7V14239t-lW5DSB?=
+ =?utf-8?q?TC6pxbmZW1lfp1V5y8YpHW3rshCv90hVc=5FW2h6TDx1TXzxFN714LvpSz4sLVc?=
+ =?utf-8?q?b4kz77jz=5FJW2Xtjgd7wzlwVW7Q0Cbh5y6bhNW8Fqw4348p4z1W8WzCG81R4S0?=
+ =?utf-8?q?N3kk11=22?= rel="noopener" style="-webkit-text-size-adjust:100%;
+ -ms-text-size-adjust:100%; color:#1082c1" data-hs-link-id="2"
+ target="_blank"><img
+ =?utf-8?q?src=3D=22https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fhs-fs=2Fhubfs=2FIM+%20post%20frid?=
+ =?utf-8?q?ay%204-16=2Epng=3Fwidth=3D1000&amp=3Bupscale=3Dtrue&amp=3Bname=3DIM+%20post?=
+ =?utf-8?q?%20friday%204-16=2Epng=22?= alt="IM+ post friday 4-16" width="500"
+ style="vertical-align:bottom; -ms-interpolation-mode:bicubic; width:500px;
+ max-width:1516px; margin-left:auto; margin-right:auto; display:block"
+ =?utf-8?q?srcset=3D=22https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fhs-fs=2Fhubfs=2FIM+%20post%20f?=
+ =?utf-8?q?riday%204-16=2Epng=3Fupscale=3Dtrue&amp=3Bwidth=3D1000&amp=3Bupscale=3Dtrue?=
+ =?utf-8?q?&amp=3Bname=3DIM+%20post%20friday%204-16=2Epng_500w=2C?=
+ =?utf-8?q?_https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fhs-fs=2Fhubfs=2FIM+%20post%20friday%20?=
+ =?utf-8?q?4-16=2Epng=3Fupscale=3Dtrue&amp=3Bwidth=3D2000&amp=3Bupscale=3Dtrue&amp=3Bnam?=
+ =?utf-8?q?e=3DIM+%20post%20friday%204-16=2Epng?= 1000w" sizes="(max-width:
+ 500px) 100vw, 500px"></a></center><h2 style="display:block; margin-right:0;
+ margin-bottom:10px; margin-left:0; font-family:Lato, Tahoma, sans-serif;
+ font-size:22px; color:#555555; font-weight:800 !important; margin-top:24px;
+ line-height:125%">Pro on-demand: Inbounder's Guide to Google Suite
+ Tools</h2><a 
+ =?utf-8?q?href=3D=22https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fe2t=2Ftc=2FVX3J8h5Z7lpwN2wy4CLg-?=
+ =?utf-8?q?6frW4FBnYy4qtf1-N3NdJFy5nxG7V3Zsc37CgLn3VbfXbM11n45gW77wSyL1S?=
+ =?utf-8?q?kcD8W34blX091KYS8W2fb=5FZ799yrmmW8dStj16z0Ll6V9VXK-5l6pmFW1pD=5FS?=
+ =?utf-8?q?c412JLgW3Y97sZ6wKGncW5tPv5V9cNLHVW4FRvJc1c1dQ=5FW4zhjQk8rjbT5W1?=
+ =?utf-8?q?1hkhg7Ny4HXW24KwvF34H350W39pFgk28Ck5TW2NBTb43=5FhvfjW5Qjhw-4HlL?=
+ =?utf-8?q?49W1Q5KxW4m-sY7W4952mD2318NyW5TC2y48VQqFTW6bzJ357mHh=5FLN4gBfGt?=
+ =?utf-8?q?tWl4HW580Dkx8Jvl1tW4883wh2Z77DFW2jWYcl6bzQ1TW7zTZGk8wgjkPW582?=
+ =?utf-8?q?CTt3s5NjbW2sjNDf6V4GXRVJggPy6Ld2JxW98cmTR4KtxDFW8780b18MJ46YV?=
+ =?utf-8?q?xv6gz8kZ=5F8gW2GHl1v35LP1131n91=22?= rel="noopener"
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ color:#1082c1" data-hs-link-id="0" target="_blank"><img
+ =?utf-8?q?src=3D=22https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fhs-fs=2Fhubfs=2FKevin%20Google%20?=
+ =?utf-8?q?Search%20LATEST=2Epng=3Fwidth=3D996&amp=3Bupscale=3Dtrue&amp=3Bname=3DKevin?=
+ =?utf-8?q?%20Google%20Search%20LATEST=2Epng=22?= alt="Kevin Google Search
+ LATEST" width="498" style="vertical-align:bottom;
+ -ms-interpolation-mode:bicubic; width:498px; max-width:540px;
+ margin-left:auto; margin-right:auto; display:block"
+ =?utf-8?q?srcset=3D=22https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fhs-fs=2Fhubfs=2FKevin%20Google?=
+ =?utf-8?q?%20Search%20LATEST=2Epng=3Fupscale=3Dtrue&amp=3Bwidth=3D996&amp=3Bupscale?=
+ =?utf-8?q?=3Dtrue&amp=3Bname=3DKevin%20Google%20Search%20LATEST=2Epng_498w=2C?=
+ =?utf-8?q?_https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fhs-fs=2Fhubfs=2FKevin%20Google%20Searc?=
+ =?utf-8?q?h%20LATEST=2Epng=3Fupscale=3Dtrue&amp=3Bwidth=3D1992&amp=3Bupscale=3Dtrue&a?=
+ =?utf-8?q?mp=3Bname=3DKevin%20Google%20Search%20LATEST=2Epng?= 996w"
+ sizes="(max-width: 498px) 100vw, 498px"></a><p style="margin-bottom: 1em;
+ -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; font-family:Lato,
+ Tahoma, sans-serif; color:#444444; font-weight:500; font-size:18px;
+ line-height:1.5em; text-align:left" align="left">Google offers a range of
+ free tools businesses can use to learn more about how search engines and real
+ buyers view and use their websites and assets. This course is built for you
+ to watch and apply at the same time and I can personally guarantee
+ =?utf-8?b?eW914oCZbGw=?= have a fuller understanding of how to use
+ =?utf-8?b?R29vZ2xl4oCZcw==?= suite of tools to measure and improve your They
+ Ask, You Answer, and overall inbound marketing.</p><p style="margin-bottom:
+ 1em; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ font-family:Lato, Tahoma, sans-serif; color:#444444; font-weight:500;
+ font-size:18px; line-height:1.5em; text-align:left"
+ align="left"></p><center><!--HubSpot Call-to-Action Code --><span
+ class="hs-cta-wrapper" data-hs-img-pg="5c18e23d-cb93-4b69-965a-53cbcbec6623"
+ id="hs-cta-wrapper-5c18e23d-cb93-4b69-965a-53cbcbec6623"><span
+ class="hs-cta-node hs-cta-5c18e23d-cb93-4b69-965a-53cbcbec6623"
+ id="hs-cta-5c18e23d-cb93-4b69-965a-53cbcbec6623"><a
+ =?utf-8?q?href=3D=22https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fe2t=2Ftc=2FVX3J8h5Z7lpwN2wy4CLg-?=
+ =?utf-8?q?6frW4FBnYy4qtf1-N3NdJHD5V93wV3Zsc37CgX-KW2p7f6g1dPTz2W90JGSQ3?=
+ =?utf-8?q?6dkplW92ngqh1y4qxkW6D6HK64Xj-cLW7PxJxP5BV60RW7-7c8f955rZrW7Xc?=
+ =?utf-8?q?wKS84tVNVW85FsNc78lmdVVqxr704N7cvbW5v=5FqDf65=5FySTW6p=5F2K98lH41RW?=
+ =?utf-8?q?84Fzk31SR1t2W3wJz=5F95FwsY8W3C34Ky8s8TbvW4bzs-H4mXNp=5FW8SPMj41Pf?=
+ =?utf-8?q?YdQW5LstzB5b0wrfW7t1rPK5Yy1bJW3rdF6z5mylVnW8KNLLt1TwMFLW5sd=5F-?=
+ =?utf-8?q?24T5DNqW32HTYW8l277FW1832rs3fNy-QW4lZDnd5b9zkfN8RsfYv6fW73VRh?=
+ =?utf-8?q?K3P2Q09DyW4dKdky79N2VzW7RpF9G1ZQSvXW5mRWGY54rrlmVL6Mz97fVhz7W?=
+ =?utf-8?q?8YLynz3n4msCW5wZXMh2FpkRMW2f2xGj47cLsPW1WTJc8609F-5W1RPhCD34y?=
+ =?utf-8?q?TrQN8c420MfLmVfVXnrdJ9cvV-qW64dzKk2dwHMkW9lJjdm4-x0TYW3jLFyn5?=
+ =?utf-8?q?cLJLKW9cCPC57klCMVW4Lc-0B8GV7BJW46=5F=5F205-Dhy4W3GgVLz68S8zSW5Np?=
+ =?utf-8?q?pNV3ZH9ggN2xjxjxDt63d3fyT1=22?= target="_blank"
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ color:#1082c1" data-hs-link-id="0"><img class="hs-cta-img"
+ id="hs-cta-img-5c18e23d-cb93-4b69-965a-53cbcbec6623"
+ style="vertical-align:bottom; -ms-interpolation-mode:bicubic;
+ border-width:0px; margin:0 auto; display:block; margin-top:20px;
+ margin-bottom:20px; width:auto !important; max-width:100% !important"
+ mce_noresize="1"
+ =?utf-8?q?src=3D=22https=3A=2F=2Fhsctaimages=2Enet=2Fctas=2Fv2=2Fpublic=2Fcs=2Fil=2F=3Fpg=3D5c18e23?=
+ =?utf-8?q?d-cb93-4b69-965a-53cbcbec6623&amp=3Bpid=3D145335&amp=3Becid=3DACsprvv?=
+ =?utf-8?q?HZSjyXCPFJEk3NrxYVXmNVBsEghT9md0ts1Pgrvxc0QVtPA90CRv=5F9n9gCeFV?=
+ =?utf-8?q?LkSz5Qrs&amp=3Bhseid=3D121819596&amp=3Bhsic=3Dfalse=22?=
+ alt="Master Google Suite for your business"
+ =?utf-8?q?srcset=3D=22https=3A=2F=2Fhsctaimages=2Enet=2Fctas=2Fv2=2Fpublic=2Fcs=2Fil=2F=3Fpg=3D5c18?=
+ =?utf-8?q?e23d-cb93-4b69-965a-53cbcbec6623&amp=3Bpid=3D145335&amp=3Becid=3DACsp?=
+ =?utf-8?q?rvvHZSjyXCPFJEk3NrxYVXmNVBsEghT9md0ts1Pgrvxc0QVtPA90CRv=5F9n9gC?=
+ =?utf-8?q?eFVLkSz5Qrs&amp=3Bhseid=3D121819596&amp=3Bhsic=3Dfalse&amp=3Bdsf=3D2_2x=2C?=
+ =?utf-8?q?_https=3A=2F=2Fhsctaimages=2Enet=2Fctas=2Fv2=2Fpublic=2Fcs=2Fil=2F=3Fpg=3D5c18e23d-cb9?=
+ =?utf-8?q?3-4b69-965a-53cbcbec6623&amp=3Bpid=3D145335&amp=3Becid=3DACsprvvHZSjy?=
+ =?utf-8?q?XCPFJEk3NrxYVXmNVBsEghT9md0ts1Pgrvxc0QVtPA90CRv=5F9n9gCeFVLkSz5?=
+ =?utf-8?q?Qrs&amp=3Bhseid=3D121819596&amp=3Bhsic=3Dfalse&amp=3Bdsf=3D3_3x=2C?=
+ =?utf-8?q?_https=3A=2F=2Fhsctaimages=2Enet=2Fctas=2Fv2=2Fpublic=2Fcs=2Fil=2F=3Fpg=3D5c18e23d-cb9?=
+ =?utf-8?q?3-4b69-965a-53cbcbec6623&amp=3Bpid=3D145335&amp=3Becid=3DACsprvvHZSjy?=
+ =?utf-8?q?XCPFJEk3NrxYVXmNVBsEghT9md0ts1Pgrvxc0QVtPA90CRv=5F9n9gCeFVLkSz5?=
+ =?utf-8?q?Qrs&amp=3Bhseid=3D121819596&amp=3Bhsic=3Dfalse&amp=3Bdsf=3D4?= 4x"
+ align="middle" width="auto"></a></span></span><!-- end HubSpot Call-to-Action
+ Code --></center><p style="margin-bottom: 1em; -webkit-text-size-adjust:100%;
+ -ms-text-size-adjust:100%; font-family:Lato, Tahoma, sans-serif;
+ color:#444444; font-weight:500; font-size:18px; line-height:1.5em"></p><p
+ style="margin-bottom: 1em; -webkit-text-size-adjust:100%;
+ -ms-text-size-adjust:100%; font-family:Lato, Tahoma, sans-serif;
+ color:#444444; font-weight:500; font-size:18px; line-height:1.5em;
+ text-align:center" align="center"><em>Not a pro member? <a
+ =?utf-8?q?href=3D=22https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fe2t=2Ftc=2FVX3J8h5Z7lpwN2wy4CLg-?=
+ =?utf-8?q?6frW4FBnYy4qtf1-N3NdJGL3p=5F97V1-WJV7CgYbLW68NnD78b63NzN6Nn1zhg?=
+ =?utf-8?q?7-pDW27dsny3WQDr8W4wsFSQ1Kv0LRW8rnhHT4=5FWTfTW4BqFnQ7wsy9hW9h9x?=
+ =?utf-8?q?Ct2G8VFFW4Mjvk12wM65rW8RCg3h25M7fQW5CYC2V8vQ7csW3ZH1966VDg7XV?=
+ =?utf-8?q?ly7xv1xHMRsW5vZW0B6kZgxPW8JMXXL7ZGZk=5FV-7KjP75cRKBW23VMyV4cTPV?=
+ =?utf-8?q?rW52WNGg2LH6QvW2nWDVf64Z5rcW7NWWz07H1rBQW43bKQx3PnXtJW98V3vy3?=
+ =?utf-8?q?=5FTRn7W7GLM7=5F5rwwFJN7Tcj3h6DGH2W1NPM7W39P8F63lB01=22?=
+ rel="noopener" style="-webkit-text-size-adjust:100%;
+ -ms-text-size-adjust:100%; color:#1082c1" data-hs-link-id="0"
+ target="_blank">Start your 14-day free trial and get
+ access</a>!</em></p></div></div></div><!--end layout-widget-wrapper
+ --></div><!--end widget-span -->   </td>           </tr>    </tbody></table>  
+ </td></tr><tr><td align="left" valign="top" class="bodyContent" width="100%"
+ colspan="12" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ mso-table-lspace:0pt; mso-table-rspace:0pt; color:#444444;
+ font-family:sans-serif; font-size:15px; line-height:150%;
+ text-align:left"><table cellpadding="0" cellspacing="0" border="0"
+ width="100%" class="templateColumnWrapper"
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse
+ !important">            <tbody><tr><td valign="top" colspan="12"
+ width="100.0%" class=" column" style="-webkit-text-size-adjust:100%;
+ -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt;
+ width:100.0%; text-align:left; padding:0; font-family:sans-serif;
+ font-size:15px; line-height:1.5em; color:#444444" align="left"><table
+ border="0" cellpadding="0" cellspacing="0" width="100%"
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:separate
+ !important; border-spacing:0; background-color:#ffffff" class="
+ columnContentTable" bgcolor="#ffffff"><tbody><tr><td align="left"
+ valign="top" class="columnContent widget-span widget-type-custom_widget"
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ mso-table-lspace:0pt; mso-table-rspace:0pt; padding-right:20px;
+ padding-left:20px; text-align:left; padding:0; font-family:sans-serif;
+ font-size:15px; line-height:1.5em; color:#444444; padding-top:20px;
+ padding-bottom:20px" data-widget-type="custom_widget"><div
+ class="layout-widget-wrapper"><div
+ id="hs_cos_wrapper_module_1616710245808257" class="hs_cos_wrapper
+ hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="color: inherit;
+ font-size: inherit; line-height: inherit;" data-hs-cos-general-type="widget"
+ data-hs-cos-type="module"><div style="border-top:2px solid
+ #EEEEEE;"></div></div></div><!--end layout-widget-wrapper
+ --></td></tr></tbody></table><!--end widget-table -->   </td>           </tr>   
+ </tbody></table>   </td></tr><tr><td align="left" valign="top"
+ class="bodyContent" width="100%" colspan="12"
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ mso-table-lspace:0pt; mso-table-rspace:0pt; color:#444444;
+ font-family:sans-serif; font-size:15px; line-height:150%;
+ text-align:left"><table cellpadding="0" cellspacing="0" border="0"
+ width="100%" class="templateColumnWrapper"
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse
+ !important">            <tbody><tr><td valign="top" colspan="12"
+ width="100.0%" class=" column" style="-webkit-text-size-adjust:100%;
+ -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt;
+ width:100.0%; text-align:left; padding:0; font-family:sans-serif;
+ font-size:15px; line-height:1.5em; color:#444444; padding-bottom:20px"
+ align="left"><div class="widget-span widget-type-custom_widget " style=""
+ data-widget-type="custom_widget"><div class="layout-widget-wrapper"><div
+ id="hs_cos_wrapper_module_1536938292138102" class="hs_cos_wrapper
+ hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text
+ widget-type-rich_text" style="color: inherit; font-size: inherit;
+ line-height: inherit;" data-hs-cos-general-type="widget"
+ data-hs-cos-type="module"><div id="hs_cos_wrapper_module_1536938292138102_"
+ class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text"
+ style="color: inherit; font-size: inherit; line-height: inherit;"
+ data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><h1
+ style="display:block; margin-right:0; margin-bottom:10px; margin-left:0;
+ font-family:Lato, Tahoma, sans-serif; font-size:28px; line-height:1.25em;
+ font-weight:800; color:#444444; margin-top:24px">Your Friday nonsense</h1><p
+ style="margin-bottom: 1em; -webkit-text-size-adjust:100%;
+ -ms-text-size-adjust:100%; font-family:Lato, Tahoma, sans-serif;
+ color:#444444; font-weight:500; font-size:18px; line-height:1.5em">The world
+ needs a giggle. Every Friday we include some nonsense to make you laugh,
+ smile, and feel <em>ridiculously</em> related to:</p><center><a
+ =?utf-8?q?href=3D=22https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fe2t=2Ftc=2FVX3J8h5Z7lpwN2wy4CLg-?=
+ =?utf-8?q?6frW4FBnYy4qtf1-N3NdJGL3p=5F97V1-WJV7CgVTfW40slkv5wB8TRW3T=5Fj2m3?=
+ =?utf-8?q?r0WdyW3bh7Dw3MwkL3W6Rf4bN9jLkKCN4v-fQ6kzjlVW6Pq=5F7x5rVbvTVgbng?=
+ =?utf-8?q?446FQQ7W2cZmw480NRSLW1MghNc3frLJXW4LNDPG1-fThSW2SwDMB2qdnGDW5?=
+ =?utf-8?q?mPzKD3xD0xWN4998rN6KlNYN7PdQ2Wj9hYsN2pHymqFct3pVZbSJp3QTxRGW7?=
+ =?utf-8?q?lvnF31yWDrMW3vwlsb5BPmh=5FW5xzlbS75hqjzW4PFb=5F32DYT3xVf2XC43jcyX?=
+ =?utf-8?q?FW8f-gYj4Yw5qDW6K2lwf75THJhVcpFl456jFqT3nlK1=22?= rel="noopener"
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ color:#1082c1" data-hs-link-id="0" target="_blank"><img
+ =?utf-8?q?src=3D=22https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fhs-fs=2Fhubfs=2FMy%20Stress%20Lev?=
+ =?utf-8?q?els=2Epng=3Fwidth=3D952&amp=3Bupscale=3Dtrue&amp=3Bname=3DMy%20Stress%20Lev?=
+ =?utf-8?q?els=2Epng=22?= alt="My Stress Levels" width="476"
+ style="vertical-align:bottom; -ms-interpolation-mode:bicubic; width:476px;
+ max-width:926px"
+ =?utf-8?q?srcset=3D=22https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fhs-fs=2Fhubfs=2FMy%20Stress%20?=
+ =?utf-8?q?Levels=2Epng=3Fupscale=3Dtrue&amp=3Bwidth=3D952&amp=3Bupscale=3Dtrue&amp=3Bna?=
+ =?utf-8?q?me=3DMy%20Stress%20Levels=2Epng_476w=2C?=
+ =?utf-8?q?_https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fhs-fs=2Fhubfs=2FMy%20Stress%20Levels=2Ep?=
+ =?utf-8?q?ng=3Fupscale=3Dtrue&amp=3Bwidth=3D1904&amp=3Bupscale=3Dtrue&amp=3Bname=3DMy%2?=
+ =?utf-8?q?0Stress%20Levels=2Epng?= 952w" sizes="(max-width: 476px) 100vw,
+ 476px"></a></center><p style="margin-bottom: 1em;
+ -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; font-family:Lato,
+ Tahoma, sans-serif; color:#444444; font-weight:500; font-size:18px;
+ line-height:1.5em">This captures this week's stress levels perfectly. It also
+ showcases my ability to overthink very simple
+ things...</p></div></div></div><!--end layout-widget-wrapper --></div><!--end
+ widget-span -->   </td>           </tr>    </tbody></table>  
+ </td></tr><tr><td align="left" valign="top" class="bodyContent" width="100%"
+ colspan="12" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ mso-table-lspace:0pt; mso-table-rspace:0pt; color:#444444;
+ font-family:sans-serif; font-size:15px; line-height:150%;
+ text-align:left"><table cellpadding="0" cellspacing="0" border="0"
+ width="100%" class="templateColumnWrapper"
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse
+ !important">            <tbody><tr><td valign="top" colspan="12"
+ width="100.0%" class=" column" style="-webkit-text-size-adjust:100%;
+ -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt;
+ width:100.0%; text-align:left; padding:0; font-family:sans-serif;
+ font-size:15px; line-height:1.5em; color:#444444" align="left"><div
+ class="widget-span widget-type-custom_widget " style=""
+ data-widget-type="custom_widget"><div class="layout-widget-wrapper"><div
+ id="hs_cos_wrapper_module_1616703667561343" class="hs_cos_wrapper
+ hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="color: inherit;
+ font-size: inherit; line-height: inherit;" data-hs-cos-general-type="widget"
+ data-hs-cos-type="module"><table cellspacing="0" cellpadding="0" width="100%"
+ border="0" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse
+ !important; width:100% !important">  <tbody><tr>    <td width="100%"
+ border="0" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ mso-table-lspace:0pt; mso-table-rspace:0pt">      <table cellspacing="0"
+ cellpadding="0" width="100%" border="0" style="-webkit-text-size-adjust:100%;
+ -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt;
+ border-collapse:collapse !important; width:100% !important">       
+ <tbody><tr>          <td width="100px;!important"
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ mso-table-lspace:0pt; mso-table-rspace:0pt">            <img
+ =?utf-8?q?src=3D=22https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fhs-fs=2Fhubfs=2F500px=5FSquare=5FConn?=
+ =?utf-8?q?or=5FDeLaney=2Ejpg=3Fwidth=3D170&amp=3Bheight=3D170&amp=3Bupscale=3Dtrue&amp=3B?=
+ =?utf-8?q?name=3D500px=5FSquare=5FConnor=5FDeLaney=2Ejpg=22?= width="85" ,
+ height="85" style="vertical-align:bottom; -ms-interpolation-mode:bicubic;
+ border-radius:50%; max-width:85px !important; max-height:85px!important;
+ width:85px!important; height:85px!important; margin-right:8px; border:2px
+ solid #222222; padding:2px"
+ =?utf-8?q?srcset=3D=22https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fhs-fs=2Fhubfs=2F500px=5FSquare=5FC?=
+ =?utf-8?q?onnor=5FDeLaney=2Ejpg=3Fupscale=3Dtrue&amp=3Bwidth=3D170&amp=3Bheight=3D170&a?=
+ =?utf-8?q?mp=3Bupscale=3Dtrue&amp=3Bname=3D500px=5FSquare=5FConnor=5FDeLaney=2Ejpg_85w=2C?=
+ =?utf-8?q?_https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fhs-fs=2Fhubfs=2F500px=5FSquare=5FConnor=5FDe?=
+ =?utf-8?q?Laney=2Ejpg=3Fupscale=3Dtrue&amp=3Bwidth=3D340&amp=3Bheight=3D340&amp=3Bupsca?=
+ =?utf-8?q?le=3Dtrue&amp=3Bname=3D500px=5FSquare=5FConnor=5FDeLaney=2Ejpg?=
+ 170w" sizes="(max-width: 85px) 100vw, 85px">          </td>          <td
+ width="100%" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ mso-table-lspace:0pt; mso-table-rspace:0pt; padding:0px 0px 0px 5px">           
+ <p style="margin-bottom: 1em; -webkit-text-size-adjust:100%;
+ -ms-text-size-adjust:100%; font-family:Lato, Tahoma, sans-serif;
+ color:#444444; font-weight:500; font-size:18px; line-height:1.5em; margin:0px
+ !important"><strong>Connor DeLaney</strong></p>            <p
+ style="margin-bottom: 1em; -webkit-text-size-adjust:100%;
+ -ms-text-size-adjust:100%; font-family:Lato, Tahoma, sans-serif;
+ color:#444444; font-weight:500; font-size:18px; margin:0px !important;
+ line-height:15px; display:inline-block">Community &amp; Events
+ Manager,&nbsp;</p><p style="margin-bottom: 1em;
+ -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; font-family:Lato,
+ Tahoma, sans-serif; color:#444444; font-weight:500; font-size:18px;
+ margin:0px !important; line-height:15px; display:inline-block"><a
+ =?utf-8?q?href=3D=22https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fe2t=2Ftc=2FVX3J8h5Z7lpwN2wy4CLg-?=
+ =?utf-8?q?6frW4FBnYy4qtf1-N3NdJGL3p=5F97V1-WJV7CgVsYVbYJ-b1SNQDqW3pRzJs96?=
+ =?utf-8?q?G-VwVKhrKT1hX4JxW8Km5-g7by1LlW7gNx0F7hQ=5F17W6NsZgM31g609W4yc8v?=
+ =?utf-8?q?g7861xdW2Zhd9l7JzytSW2766dP7LmkbCW7WBD4f3D49sdW1bSnqh78BPjGW3?=
+ =?utf-8?q?vBccl5wrRZbW4RFYmv6HXdCxW6jkXxN8QMd=5FgW7QGhq35Ccz4fW2Gw4Jf74KL?=
+ =?utf-8?q?stW55bDg92FYgZSW1LrVqb1GlbBSN6gKhxmKnqXCN2kFSNtGJs3=5FW5HT3XB8t?=
+ =?utf-8?q?b=5FhwW9hMZVl6nxCzRN6XLccdVQ1CHW4k0Y668v1XVs3hrd1=22?=
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ color:#1082c1" data-hs-link-id="0"
+ target="_blank"><i>cdelaney@impactplus.com</i></a></p>          </td>       
+ </tr>      </tbody></table>     </td>      </tr>       </tbody></table>           
+ </div></div><!--end layout-widget-wrapper --></div><!--end widget-span -->  
+ </td>           </tr>    </tbody></table>   </td></tr><tr><td align="left"
+ valign="top" class="bodyContent" width="100%" colspan="12"
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ mso-table-lspace:0pt; mso-table-rspace:0pt; color:#444444;
+ font-family:sans-serif; font-size:15px; line-height:150%;
+ text-align:left"><table cellpadding="0" cellspacing="0" border="0"
+ width="100%" class="templateColumnWrapper"
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse
+ !important">            <tbody><tr><td valign="top" colspan="12"
+ width="100.0%" class=" column" style="-webkit-text-size-adjust:100%;
+ -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt;
+ width:100.0%; text-align:left; padding:0; font-family:sans-serif;
+ font-size:15px; line-height:1.5em; color:#444444" align="left"><table
+ border="0" cellpadding="0" cellspacing="0" width="100%"
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:separate
+ !important; border-spacing:0; background-color:#ffffff" class="
+ columnContentTable" bgcolor="#ffffff"><tbody><tr><td align="left"
+ valign="top" class="columnContent widget-span widget-type-custom_widget"
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ mso-table-lspace:0pt; mso-table-rspace:0pt; padding-right:20px;
+ padding-bottom:20px; padding-left:20px; text-align:left; padding:0;
+ font-family:sans-serif; font-size:15px; line-height:1.5em; color:#444444;
+ padding-top:10px" data-widget-type="custom_widget"><div
+ class="layout-widget-wrapper"><div
+ id="hs_cos_wrapper_module_1616705617347705" class="hs_cos_wrapper
+ hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text
+ widget-type-rich_text" style="color: inherit; font-size: inherit;
+ line-height: inherit;" data-hs-cos-general-type="widget"
+ data-hs-cos-type="module"><div id="hs_cos_wrapper_module_1616705617347705_"
+ class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text"
+ style="color: inherit; font-size: inherit; line-height: inherit;"
+ data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><p
+ style="margin-bottom: 1em; -webkit-text-size-adjust:100%;
+ -ms-text-size-adjust:100%; font-family:Lato, Tahoma, sans-serif;
+ color:#444444; font-weight:500; font-size:18px; line-height:1.5em">P.S. We've
+ got a bunch of new courses and lessons in IMPACT+! This new content ranges
+ from <a
+ =?utf-8?q?href=3D=22https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fe2t=2Ftc=2FVX3J8h5Z7lpwN2wy4CLg-?=
+ =?utf-8?q?6frW4FBnYy4qtf1-N3NdJFy5nxG7V3Zsc37CgFt9MTpXzZSg2rJTHc4J4sksg?=
+ =?utf-8?q?DW4ry6Vh10hk1cW4J6G3T18QHThW5WY4P47JChBKVK8pKk1Sfc3mW91LmjP7j?=
+ =?utf-8?q?PJkCV5QK7P1YNxFnW2n9kSB422v4MW1k4z173ZNHQYW9jQfp37KxLQBW6QnpP?=
+ =?utf-8?q?557FGY2W8L2CRl7mSwtsW5mp4sG3s2SjXN4Jv4S=5FX7C4BW3W3CGv23lLZCN4-?=
+ =?utf-8?q?CQNflQQ6qW3F7VL49hQl-VW7vZMPR5s9X2gW7rqKGg3T-lkgW284m9=5F3fCG6-?=
+ =?utf-8?q?W5Bmr4t9l9fTrW11kVvF26kHH1W3YNsYS6zkWLMW996vt62gr0MRW4jPw7P3-?=
+ =?utf-8?q?dCR0W5pb8XQ1FHgg4W3hWYvN4l1rw2W5Bw4FS45X7h4N65TSd6yrcmRW88zY3?=
+ =?utf-8?q?j3C--xGVrWrCG48gfgS32wb1=22?= rel="noopener"
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ color:#1082c1; font-weight:normal" data-hs-link-id="0" target="_blank">pillar
+ content</a>, <a
+ =?utf-8?q?href=3D=22https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fe2t=2Ftc=2FVX3J8h5Z7lpwN2wy4CLg-?=
+ =?utf-8?q?6frW4FBnYy4qtf1-N3NdJH13p=5F9rV1-WJV7CgNZXW4DkSC=5F40smSSW6ZXqSc3?=
+ =?utf-8?q?fPhG2W2rDPLG8Ynvs2VCmpMm6DG22GW6XkrHh2Zz7lGW3Znkk-651vbhW6634?=
+ =?utf-8?q?FL26JQYlW8Y4YKW8d2jwMW1XycHD1sQ2YtW14d8Fg6qvyGjW2-npfl4rX725W?=
+ =?utf-8?q?5527711DJc2TW20fs6Y5sgzS9W6kfXdx66Gm46W5dHfx34BTtwTW7LKn9L7cB?=
+ =?utf-8?q?jtqW16-0rQ8zd4=5FHW8BbZ0m7skWgHW54Z7mm51QY24W35ptZ22tDm-jW7J-bF?=
+ =?utf-8?q?C6yMCgHW4QLMDB8b70dXW9blbMC3tpQWkN2czs4PzWz5YW22mtb92vzVYWW4s?=
+ =?utf-8?q?QqxB7VslY22f21=22?= rel="noopener"
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ color:#1082c1" data-hs-link-id="0" target="_blank">assignment
+ prospecting</a>, <a
+ =?utf-8?q?href=3D=22https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fe2t=2Ftc=2FVX3J8h5Z7lpwN2wy4CLg-?=
+ =?utf-8?q?6frW4FBnYy4qtf1-N3NdJFS5nxGrV3Zsc37CgSbDW8mf1wc77cyF4W1GlJjq2?=
+ =?utf-8?q?kTnCLW3XXgxR1r0pPYW3st2jH6jtvLdW7vYNvr3pb7ymV6Rv3W4KWN6tW741S?=
+ =?utf-8?q?Ng8gqLymW1fNJYg5V55qQW3DNdqQ8cWLczW2jK2zT4LmkcBW4FCFHr7w2NphN?=
+ =?utf-8?q?2xcFn421LTqW28NfKk33g3XxW71jCy75H9SzlW5XMHz0874WyNW4yCKk55Tzb?=
+ =?utf-8?q?k=5FVtbMRf6f4nF0V=5FDPDV9jx7ZtW2pw2hr4=5FTVHnW6HM27q7Z5JT7W906nrt7q?=
+ =?utf-8?q?kDNdW69y1jn1G8q4=5FW8VyfYz5w2yBVW3D59zB77d2XNW73WjCz18f=5F=5FZW5lLf?=
+ =?utf-8?q?d04plGQyW50BqXY9g75DSW312-bN8ZTygYW6cj9TP6TGG1qW6pYLD88T41BwW?=
+ =?utf-8?q?7VyxJ-1jxqTxW8dCc=5FT84JdzhW8cyz3w596QSYVxS62w1z91Zr3bwY1=22?=
+ rel="noopener" style="-webkit-text-size-adjust:100%;
+ -ms-text-size-adjust:100%; color:#1082c1" data-hs-link-id="0"
+ target="_blank">maximizing HubSpot reporting</a>, and even <a
+ =?utf-8?q?href=3D=22https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fe2t=2Ftc=2FVX3J8h5Z7lpwN2wy4CLg-?=
+ =?utf-8?q?6frW4FBnYy4qtf1-N3NdJHD3p=5Fb1V1-WJV7CgNHpVkJLww2sGXC3W9gHpxc4D?=
+ =?utf-8?q?=5FZy3W1qnRll1rdn04W289-xL8nCPKgW6ms=5F3d8M-q=5FLW7QLPJc5FWZLFW2d2h?=
+ =?utf-8?q?X47w0D2=5FN5Gm9cG98xS3W6Vr5zL7S5r7xW6qX6Z52=5FV0=5F2W3pJSqs5chCRTW1?=
+ =?utf-8?q?qWNHk70MpCBW7YBw203RRWb4N59dTxJtL6JvW7Gyl5x7dwYMYW1d=5F0PF7GZgJ?=
+ =?utf-8?q?WW50N-mb7cxVbhW4lMR=5FJ3Pld4DW2RdCGb3-6DpyW1L5sqK1H7rJBW4VnFsK7?=
+ =?utf-8?q?LbC30W401mCM2nH1dBVTdwW=5F7dnTtwN7614yBQthftW23y4cc5tXHTbW8yDFk?=
+ =?utf-8?q?W8CnW8pM9r7=5Fkh9TnMW1WD58x4CwbQHW31G41m8fW0vNW5368Ss3V4nvy34B9?=
+ =?utf-8?q?1=22?= rel="noopener" style="-webkit-text-size-adjust:100%;
+ -ms-text-size-adjust:100%; color:#1082c1" data-hs-link-id="0"
+ target="_blank">virtual event sponsorships</a>. Go check them out for
+ yourself!</p></div></div></div><!--end layout-widget-wrapper
+ --></td></tr></tbody></table><!--end widget-table -->   </td>           </tr>   
+ </tbody></table>   </td></tr><tr><td align="left" valign="top"
+ class="bodyContent" width="100%" colspan="12"
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ mso-table-lspace:0pt; mso-table-rspace:0pt; color:#444444;
+ font-family:sans-serif; font-size:15px; line-height:150%;
+ text-align:left"><table cellpadding="0" cellspacing="0" border="0"
+ width="100%" class="templateColumnWrapper"
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse
+ !important">            <tbody><tr><td valign="top" colspan="12"
+ width="100.0%" class=" column" style="-webkit-text-size-adjust:100%;
+ -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt;
+ width:100.0%; text-align:left; padding:0; font-family:sans-serif;
+ font-size:15px; line-height:1.5em; color:#444444" align="left"><div
+ class="widget-span widget-type-custom_widget bylineSection"
+ style="font-size:15px;color:#666666;" data-widget-type="custom_widget"><div
+ class="layout-widget-wrapper"><div
+ id="hs_cos_wrapper_module_16167074102561138" class="hs_cos_wrapper
+ hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text
+ widget-type-rich_text" style="color: inherit; font-size: inherit;
+ line-height: inherit;" data-hs-cos-general-type="widget"
+ data-hs-cos-type="module"><div id="hs_cos_wrapper_module_16167074102561138_"
+ class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text"
+ style="color: inherit; font-size: inherit; line-height: inherit;"
+ data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><p
+ style="margin-bottom: 1em; -webkit-text-size-adjust:100%;
+ -ms-text-size-adjust:100%; font-family:Lato, Tahoma, sans-serif;
+ color:#444444; font-weight:500; line-height:1.5em; font-size:15px
+ !important"><em style="font-size:15px !important"><span
+ style="font-weight:500; line-height:1.5em; font-size:15px"><span
+ style="font-weight:500; line-height:1.5em; font-size:15px !important;
+ color:#999999"><span style="font-weight:500; line-height:1.5em;
+ font-size:15px !important; color:#666666">IMPACT teaches business leaders how
+ to build high-performing teams that achieve extraordinary digital sales and
+ marketing results through coaching, online training, and in-person
+ experiences. We look forward to joining you on your journey to becoming a
+ hero for your own company at <a
+ =?utf-8?q?href=3D=22https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fe2t=2Ftc=2FVX3J8h5Z7lpwN2wy4CLg-?=
+ =?utf-8?q?6frW4FBnYy4qtf1-N3NdJGr3p=5F8SV1-WJV7CgVltW8SH0l79grZZJW8hN=5Fyz4?=
+ =?utf-8?q?b6hnHMCDPhZ4Mx6VW4gcZqJ3FpTRdW8XwMK46TpxZNW8N2W-=5F1l3vQmW7mq8C?=
+ =?utf-8?q?m38WJrCW7PTcpb3H--ZpW3ft6sW68M3=5F7N30K3KrY5WvZW6btfZ88VvPT2N4Y?=
+ =?utf-8?q?0-rKblDz5W565y1J6PYhwFW2FJ2hr9lMyV7W3-24yD5XXbD1W3ft85G2Zq=5Fcf?=
+ =?utf-8?q?W4KFjRM1ZyxWNW4pwqJD5slvlbN7-PQbDzbF4sW4wdvDW699DpfW1-dryv1Sc?=
+ =?utf-8?q?TNVVm0jmW5R0K3w375B1=22?= target="_blank" rel="noopener"
+ data-hs-link-id="0" style="-webkit-text-size-adjust:100%;
+ -ms-text-size-adjust:100%; color:#1082c1; font-size:15px
+ =?utf-8?q?!important=22=3Eimpactplus=2Ecom=3C=2Fa=3E=2E=3C=2Fspan=3E=3C=2Fspan=3E=3C=2Fspan=3E=3C=2Fem=3E=3C=2Fp=3E?=
+ =?utf-8?q?=3C=2Fdiv=3E=3C=2Fdiv=3E=3C=2Fdiv=3E=3C!--end?=
+ layout-widget-wrapper --></div><!--end widget-span -->   </td>          
+ </tr>    </tbody></table>   </td></tr><tr><td align="left" valign="top"
+ class="bodyContent" width="100%" colspan="12"
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ mso-table-lspace:0pt; mso-table-rspace:0pt; color:#444444;
+ font-family:sans-serif; font-size:15px; line-height:150%;
+ text-align:left"><table cellpadding="0" cellspacing="0" border="0"
+ width="100%" class="templateColumnWrapper"
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse
+ !important">            <tbody><tr><td valign="top" colspan="12"
+ width="100.0%" class=" column" style="-webkit-text-size-adjust:100%;
+ -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt;
+ width:100.0%; text-align:left; padding:0; font-family:sans-serif;
+ font-size:15px; line-height:1.5em; color:#444444" align="left"><table
+ border="0" cellpadding="0" cellspacing="0" width="100%"
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:separate
+ !important; border-spacing:0; background-color:#ffffff" class="
+ columnContentTable" bgcolor="#ffffff"><tbody><tr><td align="left"
+ valign="top" class="columnContent widget-span widget-type-custom_widget"
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ mso-table-lspace:0pt; mso-table-rspace:0pt; padding-right:20px;
+ padding-left:20px; text-align:left; padding:0; font-family:sans-serif;
+ font-size:15px; line-height:1.5em; color:#444444; padding-top:20px;
+ padding-bottom:10px" data-widget-type="custom_widget"><div
+ class="layout-widget-wrapper"><div
+ id="hs_cos_wrapper_module_1616710266765276" class="hs_cos_wrapper
+ hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="color: inherit;
+ font-size: inherit; line-height: inherit;" data-hs-cos-general-type="widget"
+ data-hs-cos-type="module"><div style="border-top:2px solid
+ #EEEEEE;"></div></div></div><!--end layout-widget-wrapper
+ --></td></tr></tbody></table><!--end widget-table -->   </td>           </tr>   
+ </tbody></table>   </td></tr><tr><td align="left" valign="top"
+ class="bodyContent" width="100%" colspan="12"
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ mso-table-lspace:0pt; mso-table-rspace:0pt; color:#444444;
+ font-family:sans-serif; font-size:15px; line-height:150%;
+ text-align:left"><table cellpadding="0" cellspacing="0" border="0"
+ width="100%" class="templateColumnWrapper"
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse
+ !important">            <tbody><tr><td valign="top" colspan="12"
+ width="100.0%" class=" column" style="-webkit-text-size-adjust:100%;
+ -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt;
+ width:100.0%; text-align:left; padding:0; font-family:sans-serif;
+ font-size:15px; line-height:1.5em; color:#444444" align="left"><div
+ class="widget-span widget-type-custom_widget " style=""
+ data-widget-type="custom_widget"><div class="layout-widget-wrapper"><div
+ id="hs_cos_wrapper_module_158387996970784" class="hs_cos_wrapper
+ hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="color: inherit;
+ font-size: inherit; line-height: inherit;" data-hs-cos-general-type="widget"
+ data-hs-cos-type="module"><div id="hs_cos_wrapper_module_158387996970784_"
+ class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text"
+ style="color: inherit; font-size: inherit; line-height: inherit;"
+ data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><p
+ style="margin-bottom: 1em; -webkit-text-size-adjust:100%;
+ -ms-text-size-adjust:100%; font-family:Lato, Tahoma, sans-serif;
+ color:#444444; font-weight:500; font-size:18px; line-height:100%;
+ text-align:left" align="left"><span style="font-weight:500;
+ line-height:1.5em; font-size:14px; color:#b9b9b9">Creating heroes, growing
+ businesses, changing lives.</span><br><span style="line-height:1.5em;
+ font-size:12px; font-weight:normal; color:#b9b9b9">Sent with
+ =?utf-8?b?8J+SmQ==?= by IMPACT&nbsp;</span></p><p style="margin-bottom: 1em;
+ -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; line-height:1.5em;
+ font-family:Lato,Tahoma,sans-serif; font-size:10px; font-weight:normal;
+ text-decoration:none; font-style:normal; color:#b9b9b9;
+ direction:lrt">IMPACT, 470 James Street, Suite 10, New Haven, CT</p><p
+ style="margin-bottom: 1em; -webkit-text-size-adjust:100%;
+ -ms-text-size-adjust:100%; font-family:Lato, Tahoma, sans-serif;
+ color:#444444; font-weight:500; font-size:18px; line-height:1.5em"><a
+ =?utf-8?q?href=3D=22https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fhs=2Fmanage-preferences=2Funsubs?=
+ =?utf-8?q?cribe=3Fd=3DVngD1f8LDYK6W41S-FJ4fK4-gW3zd5=5F-4cLxYJW2m40Kf3T0pbmW4?=
+ =?utf-8?q?3T2Pd6TxGHzW17f7hv9lRkXmW971G176tf82WW5mMkhg8YJ1TTV28XfP5GCrb?=
+ =?utf-8?q?7MGKd=5FP20N8lW373dzF6cdq55W6Q1zhV6h0-wh51CHx31&amp=3Bv=3D3&amp=3Butm?=
+ =?utf-8?q?=5Fcampaign=3DThe%20Latest%20by%20IMPACT&amp=3Butm=5Fsource=3Dhs=5Femail&?=
+ =?utf-8?q?amp=3Butm=5Fmedium=3Demail&amp=3Butm=5Fcontent=3D121819596&amp=3B=5Fhsenc=3Dp2A?=
+ =?utf-8?q?Nqtz-=5FDVz3OR5Kzib1=5FAN5y8Pv3SstFvn2ZU1rlgbp4GrcWL-OiMYLkZhbwRD?=
+ =?utf-8?q?-MQbV7bYs1WsWR6I5pSFB7TPjbI3KPPCzEXk32f4804vVFTgL79dTypBU&amp?=
+ =?utf-8?q?=3B=5Fhsmi=3D121819596=22?= style="-webkit-text-size-adjust:100%;
+ -ms-text-size-adjust:100%; font-family:Lato,Tahoma,sans-serif;
+ font-size:10px; color:#b9b9b9; font-weight:normal; text-decoration:underline;
+ font-style:normal" data-hs-link-id="0" target="_blank" rel="noopener">Manage
+ preferences</a>&nbsp;<span style="line-height:1.5em;
+ font-family:Lato,Tahoma,sans-serif; font-size:10px; color:#b9b9b9;
+ font-weight:normal; text-decoration:underline; font-style:normal">|</span> <a
+ =?utf-8?q?href=3D=22https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fhs=2Fmanage-preferences=2Funsubs?=
+ =?utf-8?q?cribe-all=3Fd=3DVngD1f8LDYK6W41S-FJ4fK4-gW3zd5=5F-4cLxYJW2m40Kf3T0p?=
+ =?utf-8?q?bmW43T2Pd6TxGHzW17f7hv9lRkXmW971G176tf82WW5mMkhg8YJ1TTV28XfP5?=
+ =?utf-8?q?GCrb7MGKd=5FP20N8lW373dzF6cdq55W6Q1zhV6h0-wh51CHx31&amp=3Bv=3D3&amp?=
+ =?utf-8?q?=3Butm=5Fcampaign=3DThe%20Latest%20by%20IMPACT&amp=3Butm=5Fsource=3Dhs=5Fem?=
+ =?utf-8?q?ail&amp=3Butm=5Fmedium=3Demail&amp=3Butm=5Fcontent=3D121819596&amp=3B=5Fhsenc?=
+ =?utf-8?q?=3Dp2ANqtz-=5FDVz3OR5Kzib1=5FAN5y8Pv3SstFvn2ZU1rlgbp4GrcWL-OiMYLkZh?=
+ =?utf-8?q?bwRD-MQbV7bYs1WsWR6I5pSFB7TPjbI3KPPCzEXk32f4804vVFTgL79dTypBU?=
+ =?utf-8?q?&amp=3B=5Fhsmi=3D121819596=22?=
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ font-family:Lato,Tahoma,sans-serif; font-size:10px; color:#b9b9b9;
+ font-weight:normal; text-decoration:underline; font-style:normal"
+ data-hs-link-id="0" target="_blank"
+ rel="noopener">Unsubscribe</a></p></div></div></div><!--end
+ layout-widget-wrapper --></div><!--end widget-span -->   </td>          
+ </tr>    </tbody></table>   </td></tr><!--end body wrapper -->                                           
+ </tbody></table>                                        </td>                                   
+ </tr>                                </tbody></table>                               
+ <!-- End Template Wrapper -->                            </td>                       
+ </tr>                        <tr>                            <td
+ align="center" valign="top" style="-webkit-text-size-adjust:100%;
+ -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt">                               
+ <!-- Begin Template Footer -->                                <div
+ class="footer-container-wrapper"></div><table border="0" cellpadding="0"
+ cellspacing="0" width="100%" id="footerTable"
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse
+ !important; background-color:#f2f2f2; color:#999999; font-family:sans-serif;
+ font-size:12px; line-height:120%; padding-top:20px; padding-right:20px;
+ padding-bottom:20px; padding-left:20px; text-align:center" bgcolor="#f2f2f2"
+ align="center">                                    <!--end footer wrapper -->                                   
+ <tbody><tr>                                        <td
+ style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ mso-table-lspace:0pt; mso-table-rspace:0pt"></td>                                   
+ </tr>                                </tbody></table>                               
+ <!-- End Template Footer -->                            </td>                       
+ </tr>                    </tbody></table>                    <!-- End
+ Template Container -->                </td>            </tr>       
+ </tbody></table>    <img
+ =?utf-8?q?src=3D=22https=3A=2F=2Fwww=2Eimpactplus=2Ecom=2Fe2t=2Fto=2FVX3J8h5Z7lpwN2wy4CLg-6?=
+ =?utf-8?q?frW4FBnYy4qtf1-f3NdJqt22=22?= alt="" width="1" height="1"
+ border="0"
+ =?utf-8?q?style=3D=22display=3Anone!important=3Bmin-height=3A1px!important=3Bwidth=3A?=
+ =?utf-8?q?1px!important=3Bborder-width=3A0!important=3Bmargin-top=3A0!important?=
+ =?utf-8?q?=3Bmargin-bottom=3A0!important=3Bmargin-right=3A0!important=3Bmargin-le?=
+ =?utf-8?q?ft=3A0!important=3Bpadding-top=3A0!important=3Bpadding-bottom=3A0!impor?=
+ =?utf-8?q?tant=3Bpadding-right=3A0!important=3Bpadding-left=3A0!important=22=3E=3C=2Fbo?=
+ =?utf-8?q?dy=3E=3C=2Fhtml=3E?=
+Content-Type: multipart/alternative; boundary="=-0M4+9g2a2BxBaXAE8uxyjw=="
+
+--=-0M4+9g2a2BxBaXAE8uxyjw==
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+Content-Id: <c71dcdab-b360-4b8f-baad-0636672898e8>
+
+It's been a long week. Why not find a fun new hobby to get into? P.S E=
+njoy your weekly nonsense!
+
+Happy Friday y'all!
+
+I'm going to keep the intro pretty short and sweet today since you and=
+ I both are looking forward to shutting it down and relaxing this week=
+end.
+
+As you head into the weekend, take a moment to think about something n=
+ew you could (or should) be doing.
+
+For me, I've been working on breaking my YouTube habit and replacing i=
+t with something new like card games or volunteering.
+
+In all honesty, I'm fighting a losing battle so far, but over time I'm=
+ confident it'll happen!
+
+Our community in IMPACT+ has been chatting about this topic and surpri=
+sing ourselves with new habits or activities to try. Hop in and let us=
+ know what you're up to for this weekend (https://www.impactplus.com/e=
+2t/sc2/Mm-nFbkMTfJW6mgx117GLTkbW79Tc3G6kfPHVW861MqQ8FSpPJf1KTlgd03 ) a=
+nd then check back in on Monday to let us know how it went!
+
+Surprise yourself with a new habit! (https://www.impactplus.com/e2t/sc=
+2/Mm-nFbkMTfJW6mgx117GLTkbW79Tc3G6kfPHVW861MqQ8FSpPJf1KTlgd13 )
+
+And now, here's THE LATEST...
+
+18 email marketing best practices you need to know for 2021 (14-minute=
+ read (https://www.impactplus.com/e2t/sc2/Mm-nFbkMTfJW6mgx117GLTkbW79T=
+c3G6kfPHVW861MqQ8FSpPJf1KTlgd23 ) )
+
+Email marketing is a critical component of almost any marketing strate=
+gy today. However, it only works if you do it the right way. Don't wor=
+ry, we've got you covered. IMPACT's Director of Marketing and local em=
+ail wizard Kristen Harold has put together a best practices guide to e=
+mail marketing, including best practices for what emails to send, whom=
+ to send them to, and how to generate results (https://www.impactplus.=
+com/e2t/sc2/Mm-nFbkMTfJW6mgx117GLTkbW79Tc3G6kfPHVW861MqQ8FSpPJf1KTlgd3=
+3 ) .
+
+=F0=9F=93=9A Related reads and resources:
+
+- 8 email newsletter mistakes that are killing your click-through rate=
+s (https://www.impactplus.com/e2t/sc2/Mm-nFbkMTfJW6mgx117GLTkbW79Tc3G6=
+kfPHVW861MqQ8FSpPJf1KTlgd43 )
+- Should you be buying email marketing lists in 2021? (https://www.imp=
+actplus.com/e2t/sc2/Mm-nFbkMTfJW6mgx117GLTkbW79Tc3G6kfPHVW861MqQ8FSpPJ=
+f1KTlgd53 )
+- IMPACT+ course: Inbounder=E2=80=99s Guide to Email Marketing (https:=
+//www.impactplus.com/e2t/sc2/Mm-nFbkMTfJW6mgx117GLTkbW79Tc3G6kfPHVW861=
+MqQ8FSpPJf1KTlgd63 )
+
+5 virtual sales appointment strategies that will help you close deals =
+faster (9-minute read (https://www.impactplus.com/e2t/sc2/Mm-nFbkMTfJW=
+6mgx117GLTkbW79Tc3G6kfPHVW861MqQ8FSpPJf1KTlgd73 ) )
+
+Virtual sales appointments don't come naturally to everyone. I sound l=
+ike a broken record, but sales teams had to do a lot of adjusting to t=
+heir sales strategies in recent memory. That's why IMPACT+ Product Man=
+ager Myriah Anderson is here to save the day with her 5 key strategies=
+ for closing more deals in a virtual selling environment. (https://www=
+.impactplus.com/e2t/sc2/Mm-nFbkMTfJW6mgx117GLTkbW79Tc3G6kfPHVW861MqQ8F=
+SpPJf1KTlgd83 )
+
+=F0=9F=93=9A Related reads and resources:
+
+- Virtual Selling Summit 2021 - Register today! (https://www.impactplu=
+s.com/e2t/sc2/Mm-nFbkMTfJW6mgx117GLTkbW79Tc3G6kfPHVW861MqQ8FSpPJf1KTlg=
+d93 )
+- Why virtual sales will continue to dominate in a post-COVID world (h=
+ttps://www.impactplus.com/e2t/sc2/Mm-nFbkMTfJW6mgx117GLTkbW79Tc3G6kfPH=
+VW861MqQ8FSpPJf1KTlgdb3 )
+- IMPACT+ on demand: How to Add Video to Your Entire Sales Process (ht=
+tps://www.impactplus.com/e2t/sc2/Mm-nFbkMTfJW6mgx117GLTkbW79Tc3G6kfPHV=
+W861MqQ8FSpPJf1KTlgdc3 )
+
+IMPACT+ community exclusives
+
+Today's takeaway is to always keep yourself on your toes! Adam is gett=
+ing into (re)building new habits. What surprising new habits are you b=
+uilding for yourself? (https://www.impactplus.com/e2t/sc2/Mm-nFbkMTfJW=
+6mgx117GLTkbW79Tc3G6kfPHVW861MqQ8FSpPJf1KTlgdd3 )
+
+IM+ post friday 4-16 (https://www.impactplus.com/e2t/sc2/Mm-nFbkMTfJW6=
+mgx117GLTkbW79Tc3G6kfPHVW861MqQ8FSpPJf1KTlgdf3 )
+
+Pro on-demand: Inbounder's Guide to Google Suite Tools
+
+Kevin Google Search LATEST (https://www.impactplus.com/e2t/sc2/Mm-nFbk=
+MTfJW6mgx117GLTkbW79Tc3G6kfPHVW861MqQ8FSpPJf1KTlgdg3 )
+
+Google offers a range of free tools businesses can use to learn more a=
+bout how search engines and real buyers view and use their websites an=
+d assets. This course is built for you to watch and apply at the same =
+time and I can personally guarantee you=E2=80=99ll have a fuller under=
+standing of how to use Google=E2=80=99s suite of tools to measure and =
+improve your They Ask, You Answer, and overall inbound marketing.
+
+Master Google Suite for your business (https://www.impactplus.com/e2t/=
+sc2/Mm-nFbkMTfJW6mgx117GLTkbW79Tc3G6kfPHVW861MqQ8FSpPJf1KTlgdh3 )
+
+Not a pro member? Start your 14-day free trial and get access (https:/=
+/www.impactplus.com/e2t/sc2/Mm-nFbkMTfJW6mgx117GLTkbW79Tc3G6kfPHVW861M=
+qQ8FSpPJf1KTlgdj3 ) !
+
+Your Friday nonsense
+
+The world needs a giggle. Every Friday we include some nonsense to mak=
+e you laugh, smile, and feel ridiculously related to:
+
+My Stress Levels (https://www.impactplus.com/e2t/sc2/Mm-nFbkMTfJW6mgx1=
+17GLTkbW79Tc3G6kfPHVW861MqQ8FSpPJf1KTlgdk3 )
+
+This captures this week's stress levels perfectly. It also showcases m=
+y ability to overthink very simple things...
+
+Connor DeLaney
+
+Community & Events Manager,
+
+cdelaney@impactplus.com (https://www.impactplus.com/e2t/sc2/Mm-nFbkMTf=
+JW6mgx117GLTkbW79Tc3G6kfPHVW861MqQ8FSpPJf1KTlgdl3 )
+
+P.S. We've got a bunch of new courses and lessons in IMPACT+! This new=
+ content ranges from pillar content (https://www.impactplus.com/e2t/sc=
+2/Mm-nFbkMTfJW6mgx117GLTkbW79Tc3G6kfPHVW861MqQ8FSpPJf1KTlgdm3 ) , assi=
+gnment prospecting (https://www.impactplus.com/e2t/sc2/Mm-nFbkMTfJW6mg=
+x117GLTkbW79Tc3G6kfPHVW861MqQ8FSpPJf1KTlgdn3 ) , maximizing HubSpot re=
+porting (https://www.impactplus.com/e2t/sc2/Mm-nFbkMTfJW6mgx117GLTkbW7=
+9Tc3G6kfPHVW861MqQ8FSpPJf1KTlgdp3 ) , and even virtual event sponsorsh=
+ips (https://www.impactplus.com/e2t/sc2/Mm-nFbkMTfJW6mgx117GLTkbW79Tc3=
+G6kfPHVW861MqQ8FSpPJf1KTlgdq3 ) . Go check them out for yourself!
+
+IMPACT teaches business leaders how to build high-performing teams tha=
+t achieve extraordinary digital sales and marketing results through co=
+aching, online training, and in-person experiences. We look forward to=
+ joining you on your journey to becoming a hero for your own company a=
+t impactplus.com (https://www.impactplus.com/e2t/sc2/Mm-nFbkMTfJW6mgx1=
+17GLTkbW79Tc3G6kfPHVW861MqQ8FSpPJf1KTlgdr3 ) .
+
+Creating heroes, growing businesses, changing lives.
+
+Sent with =F0=9F=92=99 by IMPACT
+
+IMPACT, 470 James Street, Suite 10, New Haven, CT
+
+Manage preferences (https://www.impactplus.com/hs/manage-preferences/u=
+nsubscribe?d=3DVngD1f8LDYK6W41S-FJ4fK4-gW3zd5_-4cLxYJW2m40Kf3T0pbmW43T=
+2Pd6TxGHzW17f7hv9lRkXmW971G176tf82WW5mMkhg8YJ1TTV28XfP5GCrb7MGKd_P20N8=
+lW373dzF6cdq55W6Q1zhV6h0-wh51CHx31&v=3D3&_hsenc=3Dp2ANqtz-9tyiC9ViKhaw=
+Toa__LoosjaWtivQHqZrh6V7Jw-lb0GdPTDJTItPmuPdsksxU2WJmPQaJ8gLS5lz1PCYXu=
+h8-V7MVrPUynqRqr2vB8Us7z0hl1Hp4&_hsmi=3D121819596 )  | Unsubscribe (ht=
+tps://www.impactplus.com/hs/manage-preferences/unsubscribe-all?d=3DVng=
+D1f8LDYK6W41S-FJ4fK4-gW3zd5_-4cLxYJW2m40Kf3T0pbmW43T2Pd6TxGHzW17f7hv9l=
+RkXmW971G176tf82WW5mMkhg8YJ1TTV28XfP5GCrb7MGKd_P20N8lW373dzF6cdq55W6Q1=
+zhV6h0-wh51CHx31&v=3D3&_hsenc=3Dp2ANqtz-9tyiC9ViKhawToa__LoosjaWtivQHq=
+Zrh6V7Jw-lb0GdPTDJTItPmuPdsksxU2WJmPQaJ8gLS5lz1PCYXuh8-V7MVrPUynqRqr2v=
+B8Us7z0hl1Hp4&_hsmi=3D121819596 )
+--=-0M4+9g2a2BxBaXAE8uxyjw==
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+Content-Id: <bd088bb4-1f54-44e5-a243-e67f7ca7f209>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w=
+3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns=3D"http://www.w3.or=
+g/1999/xhtml" xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn=
+:schemas-microsoft-com:office:office"><head>
+        <title>THE LATEST: It's Friday, try something new!</title>
+        <meta property=3D"og:title" content=3D"THE LATEST: It's Friday=
+, try something new!">
+        <meta name=3D"twitter:title" content=3D"THE LATEST: It's Frida=
+y, try something new!">
+        <meta http-equiv=3D"Content-Type" content=3D"text/html; charse=
+t=3Dutf-8">
+       =20
+        <style type=3D"text/css" id=3D"hs-inline-css">
+/*<![CDATA[*/
+  /* everything in this node will be inlined */
+  /* =3D=3D=3D=3D Page Styles =3D=3D=3D=3D */
+  body, #backgroundTable {
+      background-color: #f2f2f2; /* Use body to determine background c=
+olor */
+      font-family: sans-serif;
+  }
+  #templateTable {
+      width: 600px;
+      background-color: #ffffff;
+      -webkit-font-smoothing: antialiased;
+  }
+  h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+      display:block;
+      font-weight:bold;
+      line-height:100%;
+      margin-top:0;
+      margin-right:0;
+      margin-bottom:10px;
+      margin-left:0;
+  }
+  h1, .h1 {
+      font-size:26px;
+  }
+  h2, .h2 {
+      font-size:20px;
+  }
+  h3, .h3 {
+      font-size:15px;
+  }
+  h4, .h4 {
+      font-size:13px;
+  }
+  h5, .h5 {
+      font-size:11px;
+  }
+  h6, .h6 {
+      font-size:10px;
+  }
+  /* =3D=3D=3D=3D Header Styles =3D=3D=3D=3D */
+  #headerTable {
+      background-color: #f2f2f2;
+      color:#444444;
+      font-family:sans-serif;
+      font-size:10px;
+      line-height:120%;
+      text-align:right;
+      border-collapse: separate !important;
+      padding-right: 30px;
+  }
+  #headerTable a:link, #headerTable a:visited, /*Y*/ #headerTable a .y=
+shortcuts /*Y*/{
+      font-weight:normal;
+      text-decoration:underline;
+  }
+  /* =3D=3D=3D=3D Template Wrapper Styles =3D=3D=3D=3D */
+  #contentCell {
+      padding: 10px 20px;
+      background-color: #f2f2f2;
+  }
+  #contentTableOuter {
+      border-collapse: separate !important;
+      background-color: #ffffff;
+     =20
+      box-shadow: 0px 1px rgba(0, 0, 0, 0.1);
+     =20
+      padding: 30px;
+  }
+  #contentTableInner {
+      width: 600px;
+  }
+  /* =3D=3D=3D=3D Body Styles =3D=3D=3D=3D */
+  .bodyContent {
+      color:#444444;
+      font-family:sans-serif;
+      font-size: 15px;
+      line-height:150%;
+      text-align:left;
+  }
+  /* =3D=3D=3D=3D Column Styles =3D=3D=3D=3D */
+  table.columnContentTable {
+      border-collapse:separate !important;
+      border-spacing:0;
+      background-color: #ffffff;
+  }
+  td.columnContent {
+      color:#444444;
+      font-family:sans-serif;
+      font-size:15px;
+      line-height:120%;
+      padding-top:20px;
+      padding-right:20px;
+      padding-bottom:20px;
+      padding-left:20px;
+  }
+  /* =3D=3D=3D=3D Footer Styles =3D=3D=3D=3D */
+  #footerTable {
+      background-color: #f2f2f2;
+  }
+  #footerTable a {
+      color: #999999;
+  }
+  #footerTable {
+      color:#999999;
+      font-family:sans-serif;
+      font-size:12px;
+      line-height:120%;
+      padding-top:20px;
+      padding-right:20px;
+      padding-bottom:20px;
+      padding-left:20px;
+      text-align:center;
+  }
+  #footerTable a:link, #footerTable a:visited, /*Y*/ #footerTable a .y=
+shortcuts /*Y*/{
+      font-weight:normal;
+      text-decoration:underline;
+  }
+  .hs-image-social-sharing-24 {
+      max-width: 24px;
+      max-height: 24px;
+  }
+  /* =3D=3D=3D=3D Standard Resets =3D=3D=3D=3D */
+  .ExternalClass{
+      width:100%;
+  } /* Force HM to display emails at full width */
+  .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClas=
+s font, .ExternalClass td, .ExternalClass div {
+      line-height: 100%;
+  } /* Force HM to display normal line spacing */
+  body, table, td, p, a, li, blockquote{
+      -webkit-text-size-adjust:100%;
+      -ms-text-size-adjust:100%;
+  } /* Prevent WebKit and Windows mobile changing default text sizes *=
+/
+  table, td {
+      mso-table-lspace:0pt;
+      mso-table-rspace:0pt;
+  } /* Remove spacing between tables in Outlook 2007 and up */
+  img {
+      vertical-align: bottom;
+      -ms-interpolation-mode:bicubic;
+  } /* Allow smoother rendering of resized image in Internet Explorer =
+*/
+  /* Reset Styles */
+  body {
+      margin:0;
+      padding:0;
+  }
+  table {
+      border-collapse:collapse !important;
+  }
+  body, #backgroundTable, #bodyCell{
+      height:100% !important;
+      margin:0;
+      padding:0;
+      width:100% !important;
+  }
+  a:link, a:visited {
+      border-bottom: none;
+  }
+  /* iOS automatically adds a link to addresses */
+  /* Style the footer with the same color as the footer text */
+  #footer a {
+      color: #999999;;
+      -webkit-text-size-adjust: none;
+      text-decoration: underline;
+      font-weight: normal
+  }
+/*]]>*/
+</style>
+        <!--[if !mso]><!-- -->
+<style type=3D"text/css">
+/*<![CDATA[*/
+  /* =3D=3D=3D=3D Mobile Styles =3D=3D=3D=3D */
+  /* Constrain email width for small screens */
+  @media screen and (max-width: 650px) {
+      table#backgroundTable {
+          width: 95% !important;
+      }
+      table#templateTable {
+          max-width:600px !important;
+          width:100% !important;
+      }
+      table#contentTableInner {
+          max-width:600px !important;
+          width:100% !important;
+      }
+      /* Makes image expand to take 100% of width*/
+      img {
+          width: 100% !important;
+          height: auto !important;
+      }
+      #contentCell {
+          padding: 10px 10px !important;
+      }
+      #headerTable {
+          padding-right: 15.0px !important;
+      }
+      #contentTableOuter {
+          padding: 15.0px !important;
+      }
+  }
+  @media only screen and (max-width: 480px) {
+      /* =3D=3D=3D=3D Client-Specific Mobile Styles =3D=3D=3D=3D */
+      body, table, td, p, a, li, blockquote{
+          -webkit-text-size-adjust:none !important;
+      } /* Prevent Webkit platforms from changing default text sizes *=
+/
+      body{
+          width:100% !important;
+          min-width:100% !important;
+      } /* Prevent iOS Mail from adding padding to the body */
+      /* =3D=3D=3D=3D Mobile Reset Styles =3D=3D=3D=3D */
+      td#bodyCell {
+          padding:10px !important;
+      }
+      /* =3D=3D=3D=3D Mobile Template Styles =3D=3D=3D=3D */
+      table#templateTable {
+          max-width:600px !important;
+          width:100% !important;
+      }
+      table#contentTableInner {
+          max-width:600px !important;
+          width:100% !important;
+      }
+      /* =3D=3D=3D=3D Image Alignment Styles =3D=3D=3D=3D */
+      h1, .h1 {
+          font-size:26px !important;
+          line-height:125% !important;
+      }
+      h2, .h2 {
+          font-size:20px !important;
+          line-height:125% !important;
+      }
+      h3, .h3 {
+          font-size:15px !important;
+          line-height:125% !important;
+      }
+      h4, .h4 {
+          font-size:13px !important;
+          line-height:125% !important;
+      }
+      h5, .h5 {
+          font-size:11px !important;
+          line-height:125% !important;
+      }
+      h6, .h6 {
+          font-size:10px !important;
+          line-height:125% !important;
+      }
+      .hide {
+          display:none !important;
+      } /* Hide to save space */
+      /* =3D=3D=3D=3D Body Styles =3D=3D=3D=3D */
+      td.bodyContent {
+          font-size:16px !important;
+          line-height:145% !important;
+      }
+      /* =3D=3D=3D=3D Footer Styles =3D=3D=3D=3D */
+      td#footerTable {
+          padding-left: 0px !important;
+          padding-right: 0px !important;
+          font-size:12px !important;
+          line-height:145% !important;
+      }
+      /* =3D=3D=3D=3D Image Alignment Styles =3D=3D=3D=3D */
+      table.alignImageTable {
+          width: 100% !important;
+      }
+      td.imageTableTop {
+          display: none !important;
+          /*padding-top: 10px !important;*/
+      }
+      td.imageTableRight {
+          display: none !important;
+      }
+      td.imageTableBottom {
+          padding-bottom: 10px !important;
+      }
+      td.imageTableLeft {
+          display: none !important;
+      }
+      /* =3D=3D=3D=3D Column Styles =3D=3D=3D=3D */
+      td.column {
+          display: block !important;
+          width: 100% !important;
+          padding-top: 0 !important;
+          padding-right: 0 !important;
+          padding-bottom: 0 !important;
+          padding-left: 0 !important;
+      }
+      td.columnContent {
+          font-size:14px !important;
+          line-height:145% !important;
+          padding-top: 10px !important;
+          padding-right: 10px !important;
+          padding-bottom: 10px !important;
+          padding-left: 10px !important;
+      }
+      #contentCell {
+          padding: 10px 0px !important;
+      }
+      #headerTable {
+          padding-right: 15.0px !important;
+      }
+      #contentTableOuter {
+          padding: 15.0px !important;
+      }
+  }
+/*]]>*/
+</style>
+<!--<![endif]-->
+        <style type=3D"text/css" data-hse-inline-css=3D"true">
+  h1, h2, h3, h4, h5, h6, p, li{
+    font-family: Lato,Tahoma,sans-serif;
+    color: #444444;
+  }
+  h1{
+    font-size:28px;
+    line-height: 1.25em;
+    font-weight: 800;
+    color: #444444;
+    margin-top:24px;
+  }
+  h2, h2 > span{
+    font-size:22px;
+    color: #555555;
+    line-height: 1.25em;
+    font-weight: 800 !important;
+    margin-top:24px;
+  }
+  h3, h3 > span{
+    font-size:20px;
+    color: #555555;
+    line-height: 1.25em;
+    font-weight: 800 !important;
+    margin-top:24px;
+  }
+  p, p span, li, li span{
+    font-weight: 500;
+    font-size:18px;
+    line-height:1.5em;=20
+  }
+  a{
+    color:#1082c1;
+  }
+  ul{
+    padding-left: 18px;
+  }
+  li{
+    margin-bottom: 10px;
+  }
+  .bylineSection p,
+  .bylineSection p *{
+    font-size:15px !important;
+  }
+  #templateTable, #contentTableInner{
+    width:550px;
+  } =20
+  body, #backgroundTable, #contentCell{
+    background:#ffffff !important;
+  }
+  #contentTableOuter{
+    border:0 !important;
+    box-shadow: none !important;
+  }
+  #hs_cos_wrapper_logo_image{
+    text-align:center;
+  }
+  .latestIntro{
+    padding: 0px 0px 20px 0px !important;
+  }
+  .footer p{
+    margin: 5px 0px !important;
+    font-size: 10px !important;
+    color: #bbbbbb !important;
+  }
+  .footer p a{
+    color: #bbbbbb;
+  }
+  @media screen and (max-width: 650px){
+    .hs_cos_wrapper_type_social_sharing img {
+      width: inherit !important;=20
+    }
+  }
+  /* MEDIA QUERIES */
+  @media only screen and (max-width: 650px){
+    #templateTable{
+      max-width:550px;
+      width:100% !important;
+    }
+    .latestLogo{
+      max-width: 220px;
+      padding-bottom: 10px !important;
+      margin: 0 auto;
+    }
+  }
+  @media screen and (max-width: 480px){
+    h1, .h1, h1 > span {
+      font-size: 24px !important;
+      line-height: 125% !important;
+    }
+    h2, .h2, h2 > span {
+      font-size: 20px !important;
+      line-height: 125% !important;
+    }
+    .bylineSection p,
+    .bylineSection p span,
+    .bylineSection p *{
+      font-size:14px !important;
+    }
+    /*p, p span, li, li span{
+      font-size:16px !important;
+    }*/
+    td.columnContent {
+      padding-top: 0px !important;
+      padding-right: 0px !important;
+      padding-bottom: 0px !important;
+      padding-left: 0px !important;
+    }
+    .latestIntro.column {
+      padding-bottom: 20px !important;
+    }
+  }
+</style>
+        <!--[if gte mso 9]>
+          <xml>
+            <o:OfficeDocumentSettings>
+              <o:AllowPNG/>
+              <o:PixelsPerInch>96</o:PixelsPerInch>
+            </o:OfficeDocumentSettings>
+          </xml>
+        <![endif]-->
+    <meta name=3D"generator" content=3D"HubSpot"><meta property=3D"og:=
+url" content=3D"https://www.impactplus.com/-temporary-slug-41db8e5e-69=
+ec-432b-ab87-47a318f89cdf"><meta name=3D"x-apple-disable-message-refor=
+matting"><meta name=3D"robots" content=3D"noindex,follow"></head>
+    <body class=3D"" style=3D"background-color:#f2f2f2; font-family:sa=
+ns-serif; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; he=
+ight:100% !important; margin:0; padding:0; width:100% !important; back=
+ground:#ffffff !important" leftmargin=3D"0" marginwidth=3D"0" topmargi=
+n=3D"0" marginheight=3D"0" offset=3D"0" bgcolor=3D"#f2f2f2">
+        <!-- Preview text (text which appears right after subject) -->
+        <div id=3D"preview_text" style=3D"display:none;font-size:1px;c=
+olor:#f2f2f2;line-height:1px;max-height:0px;max-width:0px;opacity:0;ov=
+erflow:hidden;">
+            It's been a long week. Why not find a fun new hobby to get=
+ into? P.S Enjoy your weekly nonsense!
+        </div>
+        <!--  The  backgroundTable table manages the color of the back=
+ground and then the templateTable maintains the body of=20
+        the email template, including preheader & footer. This is the =
+only table you set the width of to, everything else is set to=20
+        100% and in the CSS above. Having the width here within the ta=
+ble is just a small win for Lotus Notes. -->
+        <!-- Begin backgroundTable --> =20
+        <table align=3D"center" bgcolor=3D"#f2f2f2" border=3D"0" cellp=
+adding=3D"0" cellspacing=3D"0" height=3D"100%" width=3D"100%" id=3D"ba=
+ckgroundTable" style=3D"-webkit-text-size-adjust:100%; -ms-text-size-a=
+djust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; border-collaps=
+e:collapse !important; background-color:#f2f2f2; font-family:sans-seri=
+f; height:100% !important; margin:0; padding:0; width:100% !important;=
+ background:#ffffff !important">
+            <tbody><tr>
+                <td align=3D"center" valign=3D"top" id=3D"bodyCell" st=
+yle=3D"-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-t=
+able-lspace:0pt; mso-table-rspace:0pt; height:100% !important; margin:=
+0; padding:0; width:100% !important" height=3D"100%" width=3D"100%"> <=
+!-- When nesting tables within a TD, align center keeps it well, cente=
+red. -->
+                    <!-- Begin Template Container -->
+                    <!-- This holds everything together in a nice cont=
+ainer -->
+                    <table border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" id=3D"templateTable" style=3D"-webkit-text-size-adjust:100%; -ms-t=
+ext-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; bord=
+er-collapse:collapse !important; background-color:#ffffff; -webkit-fon=
+t-smoothing:antialiased; width:550px" width=3D"550" bgcolor=3D"#ffffff=
+">
+                        <tbody><tr>
+                            <td align=3D"center" valign=3D"top" style=3D=
+"-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-l=
+space:0pt; mso-table-rspace:0pt">
+                                <!-- Begin Template Preheader -->
+                                <div class=3D"header-container-wrapper=
+">
+</div><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" id=3D"headerTable" style=3D"-webkit-text-size-adjust:100%; -ms-=
+text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; bac=
+kground-color:#f2f2f2; color:#444444; font-family:sans-serif; font-siz=
+e:10px; line-height:120%; text-align:right; border-collapse:separate !=
+important; padding-right:30px" bgcolor=3D"#f2f2f2" align=3D"right">
+                                    <!--end header wrapper -->
+                                </table>
+                                <!-- End Template Preheader -->
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align=3D"center" valign=3D"top" id=3D"=
+contentCell" style=3D"-webkit-text-size-adjust:100%; -ms-text-size-adj=
+ust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; padding:10px 20p=
+x; background-color:#f2f2f2; background:#ffffff !important" bgcolor=3D=
+"#f2f2f2">
+                                <!-- Begin Template Wrapper -->
+                                <!-- This separates the preheader whic=
+h usually contains the "open in browser, etc" content
+                                from the actual body of the email. Can=
+ alternatively contain the footer too, but I choose not
+                                to so that it stays outside of the bor=
+der. -->
+                                <table border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0" width=3D"100%" id=3D"contentTableOuter" style=3D"-we=
+bkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspac=
+e:0pt; mso-table-rspace:0pt; border-collapse:separate !important; back=
+ground-color:#ffffff; padding:30px; box-shadow:none !important; border=
+:1px solid #cccccc; border-bottom:1px solid #acacac" bgcolor=3D"#fffff=
+f">
+                                    <tbody><tr>
+                                        <td align=3D"center" valign=3D=
+"top" style=3D"-webkit-text-size-adjust:100%; -ms-text-size-adjust:100=
+%; mso-table-lspace:0pt; mso-table-rspace:0pt">
+                                            <div class=3D"body-contain=
+er-wrapper">
+</div><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" id=3D"co=
+ntentTableInner" style=3D"-webkit-text-size-adjust:100%; -ms-text-size=
+-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; border-colla=
+pse:collapse !important; width:550px" width=3D"550">
+                                                <tbody><tr>
+<td align=3D"left" valign=3D"top" class=3D"bodyContent" width=3D"100%"=
+ colspan=3D"12" style=3D"-webkit-text-size-adjust:100%; -ms-text-size-=
+adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; color:#444444=
+; font-family:sans-serif; font-size:15px; line-height:150%; text-align=
+:left">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%"=
+ class=3D"templateColumnWrapper" style=3D"-webkit-text-size-adjust:100=
+%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0=
+pt; border-collapse:collapse !important">
+            <tbody><tr>
+<td valign=3D"top" colspan=3D"12" width=3D"100.0%" class=3D" column" s=
+tyle=3D"-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-=
+table-lspace:0pt; mso-table-rspace:0pt; width:100.0%; text-align:left;=
+ padding:0; font-family:sans-serif; font-size:15px; line-height:1.5em;=
+ color:#444444" align=3D"left">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%"=
+ style=3D"-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; ms=
+o-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:separate !im=
+portant; border-spacing:0; background-color:#ffffff" class=3D"latestLo=
+go columnContentTable" bgcolor=3D"#ffffff"><tbody><tr><td align=3D"lef=
+t" valign=3D"top" class=3D"columnContent widget-span widget-type-custo=
+m_widget" style=3D"-webkit-text-size-adjust:100%; -ms-text-size-adjust=
+:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; padding-top:20px; p=
+adding-right:20px; padding-left:20px; text-align:left; padding:0; font=
+-family:sans-serif; font-size:15px; line-height:1.5em; color:#444444; =
+padding-bottom:20px" data-widget-type=3D"custom_widget">
+<div class=3D"layout-widget-wrapper">
+<div id=3D"hs_cos_wrapper_module_15372236239261467" class=3D"hs_cos_wr=
+apper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style=3D"color=
+: inherit; font-size: inherit; line-height: inherit;" data-hs-cos-gene=
+ral-type=3D"widget" data-hs-cos-type=3D"module">
+<table class=3D"hse-image-wrapper" role=3D"presentation" width=3D"100%=
+" cellpadding=3D"0" cellspacing=3D"0" style=3D"-webkit-text-size-adjus=
+t:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rsp=
+ace:0pt; border-collapse:collapse !important">
+    <tbody>
+        <tr>
+            <td align=3D"center" valign=3D"top" style=3D"-webkit-text-=
+size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso=
+-table-rspace:0pt; text-align:center; padding:0px; font-size:0px">
+               =20
+                <img alt=3D"IMPACT+ Presents THE LATEST - Email" src=3D=
+"https://www.impactplus.com/hs-fs/hubfs/The%20Latest%20from%20IMPACT/I=
+MPACT+%20Presents%20The%20Latest%20-%20Logos/Email/IMPACT+%20Presents%=
+20THE%20LATEST%20-%20Email.png?width=3D540&amp;upscale=3Dtrue&amp;name=
+=3DIMPACT+%20Presents%20THE%20LATEST%20-%20Email.png" style=3D"vertica=
+l-align:bottom; -ms-interpolation-mode:bicubic; max-width:100%; font-s=
+ize:16px" width=3D"270" align=3D"middle" srcset=3D"https://www.impactp=
+lus.com/hs-fs/hubfs/The%20Latest%20from%20IMPACT/IMPACT+%20Presents%20=
+The%20Latest%20-%20Logos/Email/IMPACT+%20Presents%20THE%20LATEST%20-%2=
+0Email.png?upscale=3Dtrue&amp;width=3D540&amp;upscale=3Dtrue&amp;name=3D=
+IMPACT+%20Presents%20THE%20LATEST%20-%20Email.png 270w, https://www.im=
+pactplus.com/hs-fs/hubfs/The%20Latest%20from%20IMPACT/IMPACT+%20Presen=
+ts%20The%20Latest%20-%20Logos/Email/IMPACT+%20Presents%20THE%20LATEST%=
+20-%20Email.png?upscale=3Dtrue&amp;width=3D1080&amp;upscale=3Dtrue&amp=
+;name=3DIMPACT+%20Presents%20THE%20LATEST%20-%20Email.png 540w" sizes=3D=
+"(max-width: 270px) 100vw, 270px">
+               =20
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</div><!--end layout-widget-wrapper -->
+</td></tr></tbody></table><!--end widget-table -->
+   </td>
+           </tr>
+    </tbody></table>
+   </td>
+</tr>
+<tr>
+<td align=3D"left" valign=3D"top" class=3D"bodyContent" width=3D"100%"=
+ colspan=3D"12" style=3D"-webkit-text-size-adjust:100%; -ms-text-size-=
+adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; color:#444444=
+; font-family:sans-serif; font-size:15px; line-height:150%; text-align=
+:left">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%"=
+ class=3D"templateColumnWrapper" style=3D"-webkit-text-size-adjust:100=
+%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0=
+pt; border-collapse:collapse !important">
+            <tbody><tr>
+<td valign=3D"top" colspan=3D"12" width=3D"100.0%" class=3D" column" s=
+tyle=3D"-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-=
+table-lspace:0pt; mso-table-rspace:0pt; width:100.0%; text-align:left;=
+ padding:0; font-family:sans-serif; font-size:15px; line-height:1.5em;=
+ color:#444444" align=3D"left">
+<div class=3D"widget-span widget-type-email_body " style=3D"" data-wid=
+get-type=3D"email_body">
+<div id=3D"hs_cos_wrapper_hs_email_body" class=3D"hs_cos_wrapper hs_co=
+s_wrapper_widget hs_cos_wrapper_type_rich_text" style=3D"color: inheri=
+t; font-size: inherit; line-height: inherit;" data-hs-cos-general-type=
+=3D"widget" data-hs-cos-type=3D"rich_text"><p style=3D"margin-bottom: =
+1em; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; font-fa=
+mily:Lato, Tahoma, sans-serif; color:#444444; font-weight:500; font-si=
+ze:18px; line-height:1.5em">Happy Friday y'all!&nbsp;</p>
+<p style=3D"margin-bottom: 1em; -webkit-text-size-adjust:100%; -ms-tex=
+t-size-adjust:100%; font-family:Lato, Tahoma, sans-serif; color:#44444=
+4; font-weight:500; font-size:18px; line-height:1.5em">I'm going to ke=
+ep the intro pretty short and sweet today since you and I both are loo=
+king forward to shutting it down and relaxing this weekend.&nbsp;</p>
+<p style=3D"margin-bottom: 1em; -webkit-text-size-adjust:100%; -ms-tex=
+t-size-adjust:100%; font-family:Lato, Tahoma, sans-serif; color:#44444=
+4; font-weight:500; font-size:18px; line-height:1.5em">As you head int=
+o the weekend, take a moment to think about something new you could (o=
+r should) be doing.&nbsp;</p>
+<p style=3D"margin-bottom: 1em; -webkit-text-size-adjust:100%; -ms-tex=
+t-size-adjust:100%; font-family:Lato, Tahoma, sans-serif; color:#44444=
+4; font-weight:500; font-size:18px; line-height:1.5em">For me, I've be=
+en working on breaking my YouTube habit and replacing it with somethin=
+g new like card games or volunteering.&nbsp;</p>
+<p style=3D"margin-bottom: 1em; -webkit-text-size-adjust:100%; -ms-tex=
+t-size-adjust:100%; font-family:Lato, Tahoma, sans-serif; color:#44444=
+4; font-weight:500; font-size:18px; line-height:1.5em">In all honesty,=
+ I'm fighting a losing battle so far, but over time I'm confident it'l=
+l happen!&nbsp;</p>
+<p style=3D"margin-bottom: 1em; -webkit-text-size-adjust:100%; -ms-tex=
+t-size-adjust:100%; font-family:Lato, Tahoma, sans-serif; color:#44444=
+4; font-weight:500; font-size:18px; line-height:1.5em">Our community i=
+n IMPACT+ has been chatting about this topic and surprising ourselves =
+with new habits or activities to try. <a href=3D"https://www.impactplu=
+s.com/e2t/tc/VX3J8h5Z7lpwN2wy4CLg-6frW4FBnYy4qtf1-N3NdJHD3p_b1V1-WJV7C=
+gLtdW6t4Wmf2GS7KmW66_7zp4J00phW1h-_654BcF3jW1g0mGm3YwrRVW1yGRGw2T86lNW=
+803Gll3kS_R7MpPmmBpT4_7W6lF8_02Dk-yNW4WQGbJ52k1P7W3f_HKG6Nlb8gW48_F5v2=
+-5wF9W8dxvsv34PZ86W4gRZ7k7n7wxRW5Fddjm4dSHvmW9h4R_-7D_xfSW11f1Nr39tdVP=
+W2tKm563rY4d-W2MdcwY4bFjwbW23s2VW55CdngVf26sF6DQyxpW7pMw5J8v2NYRW8T_0c=
+g8gtfF4W8Pzm_J5klBh7W7sGD_V2YpQGcVGrcls6_zYtgW8BNNb72dZMWsVjmG7m34bjCM=
+W616zz041yXvlN15MDX8-QSB9W8tBk1Q2y_w3H36FK1" rel=3D"noopener" style=3D=
+"-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; color:#1082=
+c1" data-hs-link-id=3D"0" target=3D"_blank">Hop in and let us know wha=
+t you're up to for this weekend</a> and then check back in on Monday t=
+o let us know how it went!&nbsp;</p>
+<p style=3D"margin-bottom: 1em; -webkit-text-size-adjust:100%; -ms-tex=
+t-size-adjust:100%; font-family:Lato, Tahoma, sans-serif; color:#44444=
+4; font-weight:500; font-size:18px; line-height:1.5em"></p><center><!-=
+-HubSpot Call-to-Action Code --><span class=3D"hs-cta-wrapper" data-hs=
+-img-pg=3D"51045a48-9dec-4357-8409-c1523a31a09a" id=3D"hs-cta-wrapper-=
+51045a48-9dec-4357-8409-c1523a31a09a"><span class=3D"hs-cta-node hs-ct=
+a-51045a48-9dec-4357-8409-c1523a31a09a" id=3D"hs-cta-51045a48-9dec-435=
+7-8409-c1523a31a09a"><a href=3D"https://www.impactplus.com/e2t/tc/VX3J=
+8h5Z7lpwN2wy4CLg-6frW4FBnYy4qtf1-N3NdJHD5V93wV3Zsc37CgRtJW6tkPX36h4Z9_=
+N71p4G_nZHYrN93q0ctGKbGrW5PYXGt7vzhCWF5-bQ4M-wR1V7wyYt72n9r5W2trCqw1cv=
+8QLW8D7yM38ZhQjRW8-43n46CK6TrW80XYPy8l3lvxVgyFWY7CmY22W4Xd-r-5cRZkRW6l=
+dFbl3jxtW6W6SN3FJ9hLZf7W1584qZ2SDw0dW95gwqN6_WLsgW7bnr9b29HPWDW2SXkFx3=
+_5XNdW1wbZQV5DLnF3VV0qWw4gRn58N8vKxv-NWrphW20CLQl3x94xkW2dnhcc7XMvTqW3=
+ZT39839VttKVN8jtt36CbCYW4VZsz819S8vrN8lkGBmcgxKcW3cxyWp8x5-XnW2dBTK62L=
+6mRHW5cB9KQ6_qqJ7W3K_dmr3CFGjfW2RRrm37sqBGqW8YNJ919b95JlW7w1ByD3XNVc_V=
+SJD2Q6CtsZCW4d7Gfs4pqJj2W566LNY9fNVKwW3Ry5qY70BYMRW8x5q4S6S36YkW2XFw3_=
+1mvB_FW4XXXts4XDWKZW5Kk_PZ825jSWW7_07g58L9FCbW33ZKFC2bqSFMW1Y3p8Q6hYKk=
+hV3dbkq3wkJb6390g1" target=3D"_blank" style=3D"-webkit-text-size-adjus=
+t:100%; -ms-text-size-adjust:100%; color:#1082c1" data-hs-link-id=3D"0=
+"><img class=3D"hs-cta-img" id=3D"hs-cta-img-51045a48-9dec-4357-8409-c=
+1523a31a09a" style=3D"vertical-align:bottom; -ms-interpolation-mode:bi=
+cubic; border-width:0px; margin:0 auto; display:block; margin-top:20px=
+; margin-bottom:20px; width:auto !important; max-width:100% !important=
+" mce_noresize=3D"1" src=3D"https://hsctaimages.net/ctas/v2/public/cs/=
+il/?pg=3D51045a48-9dec-4357-8409-c1523a31a09a&amp;pid=3D145335&amp;eci=
+d=3DACsprvvHZSjyXCPFJEk3NrxYVXmNVBsEghT9md0ts1Pgrvxc0QVtPA90CRv_9n9gCe=
+FVLkSz5Qrs&amp;hseid=3D121819596&amp;hsic=3Dfalse" alt=3D"Surprise you=
+rself with a new habit!" srcset=3D"https://hsctaimages.net/ctas/v2/pub=
+lic/cs/il/?pg=3D51045a48-9dec-4357-8409-c1523a31a09a&amp;pid=3D145335&=
+amp;ecid=3DACsprvvHZSjyXCPFJEk3NrxYVXmNVBsEghT9md0ts1Pgrvxc0QVtPA90CRv=
+_9n9gCeFVLkSz5Qrs&amp;hseid=3D121819596&amp;hsic=3Dfalse&amp;dsf=3D2 2=
+x, https://hsctaimages.net/ctas/v2/public/cs/il/?pg=3D51045a48-9dec-43=
+57-8409-c1523a31a09a&amp;pid=3D145335&amp;ecid=3DACsprvvHZSjyXCPFJEk3N=
+rxYVXmNVBsEghT9md0ts1Pgrvxc0QVtPA90CRv_9n9gCeFVLkSz5Qrs&amp;hseid=3D12=
+1819596&amp;hsic=3Dfalse&amp;dsf=3D3 3x, https://hsctaimages.net/ctas/=
+v2/public/cs/il/?pg=3D51045a48-9dec-4357-8409-c1523a31a09a&amp;pid=3D1=
+45335&amp;ecid=3DACsprvvHZSjyXCPFJEk3NrxYVXmNVBsEghT9md0ts1Pgrvxc0QVtP=
+A90CRv_9n9gCeFVLkSz5Qrs&amp;hseid=3D121819596&amp;hsic=3Dfalse&amp;dsf=
+=3D4 4x" align=3D"middle" width=3D"auto"></a></span></span><!-- end Hu=
+bSpot Call-to-Action Code --></center><p style=3D"margin-bottom: 1em; =
+-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; font-family:=
+Lato, Tahoma, sans-serif; color:#444444; font-weight:500; font-size:18=
+px; line-height:1.5em"></p></div>
+</div><!--end widget-span -->
+   </td>
+           </tr>
+    </tbody></table>
+   </td>
+</tr>
+<tr>
+<td align=3D"left" valign=3D"top" class=3D"bodyContent" width=3D"100%"=
+ colspan=3D"12" style=3D"-webkit-text-size-adjust:100%; -ms-text-size-=
+adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; color:#444444=
+; font-family:sans-serif; font-size:15px; line-height:150%; text-align=
+:left">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%"=
+ class=3D"templateColumnWrapper" style=3D"-webkit-text-size-adjust:100=
+%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0=
+pt; border-collapse:collapse !important">
+            <tbody><tr>
+<td valign=3D"top" colspan=3D"12" width=3D"100.0%" class=3D" column" s=
+tyle=3D"-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-=
+table-lspace:0pt; mso-table-rspace:0pt; width:100.0%; text-align:left;=
+ padding:0; font-family:sans-serif; font-size:15px; line-height:1.5em;=
+ color:#444444" align=3D"left">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%"=
+ style=3D"-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; ms=
+o-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:separate !im=
+portant; border-spacing:0; background-color:#ffffff" class=3D" columnC=
+ontentTable" bgcolor=3D"#ffffff"><tbody><tr><td align=3D"left" valign=3D=
+"top" class=3D"columnContent widget-span widget-type-custom_widget" st=
+yle=3D"-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-t=
+able-lspace:0pt; mso-table-rspace:0pt; padding-right:20px; padding-bot=
+tom:20px; padding-left:20px; text-align:left; padding:0; font-family:s=
+ans-serif; font-size:15px; line-height:1.5em; color:#444444; padding-t=
+op:15px" data-widget-type=3D"custom_widget">
+<div class=3D"layout-widget-wrapper">
+<div id=3D"hs_cos_wrapper_module_1616708529172173" class=3D"hs_cos_wra=
+pper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style=3D"color:=
+ inherit; font-size: inherit; line-height: inherit;" data-hs-cos-gener=
+al-type=3D"widget" data-hs-cos-type=3D"module"><div style=3D"border-to=
+p:2px solid #EEEEEE;"></div></div>
+</div><!--end layout-widget-wrapper -->
+</td></tr></tbody></table><!--end widget-table -->
+   </td>
+           </tr>
+    </tbody></table>
+   </td>
+</tr>
+<tr>
+<td align=3D"left" valign=3D"top" class=3D"bodyContent" width=3D"100%"=
+ colspan=3D"12" style=3D"-webkit-text-size-adjust:100%; -ms-text-size-=
+adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; color:#444444=
+; font-family:sans-serif; font-size:15px; line-height:150%; text-align=
+:left">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%"=
+ class=3D"templateColumnWrapper" style=3D"-webkit-text-size-adjust:100=
+%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0=
+pt; border-collapse:collapse !important">
+            <tbody><tr>
+<td valign=3D"top" colspan=3D"12" width=3D"100.0%" class=3D" column" s=
+tyle=3D"-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-=
+table-lspace:0pt; mso-table-rspace:0pt; width:100.0%; text-align:left;=
+ padding:0; font-family:sans-serif; font-size:15px; line-height:1.5em;=
+ color:#444444" align=3D"left">
+<div class=3D"widget-span widget-type-custom_widget highlights" style=3D=
+"" data-widget-type=3D"custom_widget">
+<div class=3D"layout-widget-wrapper">
+<div id=3D"hs_cos_wrapper_module_153693808694778" class=3D"hs_cos_wrap=
+per hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_=
+text widget-type-rich_text" style=3D"color: inherit; font-size: inheri=
+t; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-=
+cos-type=3D"module"><div id=3D"hs_cos_wrapper_module_153693808694778_"=
+ class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_ric=
+h_text" style=3D"color: inherit; font-size: inherit; line-height: inhe=
+rit;" data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"rich_tex=
+t"><h1 style=3D"display:block; margin-right:0; margin-bottom:10px; mar=
+gin-left:0; font-family:Lato, Tahoma, sans-serif; font-size:28px; font=
+-weight:800; color:#444444; margin-top:24px; line-height:175%">And now=
+, here's <em>THE LATEST</em>...&nbsp;</h1>
+<h2 style=3D"display:block; margin-right:0; margin-bottom:10px; margin=
+-left:0; font-family:Lato, Tahoma, sans-serif; font-size:22px; color:#=
+555555; line-height:1.25em; font-weight:800 !important; margin-top:24p=
+x"><span style=3D"line-height:1.25em; margin-top:24px; color:#555555; =
+font-family:Lato, Tahoma, sans-serif; font-size:22px; font-weight:800"=
+>18 email marketing best practices you need to know for 2021 (</span><=
+a href=3D"https://www.impactplus.com/e2t/tc/VX3J8h5Z7lpwN2wy4CLg-6frW4=
+FBnYy4qtf1-N3NdJHk3p_9LV1-WJV7CgKgWW886SD48xd_0qW7Cb_Dv75HcftW7QXWZj55=
+QcjvW3bp79Z7yGvMDW4ljcJF4GLr_9VFF0fF1HrSZcW5QkYp66_4TKLW6ldBMw8nHYnTN4=
+47DB9lW_-zW3Pt5kb2F4SjHW7Ty5Pb571HQmW87D1St6CrYGYW8SSy-K9m0zvTW97N5jx3=
+HLPJNN2kBCpbBXHBnVGhgLX65bKpDW6X-3sx5g_Kv0W65ZbhJ4NPQbgW71G7Mq3xCPVcW4=
+H0x5_1snnb9W13Dmp77XVZNgN8MTH4vzhdYyMRHZyYDM7dHW6HGq3f72xzzGW80zpJD4zV=
+WmYN9c5fwdkpJgcW7KQHPV8wPNJ-VcckqW6c7HBD3c3H1" rel=3D"noopener" style=3D=
+"-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; color:#1082=
+c1" data-hs-link-id=3D"0" target=3D"_blank">14-minute read</a><span st=
+yle=3D"line-height:1.25em; margin-top:24px; color:#555555; font-family=
+:Lato, Tahoma, sans-serif; font-size:22px; font-weight:800">)&nbsp;</s=
+pan></h2>
+<p style=3D"margin-bottom: 1em; -webkit-text-size-adjust:100%; -ms-tex=
+t-size-adjust:100%; font-family:Lato, Tahoma, sans-serif; color:#44444=
+4; font-weight:500; font-size:18px; line-height:1.5em"><span style=3D"=
+font-size:18px; line-height:1.5em; font-weight:normal">Email marketing=
+ is a critical component of almost any marketing strategy today. Howev=
+er, it only works if you do it the right way. Don't worry, we've got y=
+ou covered. IMPACT's Director of Marketing and local email wizard Kris=
+ten Harold has put together a </span><span style=3D"font-size:18px; li=
+ne-height:1.5em; font-weight:bold"><strong><a  href=3D"https://www.imp=
+actplus.com/e2t/tc/VX3J8h5Z7lpwN2wy4CLg-6frW4FBnYy4qtf1-N3NdJHk3p_9LV1=
+-WJV7CgXLyW1Fkv6w7xNLWMN4SlvP7YBjvfN4Pv3kMPYbnfW6V8Cz072jD5GW7w_9Qw8kc=
+ZBTW6gxx4S1DRGTgW6QRw2S8NDNGVW8DXn8B2JBndyW67fTr11W9zpSW8MWPFx4xvhWLW1=
+lyq4b3nLwFdM5BHp0_BvGRN68wxYTDd9nYN7qYMCKBtp7KMvQpvKq3n17W2Vzclb3pLHJr=
+W6TPxk91_1NjqN4f1ljKMjrVwW2y1BYm87Rj8DW3XZpQB2n0ZyNW17wvl_7dwM37W1kzZP=
+45frgWDN2dSX4P_CNV1VPvZJm2_-96FW3m1g9v2-9y57N7WJt72cBxvCW96rQSF2fSYPKW=
+5cLpvm7KLfY12hf1" rel=3D"noopener" style=3D"-webkit-text-size-adjust:1=
+00%; -ms-text-size-adjust:100%; color:#1082c1" data-hs-link-id=3D"1" t=
+arget=3D"_blank">best practices guide to email marketing, including be=
+st practices for what emails to send, whom to send them to, and how to=
+ generate results</a>.</strong></span></p>
+<h3 style=3D"display:block; margin-right:0; margin-bottom:10px; margin=
+-left:0; font-family:Lato, Tahoma, sans-serif; font-size:20px; color:#=
+555555; line-height:1.25em; font-weight:800 !important; margin-top:24p=
+x"><span style=3D"color:#555555; line-height:1.25em; margin-top:24px; =
+font-size:20px; font-weight:bold">=F0=9F=93=9A </span><span style=3D"c=
+olor:#555555; line-height:1.25em; margin-top:24px; font-size:20px; fon=
+t-weight:normal">Related reads and resources:</span></h3>
+<ul style=3D"padding-left:18px; line-height:150%">
+<li style=3D"-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;=
+ font-family:Lato, Tahoma, sans-serif; color:#444444; font-weight:500;=
+ font-size:18px; line-height:1.5em; margin-bottom:10px"><a href=3D"htt=
+ps://www.impactplus.com/e2t/tc/VX3J8h5Z7lpwN2wy4CLg-6frW4FBnYy4qtf1-N3=
+NdJH13p_9rV1-WJV7CgSlGVlhqmb9jqjcfW1SHk0N6_kpQGW5jr-2C6l0Zg6W8BJscM8-m=
+qTlW2FKyXL23p0h4W7MfwmV9ft00sVDDvM_7gZ3JYW1jg5QX8WH0xpW326SCs2kqL-6Vws=
+lR18LYymYW4-6srw4Qygw0W72419l9kFwctW5Xh4pw7LzPl6W139wzB6XXZDzW4sHPmc5g=
+0g8XW73pyQv3nGZ2WW8tzGpt2GBqKkW32ZcdB2kY8szW5hHv-V8Nb0VvN3f0Gd0mpzXXW6=
+511DQ3cVzX2W4T63328-Sl8kW8HD98C8LHZXBW1_f7yp6VdCr1W29vtWN4H0YjqW22b5TB=
+7lTvPQ38RC1" rel=3D"noopener" style=3D"-webkit-text-size-adjust:100%; =
+-ms-text-size-adjust:100%; color:#1082c1" data-hs-link-id=3D"0" target=
+=3D"_blank">8 email newsletter mistakes that are killing your click-th=
+rough rates</a></li>
+<li style=3D"-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;=
+ font-family:Lato, Tahoma, sans-serif; color:#444444; font-weight:500;=
+ font-size:18px; line-height:1.5em; margin-bottom:10px"><a href=3D"htt=
+ps://www.impactplus.com/e2t/tc/VX3J8h5Z7lpwN2wy4CLg-6frW4FBnYy4qtf1-N3=
+NdJH13p_9rV1-WJV7CgGLwW7grTdK4nPhNcW8bNV3j71QxqvN4QcKmxRZr8BVY0M7s4Rsb=
+_RW3VrRQ67_7CBNW3LFMw46ss_ZBW53dt8x4xyKxVVyd1gd2mv_0sVbwJVZ3c6pYMN6lzs=
+9RtdQWrW5L_J6_2KMV55W18wBD68WBr_4W7bmTyp48Z5CcW2-tRqy8hqXL6W8xdRDv7NML=
+qJW3f_LQk1wLfD2W8zv7vb8QMK4kW7ZTbkX8XVRmYW1-YD7j94z8JwN27BBTl3D1QNVDrK=
+-J75BlK1VSj_078by91WW5R4cJk71q9QXW50J5gS6mVwPpW8_9DXJ7dfJQ6W4V2DmW6pGL=
+6x31y81" rel=3D"noopener" style=3D"-webkit-text-size-adjust:100%; -ms-=
+text-size-adjust:100%; color:#1082c1" data-hs-link-id=3D"0" target=3D"=
+_blank">Should you be buying email marketing lists in 2021?</a></li>
+<li style=3D"-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;=
+ font-family:Lato, Tahoma, sans-serif; color:#444444; font-weight:500;=
+ font-size:18px; line-height:1.5em; margin-bottom:10px"><strong>IMPACT=
++ course: </strong><a href=3D"https://www.impactplus.com/e2t/tc/VX3J8h=
+5Z7lpwN2wy4CLg-6frW4FBnYy4qtf1-N3NdJHk3p_9LV1-WJV7CgF03W5pjlpB83TBsnW3=
+k4PJk78Mc6YW1fKmDy13JMVCW83Tcvj90rg9LW7NsZpN5j_xcxW8M__0J2qPDVLW60J4fd=
+5g5515W1lVWKN6HNRGPW4qwzt_6HjdDxW317BgX6wpqkHW24l5mH6Bn_XjN8F0lz_K5m1Q=
+W1yPQkg59xxDyW6BV9tj7R1tWFW7xplN41DT3MRW38qrJs87c-2SW2RDKCS5LRsd9Vcd3V=
+j1ycrxTW1m4P7s3HgH3HV_rfqV6vk1rDMmFwKjx6FdCV5vVWH4Z-xRlW8KgtWz2nNMG5W6=
+J-Gt07lnkJfW6PRrvT8Y-tH0V_qhzQ8G3RKzW35XrW41Y_nDtN3GN-vkTSH643js81" re=
+l=3D"noopener" style=3D"-webkit-text-size-adjust:100%; -ms-text-size-a=
+djust:100%; color:#1082c1" data-hs-link-id=3D"0" target=3D"_blank">Inb=
+ounder=E2=80=99s Guide to Email Marketing</a></li>
+</ul>
+<h2 style=3D"display:block; margin-right:0; margin-bottom:10px; margin=
+-left:0; font-family:Lato, Tahoma, sans-serif; font-size:22px; color:#=
+555555; line-height:1.25em; font-weight:800 !important; margin-top:24p=
+x">5 virtual sales appointment strategies that will help you close dea=
+ls faster (<a href=3D"https://www.impactplus.com/e2t/tc/VX3J8h5Z7lpwN2=
+wy4CLg-6frW4FBnYy4qtf1-N3NdJHk3p_9LV1-WJV7CgNtqW7x24rd6bdptSW2nJ3S2233=
+cCvW4J06SR7ljRsMW6s3WVZ5xhvJFW8VQkjy34Jf6VW1B6WwS25CXrVW7prM1S7kgXPtW1=
+XZVwS2DfjB_W6-5BSS4pDCDrW4VxRhH4sKbjxW4pmm9L5H7VwrVgn4Tr7T3V9xN2Y6Cwwy=
+fg-1W5mvmvR7WxknVW7mh4cH5ZccLKW2YGswX7zFdb0VtHHNd3_0NzhW3Xm5z36vZ5HfW2=
+GH4gJ7Qr13pW6BPX7X1RGkhSW1k7Q3p5v183nVhtXCc5FSfFtVrvlHT9hVvxmW2QS8jH4N=
+gh5tVbwmKx90nJ3LW4S_f5k253qbrW1PDqwv6R_3fYW57p87N2DGnd_38Vq1" rel=3D"n=
+oopener" style=3D"-webkit-text-size-adjust:100%; -ms-text-size-adjust:=
+100%; color:#1082c1" data-hs-link-id=3D"0" target=3D"_blank">9-minute =
+read</a>)</h2>
+<p style=3D"margin-bottom: 1em; -webkit-text-size-adjust:100%; -ms-tex=
+t-size-adjust:100%; font-family:Lato, Tahoma, sans-serif; color:#44444=
+4; font-weight:500; font-size:18px; line-height:1.5em">Virtual sales a=
+ppointments don't come naturally to everyone. I sound like a broken re=
+cord, but sales teams had to do a lot of adjusting to their sales stra=
+tegies in recent memory. <span style=3D"font-size:18px; line-height:1.=
+5em; font-weight:normal">That's why IMPACT+ Product Manager Myriah And=
+erson is </span><strong><a href=3D"https://www.impactplus.com/e2t/tc/V=
+X3J8h5Z7lpwN2wy4CLg-6frW4FBnYy4qtf1-N3NdJHk3p_9LV1-WJV7CgMG_N81ytCFY5D=
+nHW1x_WyN68Y1hyW5x91cj7kpS5WW5sq5Qd6y9lPbW7FS9Y48KH0M7W2YP0PQ5Cs_94W8M=
+6bSs8LS714N2psZ_46psqHW5PfCTh84fhdJW1PrFwH3gJ5xMW3g69TZ8z6KwzW7z7Fmh7M=
+Q1WfN5KlWGT6XZHLW5KP6rm4RkY3rW76N3Zf4rpWysW5dDPw9873Ll1W7_kYB66JZ9RxW4=
+qjmhn57x4yLW3tzN-l3rJP60W6x-XW63xT8GLW4jR9hh6cSDJHW4QxHwB1xBBzPW6CCzxS=
+6M0l3JW2KxxTR8BhPNFW2tJ8w57LgBYKVm1wtW4xfxG8W7XXxRs2HlYX9W5VbC8X23fhH3=
+31Nk1" rel=3D"noopener" style=3D"-webkit-text-size-adjust:100%; -ms-te=
+xt-size-adjust:100%; color:#1082c1" data-hs-link-id=3D"1" target=3D"_b=
+lank">here to save the day with her 5 key strategies for closing more =
+deals in a virtual selling environment.</a></strong></p>
+<p style=3D"margin-bottom: 1em; -webkit-text-size-adjust:100%; -ms-tex=
+t-size-adjust:100%; font-family:Lato, Tahoma, sans-serif; color:#44444=
+4; line-height:1.5em; font-weight:bold; font-size:20px"><strong>=F0=9F=
+=93=9A Related reads and resources:</strong></p>
+<ul style=3D"padding-left:18px; line-height:150%">
+<li style=3D"-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;=
+ font-family:Lato, Tahoma, sans-serif; color:#444444; font-weight:500;=
+ font-size:18px; line-height:1.5em; margin-bottom:10px"><a href=3D"htt=
+ps://www.impactplus.com/e2t/tc/VX3J8h5Z7lpwN2wy4CLg-6frW4FBnYy4qtf1-N3=
+NdJH13p_9rV1-WJV7CgZXZW5J7sHd3hLKH3W8S64sJ2TWzS6W5C_64t5d5TXmW5mgP798x=
+lBq1W5wzfzB1tRqTHW47Wwr_6YMPTrVsQWxj7gh__QW1KStH081lsgXLLYxLgtwjDW5LNs=
+cH8TsHwyW5JNNBM3vDbBTW7jwzMG363W0jW7S0fqd5KKFbRW43KZ3Q3ChMNbW4-lcxD4VL=
+yH1VZfsgj3hB79QW4Bk4QN4M61_XW53VxTS76mw-1W7FfH6c6jP_msW3XTT6C4msmlHV9n=
+Gtm609gnBVgqrh42ZkfHgW27pvH27RGpNsVN5j2X6ZpKFZW3PLP4g78ZsXmN85hFK4YKXC=
+F3b9P1" rel=3D"noopener" style=3D"-webkit-text-size-adjust:100%; -ms-t=
+ext-size-adjust:100%; color:#1082c1" data-hs-link-id=3D"0" target=3D"_=
+blank">Virtual Selling Summit 2021 - Register today!</a></li>
+<li style=3D"-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;=
+ font-family:Lato, Tahoma, sans-serif; color:#444444; font-weight:500;=
+ font-size:18px; line-height:1.5em; margin-bottom:10px"><a href=3D"htt=
+ps://www.impactplus.com/e2t/tc/VX3J8h5Z7lpwN2wy4CLg-6frW4FBnYy4qtf1-N3=
+NdJH13p_9rV1-WJV7CgMdnW3BKPZC2WvnDYW8PvX281f2c9KN49-BTqQrTlmW5dS_xq6ls=
+LwFW928jLC6R62KVN1tfJ8RJWyZYW74mczz7Xn6zrW4MqjzF41Q7BNW1mR3qD12z-7sN5_=
+S6dN_2MWCVfwYQc80RX-gW5w9CtV2MjSP8V3gNpd7N-HyTW4hy1_N8KHLQZW2k9MY43Qc-=
+JJW8h38pW5YPCZJW771NyM41CQZjW80GB8g7Gw2xPW1fpWrx35T9FWW4rV6P086HWTMW3b=
+JH0r6JWknSV8N90k3z0D7lW2MmmJR8kRd7JW6gJLjw61FjBlW10npcL5SQdPMW6J96175K=
+mqNW3hX71" rel=3D"noopener" style=3D"-webkit-text-size-adjust:100%; -m=
+s-text-size-adjust:100%; color:#1082c1" data-hs-link-id=3D"0" target=3D=
+"_blank">Why virtual sales will continue to dominate in a post-COVID w=
+orld</a></li>
+<li style=3D"-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;=
+ font-family:Lato, Tahoma, sans-serif; color:#444444; font-weight:500;=
+ font-size:18px; line-height:1.5em; margin-bottom:10px"><a href=3D"htt=
+ps://www.impactplus.com/e2t/tc/VX3J8h5Z7lpwN2wy4CLg-6frW4FBnYy4qtf1-N3=
+NdJHD3p_b1V1-WJV7CgStNW4k4qqQ635MmmW3ytFNn6dTZZvW3hdfnH58lKqBW7r_Gx_8N=
+_wgMW4C5tjY2_H8ttW3ZXf3j3-jNlRW1c1Zcn7p-L0VW3b2MdZ3pLjRVVTs8sj36NHk2W5=
+vvhsY1ZjSK5W27lft94Y8QDQW4BdN-W8qq-LGW1wyB_V6pBk7WW33Wdhh7vnShSN36lzxC=
+tj3C6N3lrYStqzC5WW5B6WWR14DKPCW13GhKm3jRglhVJqyjB8Gv6kcW4Tg6wl3WVRMyVJ=
+CN_J55x4q4N3jC6msF04KWW3-mn-c605fmdW2nQ7FY3q1TsKVLxf9-3FdQgjW7m7mr_1-r=
+YbgN1bJGvXNX02YW1xKGhk77vmtZW4lTQpS3Rhh9QW5kQ4qN7RfHnP3q2L1" rel=3D"no=
+opener" style=3D"-webkit-text-size-adjust:100%; -ms-text-size-adjust:1=
+00%; color:#1082c1" data-hs-link-id=3D"0" target=3D"_blank"></a><stron=
+g>IMPACT+ on demand: </strong><a href=3D"https://www.impactplus.com/e2=
+t/tc/VX3J8h5Z7lpwN2wy4CLg-6frW4FBnYy4qtf1-N3NdJHD3p_b1V1-WJV7Cg-5CW4Gl=
+ZpW8JKKTHW5KmvXn6LjW_qVW4cWX7W0WTQW5DQPMW6jjRnlW2dRMfW8DxT-WN3Rp11Yql8=
+SjW3jLQG11BpZ9WN5sn83LWPyd3W4WSXvN7FP8TjW67xJQL7DMXzbW87lk2Q6B5_K2W4H1=
+lJZ2by5pPW2VH5rJ7m5bw8W7Dfr0D6WZD9KW25S0tm6DltQBW6mqR8_4gBWVlVKrhYt4Xb=
+4KrW2Fgyzp2xVzVVW1St7b57KMXw2N1kx5gYH310xW7BJph-2QgBNFW8Nq0pc30kqS1W6B=
+5TWS3MB5wKW9m2TZs7plK8BW4tcfGh5VcHpdN1q7797LrT70W93DnPP7gyg3QW31qMDg6H=
+YVNTN8VgKKG8_kKDW6kfjBz4h-6k-36V91" rel=3D"noopener" style=3D"-webkit-=
+text-size-adjust:100%; -ms-text-size-adjust:100%; color:#1082c1; font-=
+weight:normal" data-hs-link-id=3D"0" target=3D"_blank">How to Add Vide=
+o to Your Entire Sales Process</a><strong><br></strong></li>
+</ul></div></div>
+</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+   </td>
+           </tr>
+    </tbody></table>
+   </td>
+</tr>
+<tr>
+<td align=3D"left" valign=3D"top" class=3D"bodyContent" width=3D"100%"=
+ colspan=3D"12" style=3D"-webkit-text-size-adjust:100%; -ms-text-size-=
+adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; color:#444444=
+; font-family:sans-serif; font-size:15px; line-height:150%; text-align=
+:left">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%"=
+ class=3D"templateColumnWrapper" style=3D"-webkit-text-size-adjust:100=
+%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0=
+pt; border-collapse:collapse !important">
+            <tbody><tr>
+<td valign=3D"top" colspan=3D"12" width=3D"100.0%" class=3D" column" s=
+tyle=3D"-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-=
+table-lspace:0pt; mso-table-rspace:0pt; width:100.0%; text-align:left;=
+ padding:0; font-family:sans-serif; font-size:15px; line-height:1.5em;=
+ color:#444444" align=3D"left">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%"=
+ style=3D"-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; ms=
+o-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:separate !im=
+portant; border-spacing:0; background-color:#ffffff" class=3D" columnC=
+ontentTable" bgcolor=3D"#ffffff"><tbody><tr><td align=3D"left" valign=3D=
+"top" class=3D"columnContent widget-span widget-type-custom_widget" st=
+yle=3D"-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-t=
+able-lspace:0pt; mso-table-rspace:0pt; padding-right:20px; padding-lef=
+t:20px; text-align:left; padding:0; font-family:sans-serif; font-size:=
+15px; line-height:1.5em; color:#444444; padding-top:20px; padding-bott=
+om:15px" data-widget-type=3D"custom_widget">
+<div class=3D"layout-widget-wrapper">
+<div id=3D"hs_cos_wrapper_module_1616710233636238" class=3D"hs_cos_wra=
+pper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style=3D"color:=
+ inherit; font-size: inherit; line-height: inherit;" data-hs-cos-gener=
+al-type=3D"widget" data-hs-cos-type=3D"module"><div style=3D"border-to=
+p:2px solid #EEEEEE;"></div></div>
+</div><!--end layout-widget-wrapper -->
+</td></tr></tbody></table><!--end widget-table -->
+   </td>
+           </tr>
+    </tbody></table>
+   </td>
+</tr>
+<tr>
+<td align=3D"left" valign=3D"top" class=3D"bodyContent" width=3D"100%"=
+ colspan=3D"12" style=3D"-webkit-text-size-adjust:100%; -ms-text-size-=
+adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; color:#444444=
+; font-family:sans-serif; font-size:15px; line-height:150%; text-align=
+:left">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%"=
+ class=3D"templateColumnWrapper" style=3D"-webkit-text-size-adjust:100=
+%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0=
+pt; border-collapse:collapse !important">
+            <tbody><tr>
+<td valign=3D"top" colspan=3D"12" width=3D"100.0%" class=3D" column" s=
+tyle=3D"-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-=
+table-lspace:0pt; mso-table-rspace:0pt; width:100.0%; text-align:left;=
+ padding:0; font-family:sans-serif; font-size:15px; line-height:1.5em;=
+ color:#444444" align=3D"left">
+<div class=3D"widget-span widget-type-custom_widget exclusivesSection"=
+ style=3D"" data-widget-type=3D"custom_widget">
+<div class=3D"layout-widget-wrapper">
+<div id=3D"hs_cos_wrapper_module_153693818374297" class=3D"hs_cos_wrap=
+per hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_=
+text widget-type-rich_text" style=3D"color: inherit; font-size: inheri=
+t; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-=
+cos-type=3D"module"><div id=3D"hs_cos_wrapper_module_153693818374297_"=
+ class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_ric=
+h_text" style=3D"color: inherit; font-size: inherit; line-height: inhe=
+rit;" data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"rich_tex=
+t"><h1 style=3D"display:block; margin-right:0; margin-bottom:10px; mar=
+gin-left:0; font-family:Lato, Tahoma, sans-serif; font-size:28px; font=
+-weight:800; color:#444444; margin-top:24px; line-height:125%">IMPACT+=
+ community exclusives</h1>
+<p style=3D"margin-bottom: 1em; -webkit-text-size-adjust:100%; -ms-tex=
+t-size-adjust:100%; font-family:Lato, Tahoma, sans-serif; color:#44444=
+4; font-weight:500; font-size:18px; line-height:1.5em">Today's takeawa=
+y is to always keep&nbsp;<em>yourself</em> on your toes! Adam is getti=
+ng into (re)building new habits. <a href=3D"https://www.impactplus.com=
+/e2t/tc/VX3J8h5Z7lpwN2wy4CLg-6frW4FBnYy4qtf1-N3NdJHD3p_b1V1-WJV7CgM_KW=
+4Z-TWB2MCLz4W62Vx6G2pW1C2W84wgt48_2c9hW86-LC22J5t32W2JSgYX3T0QVqW1nPFn=
+83ZBRBBW4L1Skk5jLdhfW8l1R2p1vCJ0wW2WB0wd5Bj66RW5TS3Wt4n89GJVzM6k057K4C=
+fW31HmT51Zg2zdW9j4Dpj6pKGktW1WbGLj3R3HpRW62_zSD4b91jnM3WCxZcBC8MW2yWLS=
+W2TPxkVW6m_2j71P7LDyW8tyL6R1ySnpgW6T8txL1mCySqVm8-fy2lhjqKW7hckkS39wGd=
+bVX5JqW48Xc5-W6g_v6w2KLhGJD18P5Y5Cz5W4BkhS18gKFrLW7Z76Rj4VjHq4W8pVkyl7=
+pbT3NN43srQT8QnzbW7ChzSr3sj2x43mY51" rel=3D"noopener" style=3D"-webkit=
+-text-size-adjust:100%; -ms-text-size-adjust:100%; color:#1082c1" data=
+-hs-link-id=3D"1" target=3D"_blank">What surprising new habits are you=
+ building for yourself?</a></p>
+<center><a href=3D"https://www.impactplus.com/e2t/tc/VX3J8h5Z7lpwN2wy4=
+CLg-6frW4FBnYy4qtf1-N3NdJHD3p_b1V1-WJV7CgBsqW7YYxF83J6vQnW7Vrd661MXhj3=
+W9dt46y4YTqgVW9kPtt54VgS5FW528fTv34CCnkW4QCRpY7g815GW1TxNjz28-DhJW7w1V=
+zT5XB--MW4yYqTl35nxtqW2Cw1k58hG02MW3cLwkz32psjXW2tTL5q54ZRFmW2tFDPz1c2=
+Fk7W4RHQTM1B3wb9W7Jt65T7fG5RfW54XnMm8lkgrlW4dB5mf89J65vW1Tl8bY3_WLCXW5=
+HNFqn5Fz5-7W9g7V14239t-lW5DSBTC6pxbmZW1lfp1V5y8YpHW3rshCv90hVc_W2h6TDx=
+1TXzxFN714LvpSz4sLVcb4kz77jz_JW2Xtjgd7wzlwVW7Q0Cbh5y6bhNW8Fqw4348p4z1W=
+8WzCG81R4S0N3kk11" rel=3D"noopener" style=3D"-webkit-text-size-adjust:=
+100%; -ms-text-size-adjust:100%; color:#1082c1" data-hs-link-id=3D"2" =
+target=3D"_blank"><img src=3D"https://www.impactplus.com/hs-fs/hubfs/I=
+M+%20post%20friday%204-16.png?width=3D1000&amp;upscale=3Dtrue&amp;name=
+=3DIM+%20post%20friday%204-16.png" alt=3D"IM+ post friday 4-16" width=3D=
+"500" style=3D"vertical-align:bottom; -ms-interpolation-mode:bicubic; =
+width:500px; max-width:1516px; margin-left:auto; margin-right:auto; di=
+splay:block" srcset=3D"https://www.impactplus.com/hs-fs/hubfs/IM+%20po=
+st%20friday%204-16.png?upscale=3Dtrue&amp;width=3D1000&amp;upscale=3Dt=
+rue&amp;name=3DIM+%20post%20friday%204-16.png 500w, https://www.impact=
+plus.com/hs-fs/hubfs/IM+%20post%20friday%204-16.png?upscale=3Dtrue&amp=
+;width=3D2000&amp;upscale=3Dtrue&amp;name=3DIM+%20post%20friday%204-16=
+.png 1000w" sizes=3D"(max-width: 500px) 100vw, 500px"></a></center>
+<h2 style=3D"display:block; margin-right:0; margin-bottom:10px; margin=
+-left:0; font-family:Lato, Tahoma, sans-serif; font-size:22px; color:#=
+555555; font-weight:800 !important; margin-top:24px; line-height:125%"=
+>Pro on-demand: Inbounder's Guide to Google Suite Tools</h2>
+<a  href=3D"https://www.impactplus.com/e2t/tc/VX3J8h5Z7lpwN2wy4CLg-6fr=
+W4FBnYy4qtf1-N3NdJFy5nxG7V3Zsc37CgLn3VbfXbM11n45gW77wSyL1SkcD8W34blX09=
+1KYS8W2fb_Z799yrmmW8dStj16z0Ll6V9VXK-5l6pmFW1pD_Sc412JLgW3Y97sZ6wKGncW=
+5tPv5V9cNLHVW4FRvJc1c1dQ_W4zhjQk8rjbT5W11hkhg7Ny4HXW24KwvF34H350W39pFg=
+k28Ck5TW2NBTb43_hvfjW5Qjhw-4HlL49W1Q5KxW4m-sY7W4952mD2318NyW5TC2y48VQq=
+FTW6bzJ357mHh_LN4gBfGttWl4HW580Dkx8Jvl1tW4883wh2Z77DFW2jWYcl6bzQ1TW7zT=
+ZGk8wgjkPW582CTt3s5NjbW2sjNDf6V4GXRVJggPy6Ld2JxW98cmTR4KtxDFW8780b18MJ=
+46YVxv6gz8kZ_8gW2GHl1v35LP1131n91" rel=3D"noopener" style=3D"-webkit-t=
+ext-size-adjust:100%; -ms-text-size-adjust:100%; color:#1082c1" data-h=
+s-link-id=3D"0" target=3D"_blank"><img src=3D"https://www.impactplus.c=
+om/hs-fs/hubfs/Kevin%20Google%20Search%20LATEST.png?width=3D996&amp;up=
+scale=3Dtrue&amp;name=3DKevin%20Google%20Search%20LATEST.png" alt=3D"K=
+evin Google Search LATEST" width=3D"498" style=3D"vertical-align:botto=
+m; -ms-interpolation-mode:bicubic; width:498px; max-width:540px; margi=
+n-left:auto; margin-right:auto; display:block" srcset=3D"https://www.i=
+mpactplus.com/hs-fs/hubfs/Kevin%20Google%20Search%20LATEST.png?upscale=
+=3Dtrue&amp;width=3D996&amp;upscale=3Dtrue&amp;name=3DKevin%20Google%2=
+0Search%20LATEST.png 498w, https://www.impactplus.com/hs-fs/hubfs/Kevi=
+n%20Google%20Search%20LATEST.png?upscale=3Dtrue&amp;width=3D1992&amp;u=
+pscale=3Dtrue&amp;name=3DKevin%20Google%20Search%20LATEST.png 996w" si=
+zes=3D"(max-width: 498px) 100vw, 498px"></a>
+<p style=3D"margin-bottom: 1em; -webkit-text-size-adjust:100%; -ms-tex=
+t-size-adjust:100%; font-family:Lato, Tahoma, sans-serif; color:#44444=
+4; font-weight:500; font-size:18px; line-height:1.5em; text-align:left=
+" align=3D"left">Google offers a range of free tools businesses can us=
+e to learn more about how search engines and real buyers view and use =
+their websites and assets. This course is built for you to watch and a=
+pply at the same time and I can personally guarantee you=E2=80=99ll ha=
+ve a fuller understanding of how to use Google=E2=80=99s suite of tool=
+s to measure and improve your They Ask, You Answer, and overall inboun=
+d marketing.</p>
+<p style=3D"margin-bottom: 1em; -webkit-text-size-adjust:100%; -ms-tex=
+t-size-adjust:100%; font-family:Lato, Tahoma, sans-serif; color:#44444=
+4; font-weight:500; font-size:18px; line-height:1.5em; text-align:left=
+" align=3D"left"></p><center><!--HubSpot Call-to-Action Code --><span =
+class=3D"hs-cta-wrapper" data-hs-img-pg=3D"5c18e23d-cb93-4b69-965a-53c=
+bcbec6623" id=3D"hs-cta-wrapper-5c18e23d-cb93-4b69-965a-53cbcbec6623">=
+<span class=3D"hs-cta-node hs-cta-5c18e23d-cb93-4b69-965a-53cbcbec6623=
+" id=3D"hs-cta-5c18e23d-cb93-4b69-965a-53cbcbec6623"><a href=3D"https:=
+//www.impactplus.com/e2t/tc/VX3J8h5Z7lpwN2wy4CLg-6frW4FBnYy4qtf1-N3NdJ=
+HD5V93wV3Zsc37CgX-KW2p7f6g1dPTz2W90JGSQ36dkplW92ngqh1y4qxkW6D6HK64Xj-c=
+LW7PxJxP5BV60RW7-7c8f955rZrW7XcwKS84tVNVW85FsNc78lmdVVqxr704N7cvbW5v_q=
+Df65_ySTW6p_2K98lH41RW84Fzk31SR1t2W3wJz_95FwsY8W3C34Ky8s8TbvW4bzs-H4mX=
+Np_W8SPMj41PfYdQW5LstzB5b0wrfW7t1rPK5Yy1bJW3rdF6z5mylVnW8KNLLt1TwMFLW5=
+sd_-24T5DNqW32HTYW8l277FW1832rs3fNy-QW4lZDnd5b9zkfN8RsfYv6fW73VRhK3P2Q=
+09DyW4dKdky79N2VzW7RpF9G1ZQSvXW5mRWGY54rrlmVL6Mz97fVhz7W8YLynz3n4msCW5=
+wZXMh2FpkRMW2f2xGj47cLsPW1WTJc8609F-5W1RPhCD34yTrQN8c420MfLmVfVXnrdJ9c=
+vV-qW64dzKk2dwHMkW9lJjdm4-x0TYW3jLFyn5cLJLKW9cCPC57klCMVW4Lc-0B8GV7BJW=
+46__205-Dhy4W3GgVLz68S8zSW5NppNV3ZH9ggN2xjxjxDt63d3fyT1" target=3D"_bl=
+ank" style=3D"-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%=
+; color:#1082c1" data-hs-link-id=3D"0"><img class=3D"hs-cta-img" id=3D=
+"hs-cta-img-5c18e23d-cb93-4b69-965a-53cbcbec6623" style=3D"vertical-al=
+ign:bottom; -ms-interpolation-mode:bicubic; border-width:0px; margin:0=
+ auto; display:block; margin-top:20px; margin-bottom:20px; width:auto =
+!important; max-width:100% !important" mce_noresize=3D"1" src=3D"https=
+://hsctaimages.net/ctas/v2/public/cs/il/?pg=3D5c18e23d-cb93-4b69-965a-=
+53cbcbec6623&amp;pid=3D145335&amp;ecid=3DACsprvvHZSjyXCPFJEk3NrxYVXmNV=
+BsEghT9md0ts1Pgrvxc0QVtPA90CRv_9n9gCeFVLkSz5Qrs&amp;hseid=3D121819596&=
+amp;hsic=3Dfalse" alt=3D"Master Google Suite for your business" srcset=
+=3D"https://hsctaimages.net/ctas/v2/public/cs/il/?pg=3D5c18e23d-cb93-4=
+b69-965a-53cbcbec6623&amp;pid=3D145335&amp;ecid=3DACsprvvHZSjyXCPFJEk3=
+NrxYVXmNVBsEghT9md0ts1Pgrvxc0QVtPA90CRv_9n9gCeFVLkSz5Qrs&amp;hseid=3D1=
+21819596&amp;hsic=3Dfalse&amp;dsf=3D2 2x, https://hsctaimages.net/ctas=
+/v2/public/cs/il/?pg=3D5c18e23d-cb93-4b69-965a-53cbcbec6623&amp;pid=3D=
+145335&amp;ecid=3DACsprvvHZSjyXCPFJEk3NrxYVXmNVBsEghT9md0ts1Pgrvxc0QVt=
+PA90CRv_9n9gCeFVLkSz5Qrs&amp;hseid=3D121819596&amp;hsic=3Dfalse&amp;ds=
+f=3D3 3x, https://hsctaimages.net/ctas/v2/public/cs/il/?pg=3D5c18e23d-=
+cb93-4b69-965a-53cbcbec6623&amp;pid=3D145335&amp;ecid=3DACsprvvHZSjyXC=
+PFJEk3NrxYVXmNVBsEghT9md0ts1Pgrvxc0QVtPA90CRv_9n9gCeFVLkSz5Qrs&amp;hse=
+id=3D121819596&amp;hsic=3Dfalse&amp;dsf=3D4 4x" align=3D"middle" width=
+=3D"auto"></a></span></span><!-- end HubSpot Call-to-Action Code --></=
+center><p style=3D"margin-bottom: 1em; -webkit-text-size-adjust:100%; =
+-ms-text-size-adjust:100%; font-family:Lato, Tahoma, sans-serif; color=
+:#444444; font-weight:500; font-size:18px; line-height:1.5em"></p>
+<p style=3D"margin-bottom: 1em; -webkit-text-size-adjust:100%; -ms-tex=
+t-size-adjust:100%; font-family:Lato, Tahoma, sans-serif; color:#44444=
+4; font-weight:500; font-size:18px; line-height:1.5em; text-align:cent=
+er" align=3D"center"><em>Not a pro member? <a href=3D"https://www.impa=
+ctplus.com/e2t/tc/VX3J8h5Z7lpwN2wy4CLg-6frW4FBnYy4qtf1-N3NdJGL3p_97V1-=
+WJV7CgYbLW68NnD78b63NzN6Nn1zhg7-pDW27dsny3WQDr8W4wsFSQ1Kv0LRW8rnhHT4_W=
+TfTW4BqFnQ7wsy9hW9h9xCt2G8VFFW4Mjvk12wM65rW8RCg3h25M7fQW5CYC2V8vQ7csW3=
+ZH1966VDg7XVly7xv1xHMRsW5vZW0B6kZgxPW8JMXXL7ZGZk_V-7KjP75cRKBW23VMyV4c=
+TPVrW52WNGg2LH6QvW2nWDVf64Z5rcW7NWWz07H1rBQW43bKQx3PnXtJW98V3vy3_TRn7W=
+7GLM7_5rwwFJN7Tcj3h6DGH2W1NPM7W39P8F63lB01" rel=3D"noopener" style=3D"=
+-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; color:#1082c=
+1" data-hs-link-id=3D"0" target=3D"_blank">Start your 14-day free tria=
+l and get access</a>!</em></p></div></div>
+</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+   </td>
+           </tr>
+    </tbody></table>
+   </td>
+</tr>
+<tr>
+<td align=3D"left" valign=3D"top" class=3D"bodyContent" width=3D"100%"=
+ colspan=3D"12" style=3D"-webkit-text-size-adjust:100%; -ms-text-size-=
+adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; color:#444444=
+; font-family:sans-serif; font-size:15px; line-height:150%; text-align=
+:left">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%"=
+ class=3D"templateColumnWrapper" style=3D"-webkit-text-size-adjust:100=
+%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0=
+pt; border-collapse:collapse !important">
+            <tbody><tr>
+<td valign=3D"top" colspan=3D"12" width=3D"100.0%" class=3D" column" s=
+tyle=3D"-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-=
+table-lspace:0pt; mso-table-rspace:0pt; width:100.0%; text-align:left;=
+ padding:0; font-family:sans-serif; font-size:15px; line-height:1.5em;=
+ color:#444444" align=3D"left">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%"=
+ style=3D"-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; ms=
+o-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:separate !im=
+portant; border-spacing:0; background-color:#ffffff" class=3D" columnC=
+ontentTable" bgcolor=3D"#ffffff"><tbody><tr><td align=3D"left" valign=3D=
+"top" class=3D"columnContent widget-span widget-type-custom_widget" st=
+yle=3D"-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-t=
+able-lspace:0pt; mso-table-rspace:0pt; padding-right:20px; padding-lef=
+t:20px; text-align:left; padding:0; font-family:sans-serif; font-size:=
+15px; line-height:1.5em; color:#444444; padding-top:20px; padding-bott=
+om:20px" data-widget-type=3D"custom_widget">
+<div class=3D"layout-widget-wrapper">
+<div id=3D"hs_cos_wrapper_module_1616710245808257" class=3D"hs_cos_wra=
+pper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style=3D"color:=
+ inherit; font-size: inherit; line-height: inherit;" data-hs-cos-gener=
+al-type=3D"widget" data-hs-cos-type=3D"module"><div style=3D"border-to=
+p:2px solid #EEEEEE;"></div></div>
+</div><!--end layout-widget-wrapper -->
+</td></tr></tbody></table><!--end widget-table -->
+   </td>
+           </tr>
+    </tbody></table>
+   </td>
+</tr>
+<tr>
+<td align=3D"left" valign=3D"top" class=3D"bodyContent" width=3D"100%"=
+ colspan=3D"12" style=3D"-webkit-text-size-adjust:100%; -ms-text-size-=
+adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; color:#444444=
+; font-family:sans-serif; font-size:15px; line-height:150%; text-align=
+:left">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%"=
+ class=3D"templateColumnWrapper" style=3D"-webkit-text-size-adjust:100=
+%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0=
+pt; border-collapse:collapse !important">
+            <tbody><tr>
+<td valign=3D"top" colspan=3D"12" width=3D"100.0%" class=3D" column" s=
+tyle=3D"-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-=
+table-lspace:0pt; mso-table-rspace:0pt; width:100.0%; text-align:left;=
+ padding:0; font-family:sans-serif; font-size:15px; line-height:1.5em;=
+ color:#444444; padding-bottom:20px" align=3D"left">
+<div class=3D"widget-span widget-type-custom_widget " style=3D"" data-=
+widget-type=3D"custom_widget">
+<div class=3D"layout-widget-wrapper">
+<div id=3D"hs_cos_wrapper_module_1536938292138102" class=3D"hs_cos_wra=
+pper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich=
+_text widget-type-rich_text" style=3D"color: inherit; font-size: inher=
+it; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs=
+-cos-type=3D"module"><div id=3D"hs_cos_wrapper_module_1536938292138102=
+_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_r=
+ich_text" style=3D"color: inherit; font-size: inherit; line-height: in=
+herit;" data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"rich_t=
+ext"><h1 style=3D"display:block; margin-right:0; margin-bottom:10px; m=
+argin-left:0; font-family:Lato, Tahoma, sans-serif; font-size:28px; li=
+ne-height:1.25em; font-weight:800; color:#444444; margin-top:24px">You=
+r Friday nonsense</h1>
+<p style=3D"margin-bottom: 1em; -webkit-text-size-adjust:100%; -ms-tex=
+t-size-adjust:100%; font-family:Lato, Tahoma, sans-serif; color:#44444=
+4; font-weight:500; font-size:18px; line-height:1.5em">The world needs=
+ a giggle. Every Friday we include some nonsense to make you laugh, sm=
+ile, and feel <em>ridiculously</em> related to:</p>
+<center><a href=3D"https://www.impactplus.com/e2t/tc/VX3J8h5Z7lpwN2wy4=
+CLg-6frW4FBnYy4qtf1-N3NdJGL3p_97V1-WJV7CgVTfW40slkv5wB8TRW3T_j2m3r0Wdy=
+W3bh7Dw3MwkL3W6Rf4bN9jLkKCN4v-fQ6kzjlVW6Pq_7x5rVbvTVgbng446FQQ7W2cZmw4=
+80NRSLW1MghNc3frLJXW4LNDPG1-fThSW2SwDMB2qdnGDW5mPzKD3xD0xWN4998rN6KlNY=
+N7PdQ2Wj9hYsN2pHymqFct3pVZbSJp3QTxRGW7lvnF31yWDrMW3vwlsb5BPmh_W5xzlbS7=
+5hqjzW4PFb_32DYT3xVf2XC43jcyXFW8f-gYj4Yw5qDW6K2lwf75THJhVcpFl456jFqT3n=
+lK1" rel=3D"noopener" style=3D"-webkit-text-size-adjust:100%; -ms-text=
+-size-adjust:100%; color:#1082c1" data-hs-link-id=3D"0" target=3D"_bla=
+nk"><img src=3D"https://www.impactplus.com/hs-fs/hubfs/My%20Stress%20L=
+evels.png?width=3D952&amp;upscale=3Dtrue&amp;name=3DMy%20Stress%20Leve=
+ls.png" alt=3D"My Stress Levels" width=3D"476" style=3D"vertical-align=
+:bottom; -ms-interpolation-mode:bicubic; width:476px; max-width:926px"=
+ srcset=3D"https://www.impactplus.com/hs-fs/hubfs/My%20Stress%20Levels=
+.png?upscale=3Dtrue&amp;width=3D952&amp;upscale=3Dtrue&amp;name=3DMy%2=
+0Stress%20Levels.png 476w, https://www.impactplus.com/hs-fs/hubfs/My%2=
+0Stress%20Levels.png?upscale=3Dtrue&amp;width=3D1904&amp;upscale=3Dtru=
+e&amp;name=3DMy%20Stress%20Levels.png 952w" sizes=3D"(max-width: 476px=
+) 100vw, 476px"></a></center>
+<p style=3D"margin-bottom: 1em; -webkit-text-size-adjust:100%; -ms-tex=
+t-size-adjust:100%; font-family:Lato, Tahoma, sans-serif; color:#44444=
+4; font-weight:500; font-size:18px; line-height:1.5em">This captures t=
+his week's stress levels perfectly. It also showcases my ability to ov=
+erthink very simple things...</p></div></div>
+</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+   </td>
+           </tr>
+    </tbody></table>
+   </td>
+</tr>
+<tr>
+<td align=3D"left" valign=3D"top" class=3D"bodyContent" width=3D"100%"=
+ colspan=3D"12" style=3D"-webkit-text-size-adjust:100%; -ms-text-size-=
+adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; color:#444444=
+; font-family:sans-serif; font-size:15px; line-height:150%; text-align=
+:left">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%"=
+ class=3D"templateColumnWrapper" style=3D"-webkit-text-size-adjust:100=
+%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0=
+pt; border-collapse:collapse !important">
+            <tbody><tr>
+<td valign=3D"top" colspan=3D"12" width=3D"100.0%" class=3D" column" s=
+tyle=3D"-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-=
+table-lspace:0pt; mso-table-rspace:0pt; width:100.0%; text-align:left;=
+ padding:0; font-family:sans-serif; font-size:15px; line-height:1.5em;=
+ color:#444444" align=3D"left">
+<div class=3D"widget-span widget-type-custom_widget " style=3D"" data-=
+widget-type=3D"custom_widget">
+<div class=3D"layout-widget-wrapper">
+<div id=3D"hs_cos_wrapper_module_1616703667561343" class=3D"hs_cos_wra=
+pper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style=3D"color:=
+ inherit; font-size: inherit; line-height: inherit;" data-hs-cos-gener=
+al-type=3D"widget" data-hs-cos-type=3D"module"><table cellspacing=3D"0=
+" cellpadding=3D"0" width=3D"100%" border=3D"0" style=3D"-webkit-text-=
+size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso=
+-table-rspace:0pt; border-collapse:collapse !important; width:100% !im=
+portant">
+  <tbody><tr>
+    <td width=3D"100%" border=3D"0" style=3D"-webkit-text-size-adjust:=
+100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspac=
+e:0pt">
+      <table cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" border=
+=3D"0" style=3D"-webkit-text-size-adjust:100%; -ms-text-size-adjust:10=
+0%; mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collap=
+se !important; width:100% !important">
+        <tbody><tr>
+          <td width=3D"100px;!important" style=3D"-webkit-text-size-ad=
+just:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-=
+rspace:0pt">
+            <img src=3D"https://www.impactplus.com/hs-fs/hubfs/500px_S=
+quare_Connor_DeLaney.jpg?width=3D170&amp;height=3D170&amp;upscale=3Dtr=
+ue&amp;name=3D500px_Square_Connor_DeLaney.jpg" width=3D"85" , height=3D=
+"85" style=3D"vertical-align:bottom; -ms-interpolation-mode:bicubic; b=
+order-radius:50%; max-width:85px !important; max-height:85px!important=
+; width:85px!important; height:85px!important; margin-right:8px; borde=
+r:2px solid #222222; padding:2px" srcset=3D"https://www.impactplus.com=
+/hs-fs/hubfs/500px_Square_Connor_DeLaney.jpg?upscale=3Dtrue&amp;width=3D=
+170&amp;height=3D170&amp;upscale=3Dtrue&amp;name=3D500px_Square_Connor=
+_DeLaney.jpg 85w, https://www.impactplus.com/hs-fs/hubfs/500px_Square_=
+Connor_DeLaney.jpg?upscale=3Dtrue&amp;width=3D340&amp;height=3D340&amp=
+;upscale=3Dtrue&amp;name=3D500px_Square_Connor_DeLaney.jpg 170w" sizes=
+=3D"(max-width: 85px) 100vw, 85px">
+          </td>
+          <td width=3D"100%" style=3D"-webkit-text-size-adjust:100%; -=
+ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; =
+padding:0px 0px 0px 5px">
+            <p style=3D"margin-bottom: 1em; -webkit-text-size-adjust:1=
+00%; -ms-text-size-adjust:100%; font-family:Lato, Tahoma, sans-serif; =
+color:#444444; font-weight:500; font-size:18px; line-height:1.5em; mar=
+gin:0px !important"><strong>Connor DeLaney</strong></p>
+            <p style=3D"margin-bottom: 1em; -webkit-text-size-adjust:1=
+00%; -ms-text-size-adjust:100%; font-family:Lato, Tahoma, sans-serif; =
+color:#444444; font-weight:500; font-size:18px; margin:0px !important;=
+ line-height:15px; display:inline-block">Community &amp; Events Manage=
+r,&nbsp;</p><p style=3D"margin-bottom: 1em; -webkit-text-size-adjust:1=
+00%; -ms-text-size-adjust:100%; font-family:Lato, Tahoma, sans-serif; =
+color:#444444; font-weight:500; font-size:18px; margin:0px !important;=
+ line-height:15px; display:inline-block"><a href=3D"https://www.impact=
+plus.com/e2t/tc/VX3J8h5Z7lpwN2wy4CLg-6frW4FBnYy4qtf1-N3NdJGL3p_97V1-WJ=
+V7CgVsYVbYJ-b1SNQDqW3pRzJs96G-VwVKhrKT1hX4JxW8Km5-g7by1LlW7gNx0F7hQ_17=
+W6NsZgM31g609W4yc8vg7861xdW2Zhd9l7JzytSW2766dP7LmkbCW7WBD4f3D49sdW1bSn=
+qh78BPjGW3vBccl5wrRZbW4RFYmv6HXdCxW6jkXxN8QMd_gW7QGhq35Ccz4fW2Gw4Jf74K=
+LstW55bDg92FYgZSW1LrVqb1GlbBSN6gKhxmKnqXCN2kFSNtGJs3_W5HT3XB8tb_hwW9hM=
+ZVl6nxCzRN6XLccdVQ1CHW4k0Y668v1XVs3hrd1" style=3D"-webkit-text-size-ad=
+just:100%; -ms-text-size-adjust:100%; color:#1082c1" data-hs-link-id=3D=
+"0" target=3D"_blank"><i>cdelaney@impactplus.com</i></a></p>
+          </td>
+        </tr>
+      </tbody></table>=20
+    </td>   =20
+  </tr>      =20
+</tbody></table>            </div>
+</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+   </td>
+           </tr>
+    </tbody></table>
+   </td>
+</tr>
+<tr>
+<td align=3D"left" valign=3D"top" class=3D"bodyContent" width=3D"100%"=
+ colspan=3D"12" style=3D"-webkit-text-size-adjust:100%; -ms-text-size-=
+adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; color:#444444=
+; font-family:sans-serif; font-size:15px; line-height:150%; text-align=
+:left">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%"=
+ class=3D"templateColumnWrapper" style=3D"-webkit-text-size-adjust:100=
+%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0=
+pt; border-collapse:collapse !important">
+            <tbody><tr>
+<td valign=3D"top" colspan=3D"12" width=3D"100.0%" class=3D" column" s=
+tyle=3D"-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-=
+table-lspace:0pt; mso-table-rspace:0pt; width:100.0%; text-align:left;=
+ padding:0; font-family:sans-serif; font-size:15px; line-height:1.5em;=
+ color:#444444" align=3D"left">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%"=
+ style=3D"-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; ms=
+o-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:separate !im=
+portant; border-spacing:0; background-color:#ffffff" class=3D" columnC=
+ontentTable" bgcolor=3D"#ffffff"><tbody><tr><td align=3D"left" valign=3D=
+"top" class=3D"columnContent widget-span widget-type-custom_widget" st=
+yle=3D"-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-t=
+able-lspace:0pt; mso-table-rspace:0pt; padding-right:20px; padding-bot=
+tom:20px; padding-left:20px; text-align:left; padding:0; font-family:s=
+ans-serif; font-size:15px; line-height:1.5em; color:#444444; padding-t=
+op:10px" data-widget-type=3D"custom_widget">
+<div class=3D"layout-widget-wrapper">
+<div id=3D"hs_cos_wrapper_module_1616705617347705" class=3D"hs_cos_wra=
+pper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich=
+_text widget-type-rich_text" style=3D"color: inherit; font-size: inher=
+it; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs=
+-cos-type=3D"module"><div id=3D"hs_cos_wrapper_module_1616705617347705=
+_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_r=
+ich_text" style=3D"color: inherit; font-size: inherit; line-height: in=
+herit;" data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"rich_t=
+ext"><p style=3D"margin-bottom: 1em; -webkit-text-size-adjust:100%; -m=
+s-text-size-adjust:100%; font-family:Lato, Tahoma, sans-serif; color:#=
+444444; font-weight:500; font-size:18px; line-height:1.5em">P.S. We've=
+ got a bunch of new courses and lessons in IMPACT+! This new content r=
+anges from <a href=3D"https://www.impactplus.com/e2t/tc/VX3J8h5Z7lpwN2=
+wy4CLg-6frW4FBnYy4qtf1-N3NdJFy5nxG7V3Zsc37CgFt9MTpXzZSg2rJTHc4J4sksgDW=
+4ry6Vh10hk1cW4J6G3T18QHThW5WY4P47JChBKVK8pKk1Sfc3mW91LmjP7jPJkCV5QK7P1=
+YNxFnW2n9kSB422v4MW1k4z173ZNHQYW9jQfp37KxLQBW6QnpP557FGY2W8L2CRl7mSwts=
+W5mp4sG3s2SjXN4Jv4S_X7C4BW3W3CGv23lLZCN4-CQNflQQ6qW3F7VL49hQl-VW7vZMPR=
+5s9X2gW7rqKGg3T-lkgW284m9_3fCG6-W5Bmr4t9l9fTrW11kVvF26kHH1W3YNsYS6zkWL=
+MW996vt62gr0MRW4jPw7P3-dCR0W5pb8XQ1FHgg4W3hWYvN4l1rw2W5Bw4FS45X7h4N65T=
+Sd6yrcmRW88zY3j3C--xGVrWrCG48gfgS32wb1" rel=3D"noopener" style=3D"-web=
+kit-text-size-adjust:100%; -ms-text-size-adjust:100%; color:#1082c1; f=
+ont-weight:normal" data-hs-link-id=3D"0" target=3D"_blank">pillar cont=
+ent</a>, <a href=3D"https://www.impactplus.com/e2t/tc/VX3J8h5Z7lpwN2wy=
+4CLg-6frW4FBnYy4qtf1-N3NdJH13p_9rV1-WJV7CgNZXW4DkSC_40smSSW6ZXqSc3fPhG=
+2W2rDPLG8Ynvs2VCmpMm6DG22GW6XkrHh2Zz7lGW3Znkk-651vbhW6634FL26JQYlW8Y4Y=
+KW8d2jwMW1XycHD1sQ2YtW14d8Fg6qvyGjW2-npfl4rX725W5527711DJc2TW20fs6Y5sg=
+zS9W6kfXdx66Gm46W5dHfx34BTtwTW7LKn9L7cBjtqW16-0rQ8zd4_HW8BbZ0m7skWgHW5=
+4Z7mm51QY24W35ptZ22tDm-jW7J-bFC6yMCgHW4QLMDB8b70dXW9blbMC3tpQWkN2czs4P=
+zWz5YW22mtb92vzVYWW4sQqxB7VslY22f21" rel=3D"noopener" style=3D"-webkit=
+-text-size-adjust:100%; -ms-text-size-adjust:100%; color:#1082c1" data=
+-hs-link-id=3D"0" target=3D"_blank">assignment prospecting</a>, <a hre=
+f=3D"https://www.impactplus.com/e2t/tc/VX3J8h5Z7lpwN2wy4CLg-6frW4FBnYy=
+4qtf1-N3NdJFS5nxGrV3Zsc37CgSbDW8mf1wc77cyF4W1GlJjq2kTnCLW3XXgxR1r0pPYW=
+3st2jH6jtvLdW7vYNvr3pb7ymV6Rv3W4KWN6tW741SNg8gqLymW1fNJYg5V55qQW3DNdqQ=
+8cWLczW2jK2zT4LmkcBW4FCFHr7w2NphN2xcFn421LTqW28NfKk33g3XxW71jCy75H9Szl=
+W5XMHz0874WyNW4yCKk55Tzbk_VtbMRf6f4nF0V_DPDV9jx7ZtW2pw2hr4_TVHnW6HM27q=
+7Z5JT7W906nrt7qkDNdW69y1jn1G8q4_W8VyfYz5w2yBVW3D59zB77d2XNW73WjCz18f__=
+ZW5lLfd04plGQyW50BqXY9g75DSW312-bN8ZTygYW6cj9TP6TGG1qW6pYLD88T41BwW7Vy=
+xJ-1jxqTxW8dCc_T84JdzhW8cyz3w596QSYVxS62w1z91Zr3bwY1" rel=3D"noopener"=
+ style=3D"-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; co=
+lor:#1082c1" data-hs-link-id=3D"0" target=3D"_blank">maximizing HubSpo=
+t reporting</a>, and even <a href=3D"https://www.impactplus.com/e2t/tc=
+/VX3J8h5Z7lpwN2wy4CLg-6frW4FBnYy4qtf1-N3NdJHD3p_b1V1-WJV7CgNHpVkJLww2s=
+GXC3W9gHpxc4D_Zy3W1qnRll1rdn04W289-xL8nCPKgW6ms_3d8M-q_LW7QLPJc5FWZLFW=
+2d2hX47w0D2_N5Gm9cG98xS3W6Vr5zL7S5r7xW6qX6Z52_V0_2W3pJSqs5chCRTW1qWNHk=
+70MpCBW7YBw203RRWb4N59dTxJtL6JvW7Gyl5x7dwYMYW1d_0PF7GZgJWW50N-mb7cxVbh=
+W4lMR_J3Pld4DW2RdCGb3-6DpyW1L5sqK1H7rJBW4VnFsK7LbC30W401mCM2nH1dBVTdwW=
+_7dnTtwN7614yBQthftW23y4cc5tXHTbW8yDFkW8CnW8pM9r7_kh9TnMW1WD58x4CwbQHW=
+31G41m8fW0vNW5368Ss3V4nvy34B91" rel=3D"noopener" style=3D"-webkit-text=
+-size-adjust:100%; -ms-text-size-adjust:100%; color:#1082c1" data-hs-l=
+ink-id=3D"0" target=3D"_blank">virtual event sponsorships</a>. Go chec=
+k them out for yourself!</p></div></div>
+</div><!--end layout-widget-wrapper -->
+</td></tr></tbody></table><!--end widget-table -->
+   </td>
+           </tr>
+    </tbody></table>
+   </td>
+</tr>
+<tr>
+<td align=3D"left" valign=3D"top" class=3D"bodyContent" width=3D"100%"=
+ colspan=3D"12" style=3D"-webkit-text-size-adjust:100%; -ms-text-size-=
+adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; color:#444444=
+; font-family:sans-serif; font-size:15px; line-height:150%; text-align=
+:left">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%"=
+ class=3D"templateColumnWrapper" style=3D"-webkit-text-size-adjust:100=
+%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0=
+pt; border-collapse:collapse !important">
+            <tbody><tr>
+<td valign=3D"top" colspan=3D"12" width=3D"100.0%" class=3D" column" s=
+tyle=3D"-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-=
+table-lspace:0pt; mso-table-rspace:0pt; width:100.0%; text-align:left;=
+ padding:0; font-family:sans-serif; font-size:15px; line-height:1.5em;=
+ color:#444444" align=3D"left">
+<div class=3D"widget-span widget-type-custom_widget bylineSection" sty=
+le=3D"font-size:15px;color:#666666;" data-widget-type=3D"custom_widget=
+">
+<div class=3D"layout-widget-wrapper">
+<div id=3D"hs_cos_wrapper_module_16167074102561138" class=3D"hs_cos_wr=
+apper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-ric=
+h_text widget-type-rich_text" style=3D"color: inherit; font-size: inhe=
+rit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-h=
+s-cos-type=3D"module"><div id=3D"hs_cos_wrapper_module_161670741025611=
+38_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type=
+_rich_text" style=3D"color: inherit; font-size: inherit; line-height: =
+inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"rich=
+_text"><p style=3D"margin-bottom: 1em; -webkit-text-size-adjust:100%; =
+-ms-text-size-adjust:100%; font-family:Lato, Tahoma, sans-serif; color=
+:#444444; font-weight:500; line-height:1.5em; font-size:15px !importan=
+t"><em style=3D"font-size:15px !important"><span style=3D"font-weight:=
+500; line-height:1.5em; font-size:15px"><span style=3D"font-weight:500=
+; line-height:1.5em; font-size:15px !important; color:#999999"><span s=
+tyle=3D"font-weight:500; line-height:1.5em; font-size:15px !important;=
+ color:#666666">IMPACT teaches business leaders how to build high-perf=
+orming teams that achieve extraordinary digital sales and marketing re=
+sults through coaching, online training, and in-person experiences. We=
+ look forward to joining you on your journey to becoming a hero for yo=
+ur own company at <a href=3D"https://www.impactplus.com/e2t/tc/VX3J8h5=
+Z7lpwN2wy4CLg-6frW4FBnYy4qtf1-N3NdJGr3p_8SV1-WJV7CgVltW8SH0l79grZZJW8h=
+N_yz4b6hnHMCDPhZ4Mx6VW4gcZqJ3FpTRdW8XwMK46TpxZNW8N2W-_1l3vQmW7mq8Cm38W=
+JrCW7PTcpb3H--ZpW3ft6sW68M3_7N30K3KrY5WvZW6btfZ88VvPT2N4Y0-rKblDz5W565=
+y1J6PYhwFW2FJ2hr9lMyV7W3-24yD5XXbD1W3ft85G2Zq_cfW4KFjRM1ZyxWNW4pwqJD5s=
+lvlbN7-PQbDzbF4sW4wdvDW699DpfW1-dryv1ScTNVVm0jmW5R0K3w375B1" target=3D=
+"_blank" rel=3D"noopener" data-hs-link-id=3D"0" style=3D"-webkit-text-=
+size-adjust:100%; -ms-text-size-adjust:100%; color:#1082c1; font-size:=
+15px !important">impactplus.com</a>.</span></span></span></em></p></di=
+v></div>
+</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+   </td>
+           </tr>
+    </tbody></table>
+   </td>
+</tr>
+<tr>
+<td align=3D"left" valign=3D"top" class=3D"bodyContent" width=3D"100%"=
+ colspan=3D"12" style=3D"-webkit-text-size-adjust:100%; -ms-text-size-=
+adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; color:#444444=
+; font-family:sans-serif; font-size:15px; line-height:150%; text-align=
+:left">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%"=
+ class=3D"templateColumnWrapper" style=3D"-webkit-text-size-adjust:100=
+%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0=
+pt; border-collapse:collapse !important">
+            <tbody><tr>
+<td valign=3D"top" colspan=3D"12" width=3D"100.0%" class=3D" column" s=
+tyle=3D"-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-=
+table-lspace:0pt; mso-table-rspace:0pt; width:100.0%; text-align:left;=
+ padding:0; font-family:sans-serif; font-size:15px; line-height:1.5em;=
+ color:#444444" align=3D"left">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%"=
+ style=3D"-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; ms=
+o-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:separate !im=
+portant; border-spacing:0; background-color:#ffffff" class=3D" columnC=
+ontentTable" bgcolor=3D"#ffffff"><tbody><tr><td align=3D"left" valign=3D=
+"top" class=3D"columnContent widget-span widget-type-custom_widget" st=
+yle=3D"-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-t=
+able-lspace:0pt; mso-table-rspace:0pt; padding-right:20px; padding-lef=
+t:20px; text-align:left; padding:0; font-family:sans-serif; font-size:=
+15px; line-height:1.5em; color:#444444; padding-top:20px; padding-bott=
+om:10px" data-widget-type=3D"custom_widget">
+<div class=3D"layout-widget-wrapper">
+<div id=3D"hs_cos_wrapper_module_1616710266765276" class=3D"hs_cos_wra=
+pper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style=3D"color:=
+ inherit; font-size: inherit; line-height: inherit;" data-hs-cos-gener=
+al-type=3D"widget" data-hs-cos-type=3D"module"><div style=3D"border-to=
+p:2px solid #EEEEEE;"></div></div>
+</div><!--end layout-widget-wrapper -->
+</td></tr></tbody></table><!--end widget-table -->
+   </td>
+           </tr>
+    </tbody></table>
+   </td>
+</tr>
+<tr>
+<td align=3D"left" valign=3D"top" class=3D"bodyContent" width=3D"100%"=
+ colspan=3D"12" style=3D"-webkit-text-size-adjust:100%; -ms-text-size-=
+adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; color:#444444=
+; font-family:sans-serif; font-size:15px; line-height:150%; text-align=
+:left">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%"=
+ class=3D"templateColumnWrapper" style=3D"-webkit-text-size-adjust:100=
+%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0=
+pt; border-collapse:collapse !important">
+            <tbody><tr>
+<td valign=3D"top" colspan=3D"12" width=3D"100.0%" class=3D" column" s=
+tyle=3D"-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-=
+table-lspace:0pt; mso-table-rspace:0pt; width:100.0%; text-align:left;=
+ padding:0; font-family:sans-serif; font-size:15px; line-height:1.5em;=
+ color:#444444" align=3D"left">
+<div class=3D"widget-span widget-type-custom_widget " style=3D"" data-=
+widget-type=3D"custom_widget">
+<div class=3D"layout-widget-wrapper">
+<div id=3D"hs_cos_wrapper_module_158387996970784" class=3D"hs_cos_wrap=
+per hs_cos_wrapper_widget hs_cos_wrapper_type_module" style=3D"color: =
+inherit; font-size: inherit; line-height: inherit;" data-hs-cos-genera=
+l-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"hs_cos_wrappe=
+r_module_158387996970784_" class=3D"hs_cos_wrapper hs_cos_wrapper_widg=
+et hs_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: =
+inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" da=
+ta-hs-cos-type=3D"rich_text"><p style=3D"margin-bottom: 1em; -webkit-t=
+ext-size-adjust:100%; -ms-text-size-adjust:100%; font-family:Lato, Tah=
+oma, sans-serif; color:#444444; font-weight:500; font-size:18px; line-=
+height:100%; text-align:left" align=3D"left"><span style=3D"font-weigh=
+t:500; line-height:1.5em; font-size:14px; color:#b9b9b9">Creating hero=
+es, growing businesses, changing lives.</span><br><span style=3D"line-=
+height:1.5em; font-size:12px; font-weight:normal; color:#b9b9b9">Sent =
+with =F0=9F=92=99 by IMPACT&nbsp;</span></p>
+<p style=3D"margin-bottom: 1em; -webkit-text-size-adjust:100%; -ms-tex=
+t-size-adjust:100%; line-height:1.5em; font-family:Lato,Tahoma,sans-se=
+rif; font-size:10px; font-weight:normal; text-decoration:none; font-st=
+yle:normal; color:#b9b9b9; direction:lrt">IMPACT, 470 James Street, Su=
+ite 10, New Haven, CT</p>
+<p style=3D"margin-bottom: 1em; -webkit-text-size-adjust:100%; -ms-tex=
+t-size-adjust:100%; font-family:Lato, Tahoma, sans-serif; color:#44444=
+4; font-weight:500; font-size:18px; line-height:1.5em"><a href=3D"http=
+s://www.impactplus.com/hs/manage-preferences/unsubscribe?d=3DVngD1f8LD=
+YK6W41S-FJ4fK4-gW3zd5_-4cLxYJW2m40Kf3T0pbmW43T2Pd6TxGHzW17f7hv9lRkXmW9=
+71G176tf82WW5mMkhg8YJ1TTV28XfP5GCrb7MGKd_P20N8lW373dzF6cdq55W6Q1zhV6h0=
+-wh51CHx31&amp;v=3D3&amp;utm_campaign=3DThe%20Latest%20by%20IMPACT&amp=
+;utm_source=3Dhs_email&amp;utm_medium=3Demail&amp;utm_content=3D121819=
+596&amp;_hsenc=3Dp2ANqtz-_DVz3OR5Kzib1_AN5y8Pv3SstFvn2ZU1rlgbp4GrcWL-O=
+iMYLkZhbwRD-MQbV7bYs1WsWR6I5pSFB7TPjbI3KPPCzEXk32f4804vVFTgL79dTypBU&a=
+mp;_hsmi=3D121819596" style=3D"-webkit-text-size-adjust:100%; -ms-text=
+-size-adjust:100%; font-family:Lato,Tahoma,sans-serif; font-size:10px;=
+ color:#b9b9b9; font-weight:normal; text-decoration:underline; font-st=
+yle:normal" data-hs-link-id=3D"0" target=3D"_blank" rel=3D"noopener">M=
+anage preferences</a>&nbsp;<span style=3D"line-height:1.5em; font-fami=
+ly:Lato,Tahoma,sans-serif; font-size:10px; color:#b9b9b9; font-weight:=
+normal; text-decoration:underline; font-style:normal">|</span> <a href=
+=3D"https://www.impactplus.com/hs/manage-preferences/unsubscribe-all?d=
+=3DVngD1f8LDYK6W41S-FJ4fK4-gW3zd5_-4cLxYJW2m40Kf3T0pbmW43T2Pd6TxGHzW17=
+f7hv9lRkXmW971G176tf82WW5mMkhg8YJ1TTV28XfP5GCrb7MGKd_P20N8lW373dzF6cdq=
+55W6Q1zhV6h0-wh51CHx31&amp;v=3D3&amp;utm_campaign=3DThe%20Latest%20by%=
+20IMPACT&amp;utm_source=3Dhs_email&amp;utm_medium=3Demail&amp;utm_cont=
+ent=3D121819596&amp;_hsenc=3Dp2ANqtz-_DVz3OR5Kzib1_AN5y8Pv3SstFvn2ZU1r=
+lgbp4GrcWL-OiMYLkZhbwRD-MQbV7bYs1WsWR6I5pSFB7TPjbI3KPPCzEXk32f4804vVFT=
+gL79dTypBU&amp;_hsmi=3D121819596" style=3D"-webkit-text-size-adjust:10=
+0%; -ms-text-size-adjust:100%; font-family:Lato,Tahoma,sans-serif; fon=
+t-size:10px; color:#b9b9b9; font-weight:normal; text-decoration:underl=
+ine; font-style:normal" data-hs-link-id=3D"0" target=3D"_blank" rel=3D=
+"noopener">Unsubscribe</a></p></div></div>
+</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+   </td>
+           </tr>
+    </tbody></table>
+   </td>
+</tr>
+<!--end body wrapper -->
+                                            </tbody></table>
+                                        </td>
+                                    </tr>
+                                </tbody></table>
+                                <!-- End Template Wrapper -->
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align=3D"center" valign=3D"top" style=3D=
+"-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-l=
+space:0pt; mso-table-rspace:0pt">
+                                <!-- Begin Template Footer -->
+                                <div class=3D"footer-container-wrapper=
+">
+</div><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" id=3D"footerTable" style=3D"-webkit-text-size-adjust:100%; -ms-=
+text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; bor=
+der-collapse:collapse !important; background-color:#f2f2f2; color:#999=
+999; font-family:sans-serif; font-size:12px; line-height:120%; padding=
+-top:20px; padding-right:20px; padding-bottom:20px; padding-left:20px;=
+ text-align:center" bgcolor=3D"#f2f2f2" align=3D"center">
+                                    <!--end footer wrapper -->
+                                    <tbody><tr>
+                                        <td style=3D"-webkit-text-size=
+-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-tab=
+le-rspace:0pt"></td>
+                                    </tr>
+                                </tbody></table>
+                                <!-- End Template Footer -->
+                            </td>
+                        </tr>
+                    </tbody></table>
+                    <!-- End Template Container -->
+                </td>
+            </tr>
+        </tbody></table>
+   =20
+<img src=3D"https://www.impactplus.com/e2t/to/VX3J8h5Z7lpwN2wy4CLg-6fr=
+W4FBnYy4qtf1-f3NdJqt22" alt=3D"" width=3D"1" height=3D"1" border=3D"0"=
+ style=3D"display:none!important;min-height:1px!important;width:1px!im=
+portant;border-width:0!important;margin-top:0!important;margin-bottom:=
+0!important;margin-right:0!important;margin-left:0!important;padding-t=
+op:0!important;padding-bottom:0!important;padding-right:0!important;pa=
+dding-left:0!important"></body></html>
+--=-0M4+9g2a2BxBaXAE8uxyjw==--
